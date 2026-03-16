@@ -84,20 +84,18 @@
         </div>
                     </div>
         </section>
-                <section class="elementor-section elementor-top-section elementor-element elementor-element-b0a786a elementor-section-full_width elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none ct-container-none" data-id="b0a786a" data-element_type="section" data-e-type="section">
-            
-                        <div class="elementor-container elementor-column-gap-no ">
-                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b2d9478 ct-column-none col-offset-none col-color-offset-none" data-id="b2d9478" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-                    
-        		<div class="elementor-element elementor-element-07142f1 elementor-widget elementor-widget-image" data-id="07142f1" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-															<img loading="lazy" decoding="async" width="1341" height="405" src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2023/08/Screenshot-2023-08-15-221643.png" class="lazy lazy-hidden attachment-full size-full wp-image-9408" alt="" srcset="" data-srcset="https://almalath.com/wp-content/uploads/2023/08/Screenshot-2023-08-15-221643.png 1341w, https://almalath.com/wp-content/uploads/2023/08/Screenshot-2023-08-15-221643-300x91.png 300w, https://almalath.com/wp-content/uploads/2023/08/Screenshot-2023-08-15-221643-1024x309.png 1024w, https://almalath.com/wp-content/uploads/2023/08/Screenshot-2023-08-15-221643-768x232.png 768w" sizes="(max-width: 1341px) 100vw, 1341px" /><noscript><img loading="lazy" decoding="async" width="1341" height="405" src="../wp-content/uploads/2023/08/Screenshot-2023-08-15-221643.png" class="attachment-full size-full wp-image-9408" alt="" srcset="https://almalath.com/wp-content/uploads/2023/08/Screenshot-2023-08-15-221643.png 1341w, https://almalath.com/wp-content/uploads/2023/08/Screenshot-2023-08-15-221643-300x91.png 300w, https://almalath.com/wp-content/uploads/2023/08/Screenshot-2023-08-15-221643-1024x309.png 1024w, https://almalath.com/wp-content/uploads/2023/08/Screenshot-2023-08-15-221643-768x232.png 768w" sizes="(max-width: 1341px) 100vw, 1341px" /></noscript>															</div>
-				</div>
-		            </div>
-        </div>
+                <section class="elementor-section elementor-top-section elementor-section-boxed" style="padding: 40px 0;">
+                    <div class="elementor-container">
+                        <div class="ct-partner-grid" style="display:flex;flex-wrap:wrap;gap:30px;justify-content:center;align-items:center;">
+                            @foreach($partners as $partner)
+                            <div style="flex:0 0 180px;text-align:center;padding:15px;background:#fff;border:1px solid #eee;border-radius:8px;">
+                                <img src="{{ $partner->logo }}" alt="{{ $partner->name }}" style="max-width:150px;max-height:80px;object-fit:contain;" />
+                                <p style="margin:8px 0 0;font-size:13px;color:#555;">{{ $partner->name }}</p>
+                            </div>
+                            @endforeach
+                        </div>
                     </div>
-        </section>
+                </section>
         		</div>
 		    </div><!-- .entry-content -->
 </article><!-- #post-9403 -->

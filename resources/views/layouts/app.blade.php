@@ -1179,6 +1179,7 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 import detect from "https:\/\/almalath.com\/wp-content\/plugins\/optimization-detective\/detect.min.js?ver=1.0.0-beta3"; detect( {"minViewportAspectRatio":0.4,"maxViewportAspectRatio":2.5,"isDebug":false,"extensionModuleUrls":[],"restApiEndpoint":"https:\/\/almalath.com\/wp-json\/optimization-detective\/v1\/url-metrics:store","currentETag":"e9c47ba6404397761a3f6089c919bce2","currentUrl":"https:\/\/almalath.com\/service\/wireless-solutions\/","urlMetricSlug":"4042ed5e6bacab2c66d10c7f8761a0ec","cachePurgePostId":9258,"urlMetricHMAC":"d5a931c529db7ff0ee24813fcdc372c1","urlMetricGroupStatuses":[{"minimumViewportWidth":0,"maximumViewportWidth":480,"complete":false},{"minimumViewportWidth":480,"maximumViewportWidth":600,"complete":false},{"minimumViewportWidth":600,"maximumViewportWidth":782,"complete":false},{"minimumViewportWidth":782,"maximumViewportWidth":null,"complete":false}],"storageLockTTL":60,"freshnessTTL":604800,"webVitalsLibrarySrc":"https:\/\/almalath.com\/wp-content\/plugins\/optimization-detective\/build\/web-vitals.js?ver=4.2.4"} );
 /* ]]> */
 </script>
+<script type="text/javascript" src="/wp-content/themes/itfirm/elementor/js/ct-tabs-widget1159.js?ver=1.4.2" id="ct-tabs-widget-js-js"></script>
 @yield('footer_scripts')
 </body>
 

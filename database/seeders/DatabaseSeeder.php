@@ -29,5 +29,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CounterSeeder::class);
         $this->call(AboutTabSeeder::class);
         $this->call(SiteSettingSeeder::class);
+        $this->call(PartnerSeeder::class);
     }
 }
