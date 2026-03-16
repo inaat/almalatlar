@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\ServiceCategory;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +21,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        View::share('navServiceCategories', ServiceCategory::with('services')->where('is_active', true)->orderBy('sort_order')->get());
     }
 }
