@@ -443,7 +443,7 @@ IT, possible!
     </div>
   
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">Join over +15,000 happy clients!</span>    </h3>
+        <span class="ct-text-inner">{{ $siteSettings->get('clients_heading')?->value ?? 'Join over +15,000 happy clients!' }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -466,37 +466,17 @@ IT, possible!
 					    <div class="ct-client-carousel1 ct-slick-slider style1 wow fadeInUp">
         <div class="ct-clients-list-inner">
             <div class="ct-slick-carousel ct-slick-arrow-middle" data-arrows="" data-dots="" data-pauseOnHover="" data-autoplay="true" data-autoplaySpeed="5000" data-infinite="true" data-speed="500" data-colxs="2" data-colsm="3" data-colmd="3" data-collg="4" data-colxl="4" data-dir="false" data-slidesToScroll="1">
-                                        <div class="slick-slide">
-                            <div class="ct-client--image img-hover-active">
-                                <a href="#">
-                                                                            <img loading="lazy" decoding="async" width="412" height="238" src="/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2023/07/ImgOne-removebg-preview.png" class="lazy lazy-hidden no-lazyload ct-client--imgmain image-one attachment-full" alt="" srcset="" data-srcset="https://almalath.com/wp-content/uploads/2023/07/ImgOne-removebg-preview.png 412w, https://almalath.com/wp-content/uploads/2023/07/ImgOne-removebg-preview-300x173.png 300w" sizes="(max-width: 412px) 100vw, 412px" /><noscript><img loading="lazy" decoding="async" width="412" height="238" src="/wp-content/uploads/2023/07/ImgOne-removebg-preview.png" class="no-lazyload ct-client--imgmain image-one attachment-full" alt="" srcset="https://almalath.com/wp-content/uploads/2023/07/ImgOne-removebg-preview.png 412w, https://almalath.com/wp-content/uploads/2023/07/ImgOne-removebg-preview-300x173.png 300w" sizes="(max-width: 412px) 100vw, 412px" /></noscript>                                                                                                                <img loading="lazy" decoding="async" width="412" height="238" src="/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2023/07/ImgOne-removebg-preview.png" class="lazy lazy-hidden no-lazyload ct-client--imghover attachment-full" alt="" srcset="" data-srcset="https://almalath.com/wp-content/uploads/2023/07/ImgOne-removebg-preview.png 412w, https://almalath.com/wp-content/uploads/2023/07/ImgOne-removebg-preview-300x173.png 300w" sizes="(max-width: 412px) 100vw, 412px" /><noscript><img loading="lazy" decoding="async" width="412" height="238" src="/wp-content/uploads/2023/07/ImgOne-removebg-preview.png" class="no-lazyload ct-client--imghover attachment-full" alt="" srcset="https://almalath.com/wp-content/uploads/2023/07/ImgOne-removebg-preview.png 412w, https://almalath.com/wp-content/uploads/2023/07/ImgOne-removebg-preview-300x173.png 300w" sizes="(max-width: 412px) 100vw, 412px" /></noscript>                                                                                                        </a>
-                            </div>
-                        </div>
-                                                            <div class="slick-slide">
-                            <div class="ct-client--image img-hover-active">
-                                <a href="#">
-                                                                            <img loading="lazy" decoding="async" width="220" height="79" src="/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2023/07/Axis_Communications_logo.svg-removebg-preview.png" class="lazy lazy-hidden no-lazyload ct-client--imgmain image-one attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="220" height="79" src="/wp-content/uploads/2023/07/Axis_Communications_logo.svg-removebg-preview.png" class="no-lazyload ct-client--imgmain image-one attachment-full" alt="" /></noscript>                                                                                                                <img loading="lazy" decoding="async" width="220" height="79" src="/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2023/07/Axis_Communications_logo.svg-removebg-preview.png" class="lazy lazy-hidden no-lazyload ct-client--imghover attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="220" height="79" src="/wp-content/uploads/2023/07/Axis_Communications_logo.svg-removebg-preview.png" class="no-lazyload ct-client--imghover attachment-full" alt="" /></noscript>                                                                                                        </a>
-                            </div>
-                        </div>
-                                                            <div class="slick-slide">
-                            <div class="ct-client--image img-hover-active">
-                                <a href="#">
-                                                                            <img loading="lazy" decoding="async" width="577" height="433" src="/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2023/07/genetecweb_extrasmall-removebg-preview.png" class="lazy lazy-hidden no-lazyload ct-client--imgmain image-one attachment-full" alt="" srcset="" data-srcset="https://almalath.com/wp-content/uploads/2023/07/genetecweb_extrasmall-removebg-preview.png 577w, https://almalath.com/wp-content/uploads/2023/07/genetecweb_extrasmall-removebg-preview-300x225.png 300w" sizes="(max-width: 577px) 100vw, 577px" /><noscript><img loading="lazy" decoding="async" width="577" height="433" src="/wp-content/uploads/2023/07/genetecweb_extrasmall-removebg-preview.png" class="no-lazyload ct-client--imgmain image-one attachment-full" alt="" srcset="https://almalath.com/wp-content/uploads/2023/07/genetecweb_extrasmall-removebg-preview.png 577w, https://almalath.com/wp-content/uploads/2023/07/genetecweb_extrasmall-removebg-preview-300x225.png 300w" sizes="(max-width: 577px) 100vw, 577px" /></noscript>                                                                                                                <img loading="lazy" decoding="async" width="577" height="433" src="/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2023/07/genetecweb_extrasmall-removebg-preview.png" class="lazy lazy-hidden no-lazyload ct-client--imghover attachment-full" alt="" srcset="" data-srcset="https://almalath.com/wp-content/uploads/2023/07/genetecweb_extrasmall-removebg-preview.png 577w, https://almalath.com/wp-content/uploads/2023/07/genetecweb_extrasmall-removebg-preview-300x225.png 300w" sizes="(max-width: 577px) 100vw, 577px" /><noscript><img loading="lazy" decoding="async" width="577" height="433" src="/wp-content/uploads/2023/07/genetecweb_extrasmall-removebg-preview.png" class="no-lazyload ct-client--imghover attachment-full" alt="" srcset="https://almalath.com/wp-content/uploads/2023/07/genetecweb_extrasmall-removebg-preview.png 577w, https://almalath.com/wp-content/uploads/2023/07/genetecweb_extrasmall-removebg-preview-300x225.png 300w" sizes="(max-width: 577px) 100vw, 577px" /></noscript>                                                                                                        </a>
-                            </div>
-                        </div>
-                                                            <div class="slick-slide">
-                            <div class="ct-client--image img-hover-active">
-                                <a href="#">
-                                                                            <img loading="lazy" decoding="async" width="659" height="378" src="/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2023/07/misk-21-logo-light-1024x588-removebg-preview.png" class="lazy lazy-hidden no-lazyload ct-client--imgmain image-one attachment-full" alt="" srcset="" data-srcset="https://almalath.com/wp-content/uploads/2023/07/misk-21-logo-light-1024x588-removebg-preview.png 659w, https://almalath.com/wp-content/uploads/2023/07/misk-21-logo-light-1024x588-removebg-preview-300x172.png 300w" sizes="(max-width: 659px) 100vw, 659px" /><noscript><img loading="lazy" decoding="async" width="659" height="378" src="/wp-content/uploads/2023/07/misk-21-logo-light-1024x588-removebg-preview.png" class="no-lazyload ct-client--imgmain image-one attachment-full" alt="" srcset="https://almalath.com/wp-content/uploads/2023/07/misk-21-logo-light-1024x588-removebg-preview.png 659w, https://almalath.com/wp-content/uploads/2023/07/misk-21-logo-light-1024x588-removebg-preview-300x172.png 300w" sizes="(max-width: 659px) 100vw, 659px" /></noscript>                                                                                                                <img loading="lazy" decoding="async" width="659" height="378" src="/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2023/07/misk-21-logo-light-1024x588-removebg-preview.png" class="lazy lazy-hidden no-lazyload ct-client--imghover attachment-full" alt="" srcset="" data-srcset="https://almalath.com/wp-content/uploads/2023/07/misk-21-logo-light-1024x588-removebg-preview.png 659w, https://almalath.com/wp-content/uploads/2023/07/misk-21-logo-light-1024x588-removebg-preview-300x172.png 300w" sizes="(max-width: 659px) 100vw, 659px" /><noscript><img loading="lazy" decoding="async" width="659" height="378" src="/wp-content/uploads/2023/07/misk-21-logo-light-1024x588-removebg-preview.png" class="no-lazyload ct-client--imghover attachment-full" alt="" srcset="https://almalath.com/wp-content/uploads/2023/07/misk-21-logo-light-1024x588-removebg-preview.png 659w, https://almalath.com/wp-content/uploads/2023/07/misk-21-logo-light-1024x588-removebg-preview-300x172.png 300w" sizes="(max-width: 659px) 100vw, 659px" /></noscript>                                                                                                        </a>
-                            </div>
-                        </div>
-                                                            <div class="slick-slide">
-                            <div class="ct-client--image img-hover-active">
-                                <a href="#">
-                                                                            <img loading="lazy" decoding="async" width="200" height="71" src="/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2023/07/gaca_logo-removebg-preview-1.png" class="lazy lazy-hidden no-lazyload ct-client--imgmain image-one attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="200" height="71" src="/wp-content/uploads/2023/07/gaca_logo-removebg-preview-1.png" class="no-lazyload ct-client--imgmain image-one attachment-full" alt="" /></noscript>                                                                                                                <img loading="lazy" decoding="async" width="200" height="71" src="/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2023/07/gaca_logo-removebg-preview-1.png" class="lazy lazy-hidden no-lazyload ct-client--imghover attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="200" height="71" src="/wp-content/uploads/2023/07/gaca_logo-removebg-preview-1.png" class="no-lazyload ct-client--imghover attachment-full" alt="" /></noscript>                                                                                                        </a>
-                            </div>
-                        </div>
-                                                </div>
+                @foreach($clients as $client)
+                <div class="slick-slide">
+                    <div class="ct-client--image img-hover-active">
+                        <a href="{{ $client->website ?? '#' }}">
+                            <img src="{{ $client->logo }}" class="ct-client--imgmain image-one attachment-full" alt="{{ $client->name }}" />
+                            <img src="{{ $client->logo }}" class="ct-client--imghover attachment-full" alt="{{ $client->name }}" />
+                        </a>
+                    </div>
+                </div>
+                @endforeach
+                </div>
         </div>
     </div>
 				</div>
@@ -532,7 +512,7 @@ IT, possible!
         </div>
         <div class="ct-video-image">
             <img loading="lazy" decoding="async" width="536" height="888" src="/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2023/07/Assets-1.png" class="lazy lazy-hidden attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="536" height="888" src="/wp-content/uploads/2023/07/Assets-1.png" class="attachment-full" alt="" /></noscript>        </div>
-                    <a class="el-btn-video" href="https://www.youtube.com/watch?v=SF4aHwxHtZ0">
+                    <a class="el-btn-video" href="https://www.youtube.com/watch?v={{ $siteSettings->get('about_video_id')?->value ?? 'SF4aHwxHtZ0' }}">
                 <i class="fa fa-play"></i>
             </a>
                             <div class="ct-video-shape">
@@ -595,12 +575,10 @@ IT, possible!
   
 			<div class="item--sub-title style-box-gr wow fadeInUp" data-wow-delay="ms">
                         <span>
-                About Our Company ~            </span>
+                {{ $siteSettings->get('about_subtitle')?->value ?? 'About Our Company ~' }}            </span>
                     </div>
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">Choose         <cite class="ct-text-highlight">
-            The Best        </cite>
-         IT Service Company</span>    </h3>
+        <span class="ct-text-inner">{{ $siteSettings->get('about_heading')?->value ?? 'Choose The Best IT Service Company' }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -614,7 +592,7 @@ IT, possible!
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			<p>Since its founding in 2011 Al Malath Al Arabia has grown to be one of the major IT solutions integrators in the Kingdom. Our most key strength is the quality of our team of seasoned experts with over 30 years in the IT space. We have a strong foundation built on legacy including specialties in IT Hardware, Software and Services, Business Concepts Development, and Consultancy.</p>		
+			<p>{{ $siteSettings->get('about_description')?->value ?? '' }}</p>
 		</div>
 	</div>
 </div>				</div>
@@ -780,12 +758,10 @@ IT, possible!
   
 			<div class="item--sub-title style-box-gr wow fadeInUp" data-wow-delay="ms">
                         <span>
-                ~ Our Awesome Services ~            </span>
+                {{ $siteSettings->get('services_subheading')?->value ?? '~ Our Awesome Services ~' }}            </span>
                     </div>
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner"> We are          <cite class="ct-text-highlight">
-            dedicated        </cite>
-         to serve you all time.</span>    </h3>
+        <span class="ct-text-inner">{{ $siteSettings->get('services_heading')?->value ?? 'We are dedicated to serve you all time.' }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -820,109 +796,26 @@ IT, possible!
         </div>
         <div class="ct-carousel-inner">
             <div class="ct-slick-carousel" data-arrows="true" data-dots="true" data-pauseOnHover="" data-autoplay="" data-autoplaySpeed="5000" data-infinite="true" data-speed="500" data-colxs="1" data-colsm="2" data-colmd="3" data-collg="4" data-colxl="4" data-dir="false" data-slidesToScroll="2">
-                                        <div class="slick-slide">
-                            <div class="item--inner wow fadeInUp">
-                                <div class="item--overlay">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 100 100" version="1.1" preserveAspectRatio="none" height="32px" style="fill:#fff"><path stroke-width="0" d="M0 0 C50 100 50 100 100 0  L100 100 0 100"></path></svg>
-                                </div>
-                                <div class="item--holder">
-                                                                            <div class="item--icon">
-                                            <i aria-hidden="true" class="flaticon flaticon-sketch"></i>                                        </div>
-                                                                                                            <h3 class="item--title">    
-                                         IT Service Management                                    </h3>
-                                    <div class="item--description">Information technology service management (ITSM)</div>
-                                                                            <div class="item--readmore">
-                                            <a class="btn-text-gr" href="/service/it-service-management">Learn More<i class="flaticon-right pxl-rtl-icon"></i></a>
-                                        </div>
-                                                                    </div>
-                           </div>
+                @foreach($services as $service)
+                <div class="slick-slide">
+                    <div class="item--inner wow fadeInUp">
+                        <div class="item--overlay">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 100 100" version="1.1" preserveAspectRatio="none" height="32px" style="fill:#fff"><path stroke-width="0" d="M0 0 C50 100 50 100 100 0  L100 100 0 100"></path></svg>
                         </div>
-                                        <div class="slick-slide">
-                            <div class="item--inner wow fadeInUp">
-                                <div class="item--overlay">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 100 100" version="1.1" preserveAspectRatio="none" height="32px" style="fill:#fff"><path stroke-width="0" d="M0 0 C50 100 50 100 100 0  L100 100 0 100"></path></svg>
-                                </div>
-                                <div class="item--holder">
-                                                                            <div class="item--icon">
-                                            <i aria-hidden="true" class="flaticon flaticon-business"></i>                                        </div>
-                                                                                                            <h3 class="item--title">    
-                                         Applications Development Services                                    </h3>
-                                    <div class="item--description">Al Malath Al Arabia keep Skilled and experienced software engineers ..</div>
-                                                                            <div class="item--readmore">
-                                            <a class="btn-text-gr" href="/service/applications-development-services">Learn More<i class="flaticon-right pxl-rtl-icon"></i></a>
-                                        </div>
-                                                                    </div>
-                           </div>
-                        </div>
-                                        <div class="slick-slide">
-                            <div class="item--inner wow fadeInUp">
-                                <div class="item--overlay">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 100 100" version="1.1" preserveAspectRatio="none" height="32px" style="fill:#fff"><path stroke-width="0" d="M0 0 C50 100 50 100 100 0  L100 100 0 100"></path></svg>
-                                </div>
-                                <div class="item--holder">
-                                                                            <div class="item--icon">
-                                            <i aria-hidden="true" class="flaticon flaticon-process"></i>                                        </div>
-                                                                                                            <h3 class="item--title">    
-                                        Data Center Solutions Services                                    </h3>
-                                    <div class="item--description">Data centers support almost all computation, data..</div>
-                                                                            <div class="item--readmore">
-                                            <a class="btn-text-gr" href="/service/data-center-solutions-services">Learn More<i class="flaticon-right pxl-rtl-icon"></i></a>
-                                        </div>
-                                                                    </div>
-                           </div>
-                        </div>
-                                        <div class="slick-slide">
-                            <div class="item--inner wow fadeInUp">
-                                <div class="item--overlay">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 100 100" version="1.1" preserveAspectRatio="none" height="32px" style="fill:#fff"><path stroke-width="0" d="M0 0 C50 100 50 100 100 0  L100 100 0 100"></path></svg>
-                                </div>
-                                <div class="item--holder">
-                                                                            <div class="item--icon">
-                                            <i aria-hidden="true" class="flaticon flaticon-receipt"></i>                                        </div>
-                                                                                                            <h3 class="item--title">    
-                                         IT Managed Services                                    </h3>
-                                    <div class="item--description">Managed services can help you expand or upgrade </div>
-                                                                            <div class="item--readmore">
-                                            <a class="btn-text-gr" href="/service/it-managed-services">Learn More<i class="flaticon-right pxl-rtl-icon"></i></a>
-                                        </div>
-                                                                    </div>
-                           </div>
-                        </div>
-                                        <div class="slick-slide">
-                            <div class="item--inner wow fadeInUp">
-                                <div class="item--overlay">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 100 100" version="1.1" preserveAspectRatio="none" height="32px" style="fill:#fff"><path stroke-width="0" d="M0 0 C50 100 50 100 100 0  L100 100 0 100"></path></svg>
-                                </div>
-                                <div class="item--holder">
-                                                                            <div class="item--icon">
-                                            <i aria-hidden="true" class="flaticon flaticon-profit"></i>                                        </div>
-                                                                                                            <h3 class="item--title">    
-                                         IT Information Security                                    </h3>
-                                    <div class="item--description">Information security is a broad field that covers many..</div>
-                                                                            <div class="item--readmore">
-                                            <a class="btn-text-gr" href="/service/it-information-security">Learn More<i class="flaticon-right pxl-rtl-icon"></i></a>
-                                        </div>
-                                                                    </div>
-                           </div>
-                        </div>
-                                        <div class="slick-slide">
-                            <div class="item--inner wow fadeInUp">
-                                <div class="item--overlay">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 100 100" version="1.1" preserveAspectRatio="none" height="32px" style="fill:#fff"><path stroke-width="0" d="M0 0 C50 100 50 100 100 0  L100 100 0 100"></path></svg>
-                                </div>
-                                <div class="item--holder">
-                                                                            <div class="item--icon">
-                                            <i aria-hidden="true" class="flaticon flaticon-cloud-computing-1"></i>                                        </div>
-                                                                                                            <h3 class="item--title">    
-                                         IT Infrastructure Management                                    </h3>
-                                    <div class="item--description">IT infrastructure has vital role in the organization operations.</div>
-                                                                            <div class="item--readmore">
-                                            <a class="btn-text-gr" href="/service/it-infrastructure-management">Learn More<i class="flaticon-right pxl-rtl-icon"></i></a>
-                                        </div>
-                                                                    </div>
-                           </div>
-                        </div>
+                        <div class="item--holder">
+                            <div class="item--icon">
+                                <i aria-hidden="true" class="flaticon {{ $service->icon_class }}"></i>
                             </div>
+                            <h3 class="item--title">{{ $service->title }}</h3>
+                            <div class="item--description">{{ $service->description }}</div>
+                            <div class="item--readmore">
+                                <a class="btn-text-gr" href="/service/{{ $service->slug }}">Learn More<i class="flaticon-right pxl-rtl-icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+                </div>
         </div>
     </div>
 				</div>
@@ -983,12 +876,10 @@ IT, possible!
   
 			<div class="item--sub-title style-box-gr wow fadeInUp" data-wow-delay="ms">
                         <span>
-                ~ Why choose Us? ~            </span>
+                {{ $siteSettings->get('industries_subheading')?->value ?? '~ Why choose Us? ~' }}            </span>
                     </div>
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">We serve a wide         <cite class="ct-text-highlight">
-            variety        </cite>
-         of industries</span>    </h3>
+        <span class="ct-text-inner">{{ $siteSettings->get('industries_heading')?->value ?? 'We serve a wide variety of industries' }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -1002,7 +893,7 @@ IT, possible!
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			Below is just a small sample of some of the industries that we serve.		
+			{{ $siteSettings->get('industries_description')?->value ?? 'Below is just a small sample of some of the industries that we serve.' }}
 		</div>
 	</div>
 </div>				</div>
@@ -1021,97 +912,54 @@ IT, possible!
 					<div class="ct-tabs ct-tabs3  content-type-template" data-wow-delay="ms">
     <div class="ct-tabs--main">
         <div class="ct-tabs-title">
-                            <span class="ct-tab-title active" data-target="#ct_tabs-141c49e-b21d98c">
-                                                            Our Vision        
+            @foreach($aboutTabs as $i => $tab)
+                <span class="ct-tab-title {{ $i === 0 ? 'active' : '' }}" data-target="#tab-{{ $tab->tab_key }}">
+                    {{ $tab->title }}
                 </span>
-                            <span class="ct-tab-title " data-target="#ct_tabs-141c49e-870d555">
-                                                            Our Goal        
-                </span>
-                            <span class="ct-tab-title " data-target="#ct_tabs-141c49e-4040682">
-                                                            Our Values        
-                </span>
-                    </div>
+            @endforeach
+        </div>
 
         <div class="ct-tabs-content">
-                            <div class="ct-tab-content " id="ct_tabs-141c49e-b21d98c" style="display:block;">		<div data-elementor-type="section" data-elementor-id="2828" class="elementor elementor-2828">
-				        <section class="elementor-section elementor-top-section elementor-element elementor-element-f214e46 elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none" data-id="f214e46" data-element_type="section" data-e-type="section">
-            
-                        <div class="elementor-container elementor-column-gap-extended ">
-                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-499237a ct-column-none col-offset-none col-color-offset-none" data-id="499237a" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-                    
-        		<div class="elementor-element elementor-element-f3e75fa elementor-widget elementor-widget-ct_banner" data-id="f3e75fa" data-element_type="widget" data-e-type="widget" data-widget_type="ct_banner.default">
-				<div class="elementor-widget-container">
-						<div class="ct-banner ct-banner2 wow fadeInUp" data-wow-delay="ms">
-		<div class="ct-banner-inner">
-			<div class="ct-banner-image">
-				<img loading="lazy" decoding="async" class="lazy lazy-hidden " src="/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/11/Untitled-design-8.png" width="600" height="473" alt="Untitled design (8)" title="Untitled design (8)" /><noscript><img loading="lazy" decoding="async" class="" src="/wp-content/uploads/2021/11/Untitled-design-8.png" width="600" height="473" alt="Untitled design (8)" title="Untitled design (8)" /></noscript>			</div>
-							<div class="ct-banner-shape">
-					<img loading="lazy" decoding="async" width="123" height="242" src="/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/11/h2-shape2.png" class="lazy lazy-hidden attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="123" height="242" src="/wp-content/uploads/2021/11/h2-shape2.png" class="attachment-full" alt="" /></noscript>				</div>
-					</div>
-	</div>
-				</div>
-				</div>
-		            </div>
-        </div>
-                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-a449ec7 ct-column-none col-offset-none col-color-offset-none" data-id="a449ec7" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-                    
-        		<div class="elementor-element elementor-element-26fa349 elementor-widget elementor-widget-ct_heading" data-id="26fa349" data-element_type="widget" data-e-type="widget" data-widget_type="ct_heading.default">
-				<div class="elementor-widget-container">
-					<div id="ct_heading-26fa349" class="ct-heading h-align- item-st-default highlight-style1">
-  <div class="ct-heading--inner"> 
-    <div class="ct-inline-css"  data-css="
-                            #ct_heading-26fa349.ct-heading .item--sub-title span {
-                background-image: -webkit-gradient(linear, left top, left bottom, from(#3F69B1), to(#3F69B163));
-                background-image: -webkit-linear-gradient(to left, #3F69B1, #3F69B163);
-                background-image: -moz-linear-gradient(to left, #3F69B1, #3F69B163);
-                background-image: -ms-linear-gradient(to left, #3F69B1, #3F69B163);
-                background-image: -o-linear-gradient(to left, #3F69B1, #3F69B163);
-                background-image: linear-gradient(to left, #3F69B1, #3F69B163);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#3F69B1', endColorStr='#3F69B163');
-                background-color: transparent;
-                background-clip: text;
-                -o-background-clip: text;
-                -ms-background-clip: text;
-                -moz-background-clip: text;
-                -webkit-background-clip: text;
-                text-fill-color: transparent;
-                -o-text-fill-color: transparent;
-                -ms-text-fill-color: transparent;
-                -moz-text-fill-color: transparent;
-                -webkit-text-fill-color: transparent;
-            }
-                        ">
-    </div>
-      <div class="item--text-below">
-      <div class="ct-inline-css"  data-css="
-        ">
-      </div>
-          </div>
-  
-			<div class="item--sub-title style-default wow fadeInUp" data-wow-delay="ms">
-                        <span>
-                Our Vision            </span>
+            @foreach($aboutTabs as $i => $tab)
+            <div class="ct-tab-content" id="tab-{{ $tab->tab_key }}" @if($i === 0) style="display:block;" @endif>
+                <div class="elementor-container elementor-column-gap-extended">
+                    <div class="elementor-column elementor-col-50">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="ct-banner ct-banner2 wow fadeInUp">
+                                <div class="ct-banner-inner">
+                                    <div class="ct-banner-image">
+                                        <img src="{{ $tab->image }}" alt="{{ $tab->title }}" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">vibrant society, thriving economy, ambitious nation</span>    </h3>
-  </div>
-</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-3f510b4 elementor-widget elementor-widget-ct_text_editor" data-id="3f510b4" data-element_type="widget" data-e-type="widget" data-widget_type="ct_text_editor.default">
-				<div class="elementor-widget-container">
-					<div id="ct_text_editor-3f510b4" class="ct-text-editor wow fadeInUp" data-wow-delay="ms">
-	<div class="ct-item--inner">
-		<div class="ct-inline-css"  data-css="
-	        			">
-
-	    </div>
-		<div class="ct-text-editor elementor-clearfix">
-			<p>To utilize advanced technology to help our customers extending their business, with added value to Saudi market and local community. To move in compliance with the kingdom&#8217;s vision 2030</p>		
-		</div>
-	</div>
+                    <div class="elementor-column elementor-col-50">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="ct-heading h-align- item-st-default highlight-style1">
+                                <div class="ct-heading--inner">
+                                    <div class="item--sub-title style-default wow fadeInUp"><span>{{ $tab->subtitle }}</span></div>
+                                    <h3 class="item--title st-default wow fadeInUp"><span class="ct-text-inner">{{ $tab->title }}</span></h3>
+                                </div>
+                            </div>
+                            <div class="ct-text-editor wow fadeInUp">
+                                <div class="ct-item--inner">
+                                    <div class="ct-text-editor elementor-clearfix"><p>{{ $tab->description }}</p></div>
+                                </div>
+                            </div>
+                            <div class="ct-button-wrapper ct-button-layout1">
+                                <a href="{{ $tab->button_url }}" class="btn btn-default wow fadeInUp icon-ps-right">
+                                    <span class="ct-button-icon ct-icon-normal ct-align-icon-right"><i aria-hidden="true" class="flaticon flaticon-right-arrow"></i></span>
+                                    <span class="ct-button-text">{{ $tab->button_text }}</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
 </div>				</div>
 				</div>
 				<div class="elementor-element elementor-element-67724e1 pxl-button-icon-rtl elementor-widget elementor-widget-ct_button" data-id="67724e1" data-element_type="widget" data-e-type="widget" data-widget_type="ct_button.default">
@@ -1417,92 +1265,30 @@ Acknowledging accountability, definite Promise to Clients. Believe in Teamwork p
 				</div>
 				</div>
 		        <section class="elementor-section elementor-inner-section elementor-element elementor-element-3fcf7e1 elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none" data-id="3fcf7e1" data-element_type="section" data-e-type="section">
-            
                         <div class="elementor-container elementor-column-gap-extended ">
-                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-9e558f5 ct-column-none col-offset-none col-color-offset-none" data-id="9e558f5" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-                    
-        		<div class="elementor-element elementor-element-2e3514a ct-counter-layout1 elementor-widget elementor-widget-ct_counter" data-id="2e3514a" data-element_type="widget" data-e-type="widget" data-widget_type="ct_counter.default">
-				<div class="elementor-widget-container">
-					<div class="ct-counter ct-counter-layout1 wow fadeInUp style2" data-wow-delay="ms">
-    <div class="ct-counter-inner">
-        <div class="ct-counter-meta">
-                            <div class="ct-counter-icon">
-                                                                                                        </div>
-                        <div class="ct-counter-number">
-                                <span class="ct-counter-number-value" data-duration="2000" data-to-value="2003" data-delimiter="">1000</span>
+                @foreach($counters as $counter)
+                <div class="elementor-column elementor-col-25 elementor-inner-column ct-column-none">
+                    <div class="elementor-widget-wrap elementor-element-populated">
+                        <div class="elementor-widget-container">
+                            <div class="ct-counter ct-counter-layout1 wow fadeInUp style2">
+                                <div class="ct-counter-inner">
+                                    <div class="ct-counter-meta">
+                                        <div class="ct-counter-icon"></div>
+                                        <div class="ct-counter-number">
+                                            <span class="ct-counter-number-value" data-duration="2000" data-to-value="{{ $counter->value }}" data-delimiter="">0</span>
+                                            @if($counter->suffix)
+                                                <span class="ct-counter-number-suffix">{{ $counter->suffix }}</span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="ct-counter-title">{{ $counter->label }}</div>
+                                </div>
                             </div>
-        </div>
-                    <div class="ct-counter-title">Year of establishment</div>
-            </div>
-</div>				</div>
-				</div>
-		            </div>
-        </div>
-                <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-556ddd4 ct-column-none col-offset-none col-color-offset-none" data-id="556ddd4" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-                    
-        		<div class="elementor-element elementor-element-94436e0 ct-counter-layout1 elementor-widget elementor-widget-ct_counter" data-id="94436e0" data-element_type="widget" data-e-type="widget" data-widget_type="ct_counter.default">
-				<div class="elementor-widget-container">
-					<div class="ct-counter ct-counter-layout1 wow fadeInUp style2" data-wow-delay="40ms">
-    <div class="ct-counter-inner">
-        <div class="ct-counter-meta">
-                            <div class="ct-counter-icon">
-                                                                                                        </div>
-                        <div class="ct-counter-number">
-                                <span class="ct-counter-number-value" data-duration="2000" data-to-value="2" data-delimiter="">1</span>
-                                    <span class="ct-counter-number-suffix">,5k+</span>
-                            </div>
-        </div>
-                    <div class="ct-counter-title">Of customers worldwide</div>
-            </div>
-</div>				</div>
-				</div>
-		            </div>
-        </div>
-                <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-b67ec38 ct-column-none col-offset-none col-color-offset-none" data-id="b67ec38" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-                    
-        		<div class="elementor-element elementor-element-9d19ef0 ct-counter-layout1 elementor-widget elementor-widget-ct_counter" data-id="9d19ef0" data-element_type="widget" data-e-type="widget" data-widget_type="ct_counter.default">
-				<div class="elementor-widget-container">
-					<div class="ct-counter ct-counter-layout1 wow fadeInUp style2" data-wow-delay="80ms">
-    <div class="ct-counter-inner">
-        <div class="ct-counter-meta">
-                            <div class="ct-counter-icon">
-                                                                                                        </div>
-                        <div class="ct-counter-number">
-                                <span class="ct-counter-number-value" data-duration="2000" data-to-value="14" data-delimiter="">1</span>
-                                    <span class="ct-counter-number-suffix">+</span>
-                            </div>
-        </div>
-                    <div class="ct-counter-title">Countries with active client base</div>
-            </div>
-</div>				</div>
-				</div>
-		            </div>
-        </div>
-                <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-e0f33ac ct-column-none col-offset-none col-color-offset-none" data-id="e0f33ac" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-                    
-        		<div class="elementor-element elementor-element-d453660 ct-counter-layout1 elementor-widget elementor-widget-ct_counter" data-id="d453660" data-element_type="widget" data-e-type="widget" data-widget_type="ct_counter.default">
-				<div class="elementor-widget-container">
-					<div class="ct-counter ct-counter-layout1 wow fadeInUp style2" data-wow-delay="120ms">
-    <div class="ct-counter-inner">
-        <div class="ct-counter-meta">
-                            <div class="ct-counter-icon">
-                                                                                                        </div>
-                        <div class="ct-counter-number">
-                                <span class="ct-counter-number-value" data-duration="2000" data-to-value="4" data-delimiter="">1</span>
-                                    <span class="ct-counter-number-suffix">.9/5</span>
-                            </div>
-        </div>
-                    <div class="ct-counter-title">Customer rating</div>
-            </div>
-</div>				</div>
-				</div>
-		            </div>
-        </div>
+                        </div>
                     </div>
+                </div>
+                @endforeach
+                </div>
         </section>
         		<div class="elementor-element elementor-element-47a4d04 elementor-widget elementor-widget-ct_text_editor" data-id="47a4d04" data-element_type="widget" data-e-type="widget" data-widget_type="ct_text_editor.default">
 				<div class="elementor-widget-container">
@@ -1513,7 +1299,7 @@ Acknowledging accountability, definite Promise to Clients. Believe in Teamwork p
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			<p>You have better things to do than worry about IT for your small business. <a href="/contact">Let’s Discuss about Project.</a></p>		
+			<p>{!! $siteSettings->get('cta_text')?->value ?? '' !!}</p>
 		</div>
 	</div>
 </div>				</div>

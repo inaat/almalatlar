@@ -363,7 +363,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
                 }
             ">
         </div>
-        <a href="/">            <img loading="lazy" width="2412" height="505" src="/wp-content/uploads/2021/11/web-logo.png" class="attachment-full" alt="" />        </a>    </div>
+        <a href="/">            <img loading="lazy" width="2412" height="505" src="{{ $siteSettings->get('site_logo')?->value ?? '/wp-content/uploads/2021/11/web-logo.png' }}" class="attachment-full" alt="" />        </a>    </div>
 				</div>
 				</div>
 				<div class="elementor-element elementor-element-91b9ab6 elementor-widget__width-initial el-flex-grow elementor-widget elementor-widget-ct_menu" data-id="91b9ab6" data-element_type="widget" data-e-type="widget" data-widget_type="ct_menu.default">
@@ -512,7 +512,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
                 }
             ">
         </div>
-        <a href="/">            <img loading="lazy" width="2412" height="505" src="/wp-content/uploads/2021/11/web-logo.png" class="attachment-full" alt="" />        </a>    </div>
+        <a href="/">            <img loading="lazy" width="2412" height="505" src="{{ $siteSettings->get('site_logo')?->value ?? '/wp-content/uploads/2021/11/web-logo.png' }}" class="attachment-full" alt="" />        </a>    </div>
 				</div>
 				</div>
 				<div class="elementor-element elementor-element-79ba75a elementor-widget__width-auto el-flex-grow elementor-widget elementor-widget-ct_menu" data-id="79ba75a" data-element_type="widget" data-e-type="widget" data-widget_type="ct_menu.default">
@@ -640,12 +640,12 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
             <div class="container">
                 <div class="row">
                     <div class="ct-header-branding">
-                        <a class="logo-mobile" href="/" title="MAC |" rel="home"><img src="/wp-content/uploads/2021/11/web-logo.png" alt="MAC |"/></a><a class="logo-light" href="/" title="MAC |" rel="home"><img src="/wp-content/themes/itfirm/assets/images/logo-df.png" alt="MAC |"/></a>                    </div>
+                        <a class="logo-mobile" href="/" title="MAC |" rel="home"><img src="{{ $siteSettings->get('site_logo')?->value ?? '/wp-content/uploads/2021/11/web-logo.png' }}" alt="MAC |"/></a><a class="logo-light" href="/" title="MAC |" rel="home"><img src="/wp-content/themes/itfirm/assets/images/logo-df.png" alt="MAC |"/></a>                    </div>
                     <div class="ct-header-navigation">
                         <nav class="ct-main-navigation">
                             <div class="ct-main-navigation-inner">
                                                                     <div class="ct-logo-mobile">
-                                        <a class="logo-mobile" href="/" title="MAC |" rel="home"><img src="/wp-content/uploads/2021/11/web-logo.png" alt="MAC |"/></a><a class="logo-light" href="/" title="MAC |" rel="home"><img src="/wp-content/themes/itfirm/assets/images/logo-df.png" alt="MAC |"/></a>                                    </div>
+                                        <a class="logo-mobile" href="/" title="MAC |" rel="home"><img src="{{ $siteSettings->get('site_logo')?->value ?? '/wp-content/uploads/2021/11/web-logo.png' }}" alt="MAC |"/></a><a class="logo-light" href="/" title="MAC |" rel="home"><img src="/wp-content/themes/itfirm/assets/images/logo-df.png" alt="MAC |"/></a>                                    </div>
                                                                                                 <ul id="menu-header-menu-2" class="ct-main-menu clearfix"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-9013"><a href="/"><span>Home</span></a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-9014"><a href="/about"><span>About</span></a>
 <ul class="sub-menu">
@@ -707,7 +707,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
     </div>
   
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">Looking for the Best IT Business Solutions?</span>    </h3>
+        <span class="ct-text-inner">{{ $siteSettings->get('footer_cta_heading')?->value ?? 'Looking for the Best IT Business Solutions?' }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -721,7 +721,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			As a app web crawler expert, We will help to organize.		
+			{{ $siteSettings->get('footer_cta_description')?->value ?? 'As a app web crawler expert, We will help to organize.' }}
 		</div>
 	</div>
 </div>				</div>
@@ -779,7 +779,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
         <div class="ct-inline-css"  data-css="
             ">
         </div>
-        <a href="/">            <img width="1852" height="1628" src="/wp-content/uploads/2021/11/web-logo1.png" class="attachment-full" alt="" />        </a>    </div>
+        <a href="/">            <img width="1852" height="1628" src="{{ $siteSettings->get('site_logo_footer')?->value ?? '/wp-content/uploads/2021/11/web-logo1.png' }}" class="attachment-full" alt="" />        </a>    </div>
 				</div>
 				</div>
 				<div class="elementor-element elementor-element-4a24853 elementor-widget elementor-widget-ct_text_editor" data-id="4a24853" data-element_type="widget" data-e-type="widget" data-widget_type="ct_text_editor.default">
@@ -791,7 +791,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			Adopting the evolving new IT technologies. Acting with strong ethics, Honesty, and transparency.		
+			{{ $siteSettings->get('footer_tagline')?->value ?? 'Adopting the evolving new IT technologies. Acting with strong ethics, Honesty, and transparency.' }}
 		</div>
 	</div>
 </div>				</div>
@@ -860,13 +860,13 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
                 	    			        <span class="ct-contact-icon">
     		                <i aria-hidden="true" class="fas fa-map-marker-alt"></i>    		                    			        </span>
     			                        <span class="ct-contact-content">
-                	   P.O. Box 12234 - Riyadh 2949 Kingdom of Saudi Arabia                    </span>
+                	   {{ $siteSettings->get('address')?->value ?? 'P.O. Box 12234 - Riyadh 2949 Kingdom of Saudi Arabia' }}                    </span>
                                    </div>
                         <div class="item--contact-info">
                 	    			        <span class="ct-contact-icon">
     		                <i aria-hidden="true" class="fas fa-phone-alt"></i>    		                    			        </span>
     			                        <span class="ct-contact-content">
-                	   +(966) 11 4002 03                    </span>
+                	   {{ $siteSettings->get('phone')?->value ?? '+(966) 11 4002 03' }}                    </span>
                                    </div>
             </div>
 				</div>
@@ -894,8 +894,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			Mon &#8211; Sat: 8 am &#8211; 5 pm,<br />
-Sunday: CLOSED		
+			{{ $siteSettings->get('open_hours')?->value ?? 'Mon – Sat: 8 am – 5 pm, Sunday: CLOSED' }}
 		</div>
 	</div>
 </div>				</div>
@@ -931,9 +930,9 @@ Sunday: CLOSED
 				<div class="elementor-widget-container">
 							<div class="elementor-custom-embed">
 			<iframe loading="lazy"
-					src="https://maps.google.com/maps?q=P.O.%20Box%2012234%20-%20Riyadh%202949%20Kingdom%20of%20Saudi%20Arabia&amp;t=m&amp;z=5&amp;output=embed&amp;iwloc=near"
-					title="P.O. Box 12234 - Riyadh 2949 Kingdom of Saudi Arabia"
-					aria-label="P.O. Box 12234 - Riyadh 2949 Kingdom of Saudi Arabia"
+					src="https://maps.google.com/maps?q={{ urlencode($siteSettings->get('map_query')?->value ?? 'Riyadh, Saudi Arabia') }}&amp;t=m&amp;z=5&amp;output=embed&amp;iwloc=near"
+					title="{{ $siteSettings->get('map_query')?->value ?? 'Riyadh, Saudi Arabia' }}"
+					aria-label="{{ $siteSettings->get('map_query')?->value ?? 'Riyadh, Saudi Arabia' }}"
 			></iframe>
 		</div>
 						</div>
@@ -957,8 +956,7 @@ Sunday: CLOSED
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			<p>©         <span class="ct-year">2026</span>
-         Al Malath Al Arabia. All rights reserved. Design and Developed by <a href="https://abq.com.sa/">ABQ IT Company</a></p>		
+			<p>© <span class="ct-year">{{ date('Y') }}</span> {!! $siteSettings->get('copyright')?->value ?? 'Al Malath Al Arabia. All rights reserved.' !!}</p>
 		</div>
 	</div>
 </div>				</div>
@@ -972,22 +970,13 @@ Sunday: CLOSED
 				<div class="elementor-widget-container">
 					    <div class="ct-icon1 style1 icon-align-right">
         
-                            <a class="ct_icon-86bb465-0 elementor-repeater-item-9f033d2" href="#">
+                            <a class="ct_icon-86bb465-0 elementor-repeater-item-9f033d2" href="{{ $siteSettings->get('social_facebook')?->value ?? '#' }}">
                     <i aria-hidden="true" class="fab fa-facebook-f"></i>                                    </a>
-            
-            
-        
-                            <a class="ct_icon-86bb465-1 elementor-repeater-item-3f0e626" href="#">
+                            <a class="ct_icon-86bb465-1 elementor-repeater-item-3f0e626" href="{{ $siteSettings->get('social_twitter')?->value ?? '#' }}">
                     <i aria-hidden="true" class="fab fa-twitter"></i>                                    </a>
-            
-            
-        
-                            <a class="ct_icon-86bb465-2 elementor-repeater-item-05c7498" href="#">
+                            <a class="ct_icon-86bb465-2 elementor-repeater-item-05c7498" href="{{ $siteSettings->get('social_dribbble')?->value ?? '#' }}">
                     <i aria-hidden="true" class="fab fa-dribbble"></i>                                    </a>
-            
-            
-        
-                            <a class="ct_icon-86bb465-3 elementor-repeater-item-7342d6c" href="#">
+                            <a class="ct_icon-86bb465-3 elementor-repeater-item-7342d6c" href="{{ $siteSettings->get('social_behance')?->value ?? '#' }}">
                     <i aria-hidden="true" class="fab fa-behance"></i>                                    </a>
             
             

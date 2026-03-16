@@ -24,5 +24,10 @@ class DatabaseSeeder extends Seeder
 
         $this->call(ServiceCategorySeeder::class);
         $this->call(ServiceSeeder::class);
+        $this->call(SliderSlideSeeder::class);
+        $this->call(ClientSeeder::class);
+        $this->call(CounterSeeder::class);
+        $this->call(AboutTabSeeder::class);
+        $this->call(SiteSettingSeeder::class);
     }
 }
