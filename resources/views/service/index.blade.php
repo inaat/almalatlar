@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Services &#8211; MAC |')
+@section('title', 'Services')
 
 @section('head_extra')
 <style id="ct_theme_options-dynamic-css" title="dynamic-css" class="redux-options-output">body #ct-pagetitle{background-image:url('../wp-content/uploads/2023/07/Untitled-design-5.png');}a{color:#3f69b1;}a:hover{color:#3f69b1;}a:active{color:#3f69b1;}</style>
@@ -38,7 +38,7 @@
                                 Master Clock System            </a>
         </h2>
         <div class="entry-excerpt">
-            Contact us now If need help! +(966) 11 4002 03 or go to contact form: Let’s start now Master Clock System A master clock is an electronic device that provides time synchronization signals to several slave clocks on a network. Al Malath Al Arabia Master Clock solutions are according to the international standards, and we [&hellip;]        </div>
+            Contact us now If need help!  or go to contact form: Let’s start now Master Clock System A master clock is an electronic device that provides time synchronization signals to several slave clocks on a network. Al Malath Al Arabia Master Clock solutions are according to the international standards, and we [&hellip;]        </div>
         <div class="entry-readmore">
             <a class="btn" href="master-clock-system/index.html">
                 <span>Read More</span>
@@ -60,7 +60,7 @@
                                 Building Management System            </a>
         </h2>
         <div class="entry-excerpt">
-            Contact us now If need help! +(966) 11 4002 03 or go to contact form: Let’s start now Building Management System Al Malath Al Arabia is partner with industry leading BMS vendors .A Building Management System (BMS) can help reduce energy and maintenance costs by maintaining building temperatures within a specified range, lighting rooms according [&hellip;]        </div>
+            Contact us now If need help!  or go to contact form: Let’s start now Building Management System Al Malath Al Arabia is partner with industry leading BMS vendors .A Building Management System (BMS) can help reduce energy and maintenance costs by maintaining building temperatures within a specified range, lighting rooms according [&hellip;]        </div>
         <div class="entry-readmore">
             <a class="btn" href="building-management-system/index.html">
                 <span>Read More</span>
@@ -82,7 +82,7 @@
                                 Audio &#038; Visual System            </a>
         </h2>
         <div class="entry-excerpt">
-            Contact us now If need help! +(966) 11 4002 03 or go to contact form: Let’s start now Audio &#038; Visual System We design conference rooms with particular emphasis on flexibility and on the ability to adjust to differing requirements and workloads. Al Malath Al Arabia continuously and constantly integrates and upgrades the designs by [&hellip;]        </div>
+            Contact us now If need help!  or go to contact form: Let’s start now Audio &#038; Visual System We design conference rooms with particular emphasis on flexibility and on the ability to adjust to differing requirements and workloads. Al Malath Al Arabia continuously and constantly integrates and upgrades the designs by [&hellip;]        </div>
         <div class="entry-readmore">
             <a class="btn" href="audio-visual-system/index.html">
                 <span>Read More</span>
@@ -104,7 +104,7 @@
                                 Public Address System            </a>
         </h2>
         <div class="entry-excerpt">
-            Contact us now If need help! +(966) 11 4002 03 or go to contact form: Let’s start now Public Address System Al Malath Al Arabia offers many different types of Public Address systems depending on the number of audiences and the cost of the service. We enable our customers with the Public Address System to [&hellip;]        </div>
+            Contact us now If need help!  or go to contact form: Let’s start now Public Address System Al Malath Al Arabia offers many different types of Public Address systems depending on the number of audiences and the cost of the service. We enable our customers with the Public Address System to [&hellip;]        </div>
         <div class="entry-readmore">
             <a class="btn" href="public-address-system/index.html">
                 <span>Read More</span>
@@ -126,7 +126,7 @@
                                 Fire Alarm &#038; Fire Suspension System            </a>
         </h2>
         <div class="entry-excerpt">
-            Contact us now If need help! +(966) 11 4002 03 or go to contact form: Let’s start now Fire Alarm &#038; Fire Suspension System Al Malath Al Arabia offers a wide range of Fire products and solutions to Clients who wish to augment the performance, reliability, and commercial profitability of their business with innovative technologies. [&hellip;]        </div>
+            Contact us now If need help!  or go to contact form: Let’s start now Fire Alarm &#038; Fire Suspension System Al Malath Al Arabia offers a wide range of Fire products and solutions to Clients who wish to augment the performance, reliability, and commercial profitability of their business with innovative technologies. [&hellip;]        </div>
         <div class="entry-readmore">
             <a class="btn" href="fire-alarm-fire-suspension-system/index.html">
                 <span>Read More</span>
@@ -148,7 +148,7 @@
                                 Access Control System            </a>
         </h2>
         <div class="entry-excerpt">
-            Contact us now If need help! +(966) 11 4002 03 or go to contact form: Let’s start now Access Control System The smart access control solutions enable building owners, offices, tenants and visitors to &#8216;go with the flow&#8217;. Investing in the right access control technology is central to the protection of people and assets. While [&hellip;]        </div>
+            Contact us now If need help!  or go to contact form: Let’s start now Access Control System The smart access control solutions enable building owners, offices, tenants and visitors to &#8216;go with the flow&#8217;. Investing in the right access control technology is central to the protection of people and assets. While [&hellip;]        </div>
         <div class="entry-readmore">
             <a class="btn" href="access-control-system/index.html">
                 <span>Read More</span>
@@ -170,7 +170,7 @@
                                 CCTV System            </a>
         </h2>
         <div class="entry-excerpt">
-            Contact us now If need help! +(966) 11 4002 03 or go to contact form: Let’s start now CCTV System Our CCTV solutions ensure that your expectations are set to what a system can deliver. We also provide stand-alone CCTV systems and visual display. We provide a total range of digital video and audio recording [&hellip;]        </div>
+            Contact us now If need help!  or go to contact form: Let’s start now CCTV System Our CCTV solutions ensure that your expectations are set to what a system can deliver. We also provide stand-alone CCTV systems and visual display. We provide a total range of digital video and audio recording [&hellip;]        </div>
         <div class="entry-readmore">
             <a class="btn" href="cctv-system/index.html">
                 <span>Read More</span>
@@ -192,7 +192,7 @@
                                 Call Center Services            </a>
         </h2>
         <div class="entry-excerpt">
-            Contact us now If need help! +(966) 11 4002 03 or go to contact form: Let’s start now Call Center Services Al Malath Al Arabia offering call center services on-Premises or On-cloud. We also have call center services outsource model that fits many of the customers who do not have their own call center system [&hellip;]        </div>
+            Contact us now If need help!  or go to contact form: Let’s start now Call Center Services Al Malath Al Arabia offering call center services on-Premises or On-cloud. We also have call center services outsource model that fits many of the customers who do not have their own call center system [&hellip;]        </div>
         <div class="entry-readmore">
             <a class="btn" href="call-center-services/index.html">
                 <span>Read More</span>
@@ -214,7 +214,7 @@
                                 IT Resource Outsourcing            </a>
         </h2>
         <div class="entry-excerpt">
-            Contact us now If need help! +(966) 11 4002 03 or go to contact form: Let’s start now IT Resource Outsourcing Due to technology surfacing very fast, companies adopt many IT solutions and keeping expert for each technology has high cost and many of companies suffer with this issue. Al Malath Al Arabia provides IT [&hellip;]        </div>
+            Contact us now If need help!  or go to contact form: Let’s start now IT Resource Outsourcing Due to technology surfacing very fast, companies adopt many IT solutions and keeping expert for each technology has high cost and many of companies suffer with this issue. Al Malath Al Arabia provides IT [&hellip;]        </div>
         <div class="entry-readmore">
             <a class="btn" href="it-resource-outsourcing/index.html">
                 <span>Read More</span>
@@ -236,7 +236,7 @@
                                 Business Process Automation            </a>
         </h2>
         <div class="entry-excerpt">
-            Contact us now If need help! +(966) 11 4002 03 or go to contact form: Let’s start now Business Process Automation Al Malath Al Arabia is specialized in Basic automation, Process automation and Advanced automation according to the customer need and the environment. We successfully implemented Business process management (BPM) projects for the customer and [&hellip;]        </div>
+            Contact us now If need help!  or go to contact form: Let’s start now Business Process Automation Al Malath Al Arabia is specialized in Basic automation, Process automation and Advanced automation according to the customer need and the environment. We successfully implemented Business process management (BPM) projects for the customer and [&hellip;]        </div>
         <div class="entry-readmore">
             <a class="btn" href="business-process-automation/index.html">
                 <span>Read More</span>

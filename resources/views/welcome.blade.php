@@ -259,7 +259,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
                 	    			        <span class="ct-contact-icon">
     		                <i aria-hidden="true" class="flaticon flaticon-telephone-call"></i>    		                    			        </span>
     			                        <span class="ct-contact-content">
-                	   +(966) 11 4002 03                    </span>
+                	                       </span>
                                             <a class="pxl-item--link" href="tel:+96611400203" target="_blank"></a>
                                    </div>
             </div>
@@ -1932,7 +1932,7 @@ IT, possible!
                             </div>
         		<div class="item--meta">
     		<div class="item--title el-empty">Call for help</div>
-    		<div class="item--phone el-empty">+(966) 11 4002 03</div>
+    		<div class="item--phone el-empty"></div>
         </div>
 	</div>
 </div>				</div>
@@ -2942,7 +2942,7 @@ Acknowledging accountability, definite Promise to Clients. Believe in Teamwork p
                 	    			        <span class="ct-contact-icon">
     		                <i aria-hidden="true" class="fas fa-phone-alt"></i>    		                    			        </span>
     			                        <span class="ct-contact-content">
-                	   +(966) 11 4002 03                    </span>
+                	                       </span>
                                    </div>
             </div>
 				</div>

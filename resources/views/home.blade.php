@@ -697,7 +697,7 @@ IT, possible!
                             </div>
         		<div class="item--meta">
     		<div class="item--title el-empty">Call for help</div>
-    		<div class="item--phone el-empty">+(966) 11 4002 03</div>
+    		<div class="item--phone el-empty"></div>
         </div>
 	</div>
 </div>				</div>

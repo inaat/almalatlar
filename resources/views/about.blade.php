@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'About &#8211; MAC |')
+@section('title', 'About')
 
 @section('head_extra')
 <style id="ct_theme_options-dynamic-css" title="dynamic-css" class="redux-options-output">body #ct-pagetitle{background-image:url('../wp-content/uploads/2023/07/Untitled-design-5.png');}a{color:#3f69b1;}a:hover{color:#3f69b1;}a:active{color:#3f69b1;}</style><style id="ct-page-dynamic-css" data-type="redux-output-css">#content{padding-top:0px;padding-bottom:0px;}</style>
@@ -250,7 +250,7 @@
                             </div>
         		<div class="item--meta">
     		<div class="item--title el-empty">Call for help</div>
-    		<div class="item--phone el-empty">+(966) 11 4002 03</div>
+    		<div class="item--phone el-empty"></div>
         </div>
 	</div>
 </div>				</div>

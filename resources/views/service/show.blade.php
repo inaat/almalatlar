@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $service->title . ' &#8211; MAC |')
+@section('title', $service->title)
 
 @section('head_extra')
 <style id="ct_theme_options-dynamic-css" title="dynamic-css" class="redux-options-output">body #ct-pagetitle{background-image:url('/wp-content/uploads/2023/07/Untitled-design-5.png');}a{color:#3f69b1;}a:hover{color:#3f69b1;}a:active{color:#3f69b1;}</style>
@@ -56,7 +56,7 @@
                                                                 <div class="ct-infobox-inner">
                                                                     <div class="item--subtitle el-empty">Contact us now</div>
                                                                     <div class="item--title el-empty">If need help!</div>
-                                                                    <div class="item--phone el-empty">+(966) 11 4002 03</div>
+                                                                    <div class="item--phone el-empty"></div>
                                                                     <div class="item--desc el-empty">or go to contact form:</div>
                                                                     <a class="ct-info-button" href="/contact">Let's start now<i class="fas fa-link"></i></a>
                                                                 </div>

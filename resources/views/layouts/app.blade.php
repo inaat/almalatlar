@@ -233,8 +233,8 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
                 	    			        <span class="ct-contact-icon">
     		                <i aria-hidden="true" class="flaticon flaticon-telephone-call"></i>    		                    			        </span>
     			                        <span class="ct-contact-content">
-                	   +(966) 11 4002 03                    </span>
-                                            <a class="pxl-item--link" href="tel:+96611400203" target="_blank"></a>
+                	   {{ $siteSettings->get('phone')?->value ?? '' }}                    </span>
+                                            <a class="pxl-item--link" href="tel:{{ preg_replace('/[^0-9+]/', '', $siteSettings->get('phone')?->value ?? '+96611400203') }}" target="_blank"></a>
                                    </div>
             </div>
 				</div>
@@ -298,8 +298,8 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
                 	    			        <span class="ct-contact-icon">
     		                <i aria-hidden="true" class="flaticon flaticon-inbox"></i>    		                    			        </span>
     			                        <span class="ct-contact-content">
-                	   Info@almalath.com                    </span>
-                                            <a class="pxl-item--link" href="mailto:envato@mail.com" target="_blank"></a>
+                	   {{ $siteSettings->get('contact_email')?->value ?? 'Info@almalath.com' }}                    </span>
+                                            <a class="pxl-item--link" href="mailto:{{ $siteSettings->get('contact_email')?->value ?? 'Info@almalath.com' }}" target="_blank"></a>
                                    </div>
             </div>
 				</div>
@@ -382,62 +382,13 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
                 }
             ">
         </div>
-        <div class="menu-header-menu-container"><ul id="menu-header-menu" class="ct-main-menu clearfix"><li id="menu-item-9013" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-9013"><a href="/"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>Home</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a></li>
-<li id="menu-item-9014" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-9014"><a href="/about"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>About</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a>
-<ul class="sub-menu">
-	<li id="menu-item-9419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9419"><a href="/customers-clients"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>Customers/Clients</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a></li>
-	<li id="menu-item-9418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9418"><a href="/partners"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>Our Partners</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a></li>
-</ul>
-</li>
-@php $megaColIds=[['col'=>'dd797c6','h'=>'2ad64e7','m'=>'cfec087'],['col'=>'d576266','h'=>'7cf32ec','m'=>'f2c17ab'],['col'=>'c737809','h'=>'094a9e7','m'=>'9cc1b2a'],['col'=>'820fea2','h'=>'50775e9','m'=>'1739158']]; @endphp
-<li id="menu-item-9195" class="menu-item menu-item-type-custom menu-item-object-custom megamenu megamenu-style-alt menu-item-has-children menu-item-9195"><a href="#"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>Services</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a><ul class="sub-menu"><li><div class="container">		<div data-elementor-type="wp-post" data-elementor-id="9051" class="elementor elementor-9051">
-				        <section class="elementor-section elementor-top-section elementor-element elementor-element-ceec42a elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none" data-id="ceec42a" data-element_type="section" data-e-type="section">
-                        <div class="elementor-container elementor-column-gap-extended ">
-    @foreach($navServiceCategories as $navCat)
-    @php $ids = $megaColIds[$loop->index] ?? $megaColIds[0]; @endphp
-    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-{{ $ids['col'] }} ct-column-none col-offset-none col-color-offset-none" data-id="{{ $ids['col'] }}" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-            <div class="elementor-element elementor-element-{{ $ids['h'] }} elementor-widget elementor-widget-ct_heading" data-id="{{ $ids['h'] }}" data-element_type="widget" data-e-type="widget" data-widget_type="ct_heading.default">
-				<div class="elementor-widget-container">
-					<div id="ct_heading-{{ $ids['h'] }}" class="ct-heading h-align- item-st-default highlight-style1">
-  <div class="ct-heading--inner">
-    <div class="ct-inline-css" data-css="                                "></div>
-	    <h3 class="item--title st-default " data-wow-delay="ms">
-        <span class="ct-text-inner">{{ $navCat->name }}</span></h3>
-  </div>
-</div>
-				</div>
-			</div>
-			<div class="elementor-element elementor-element-{{ $ids['m'] }} elementor-widget elementor-widget-ct_menu_item" data-id="{{ $ids['m'] }}" data-element_type="widget" data-e-type="widget" data-widget_type="ct_menu_item.default">
-				<div class="elementor-widget-container">
-					    <ul class="ct-menu-item style-default ">
-                        @foreach($navCat->services as $navService)
-                        <li><a href="/service/{{ $navService->slug }}"><i aria-hidden="true" class="far fa-dot-circle"></i> {{ $navService->title }}</a></li>
-                        @endforeach
-                    </ul>
-				</div>
-			</div>
-        </div>
-    </div>
-    @endforeach
-</div>
-        </section>
-        		</div>
-		</div></li></ul></li>
-<li id="menu-item-9016" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9016"><a href="#"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>Products</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a>
-<ul class="sub-menu">
-	<li id="menu-item-9382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9382"><a href="/it-hardware-software"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>IT Hardware &#038; Software</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a></li>
-	<li id="menu-item-9395" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9395"><a href="/it-passive-equipment"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>IT Passive Equipment</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a></li>
-</ul>
-</li>
-<li id="menu-item-9635" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9635"><a href="/contact"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>Contact</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a></li>
-</ul></div>    </div>
+        <div class="menu-header-menu-container"><ul id="menu-header-menu" class="ct-main-menu clearfix">@include('partials.nav-menu-full')</ul></div>    </div>
 				</div>
 				</div>
 				<div class="elementor-element elementor-element-b48bc37 elementor-widget__width-initial elementor-widget elementor-widget-ct_icon_search" data-id="b48bc37" data-element_type="widget" data-e-type="widget" data-widget_type="ct_icon_search.default">
 				<div class="elementor-widget-container">
 					<div class="ct-search-form1">
-	<form role="search" method="get" action="https://almalath.com/">
+	<form role="search" method="get" action="{{ url('/') }}">
         <input type="text" placeholder="Search..." name="s" class="search-field" />
         <button type="submit" class="search-submit"><i class="caseicon-search"></i></button>
     </form>
@@ -546,61 +497,13 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
                 }
             ">
         </div>
-        <div class="menu-header-menu-container"><ul id="menu-header-menu-1" class="ct-main-menu clearfix"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-9013"><a href="/"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>Home</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-9014"><a href="/about"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>About</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a>
-<ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9419"><a href="/customers-clients"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>Customers/Clients</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9418"><a href="/partners"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>Our Partners</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom megamenu megamenu-style-alt menu-item-has-children menu-item-9195"><a href="#"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>Services</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a><ul class="sub-menu"><li><div class="container">		<div data-elementor-type="wp-post" data-elementor-id="9051" class="elementor elementor-9051">
-				        <section class="elementor-section elementor-top-section elementor-element elementor-element-ceec42a elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none" data-id="ceec42a" data-element_type="section" data-e-type="section">
-                        <div class="elementor-container elementor-column-gap-extended ">
-    @foreach($navServiceCategories as $navCat)
-    @php $ids = $megaColIds[$loop->index] ?? $megaColIds[0]; @endphp
-    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-{{ $ids['col'] }} ct-column-none col-offset-none col-color-offset-none" data-id="{{ $ids['col'] }}" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-            <div class="elementor-element elementor-element-{{ $ids['h'] }} elementor-widget elementor-widget-ct_heading" data-id="{{ $ids['h'] }}" data-element_type="widget" data-e-type="widget" data-widget_type="ct_heading.default">
-				<div class="elementor-widget-container">
-					<div id="ct_heading-{{ $ids['h'] }}" class="ct-heading h-align- item-st-default highlight-style1">
-  <div class="ct-heading--inner">
-    <div class="ct-inline-css" data-css="                                "></div>
-	    <h3 class="item--title st-default " data-wow-delay="ms">
-        <span class="ct-text-inner">{{ $navCat->name }}</span></h3>
-  </div>
-</div>
-				</div>
-			</div>
-			<div class="elementor-element elementor-element-{{ $ids['m'] }} elementor-widget elementor-widget-ct_menu_item" data-id="{{ $ids['m'] }}" data-element_type="widget" data-e-type="widget" data-widget_type="ct_menu_item.default">
-				<div class="elementor-widget-container">
-					    <ul class="ct-menu-item style-default ">
-                        @foreach($navCat->services as $navService)
-                        <li><a href="/service/{{ $navService->slug }}"><i aria-hidden="true" class="far fa-dot-circle"></i> {{ $navService->title }}</a></li>
-                        @endforeach
-                    </ul>
-				</div>
-			</div>
-        </div>
-    </div>
-    @endforeach
-</div>
-        </section>
-        		</div>
-		</div></li></ul></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9016"><a href="#"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>Products</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a>
-<ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9382"><a href="/it-hardware-software"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>IT Hardware &#038; Software</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9395"><a href="/it-passive-equipment"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>IT Passive Equipment</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9635"><a href="/contact"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>Contact</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a></li>
-</ul></div>    </div>
+        <div class="menu-header-menu-container"><ul id="menu-header-menu-1" class="ct-main-menu clearfix">@include('partials.nav-menu-full')</ul></div>    </div>
 				</div>
 				</div>
 				<div class="elementor-element elementor-element-2ea0ac5 elementor-widget__width-auto elementor-widget elementor-widget-ct_icon_search" data-id="2ea0ac5" data-element_type="widget" data-e-type="widget" data-widget_type="ct_icon_search.default">
 				<div class="elementor-widget-container">
 					<div class="ct-search-form1">
-	<form role="search" method="get" action="https://almalath.com/">
+	<form role="search" method="get" action="{{ url('/') }}">
         <input type="text" placeholder="Search..." name="s" class="search-field" />
         <button type="submit" class="search-submit"><i class="caseicon-search"></i></button>
     </form>
@@ -669,61 +572,13 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
             <div class="container">
                 <div class="row">
                     <div class="ct-header-branding">
-                        <a class="logo-mobile" href="/" title="MAC |" rel="home"><img src="{{ $siteSettings->get('site_logo')?->value ?? '/wp-content/uploads/2021/11/web-logo.png' }}" alt="MAC |"/></a><a class="logo-light" href="/" title="MAC |" rel="home"><img src="/wp-content/themes/itfirm/assets/images/logo-df.png" alt="MAC |"/></a>                    </div>
+                        <a class="logo-mobile" href="/" title="{{ $siteSettings->get('site_name')?->value ?? 'MAC' }}" rel="home"><img src="{{ $siteSettings->get('site_logo')?->value ?? '/wp-content/uploads/2021/11/web-logo.png' }}" alt="{{ $siteSettings->get('site_name')?->value ?? 'MAC' }}"/></a><a class="logo-light" href="/" title="{{ $siteSettings->get('site_name')?->value ?? 'MAC' }}" rel="home"><img src="/wp-content/themes/itfirm/assets/images/logo-df.png" alt="{{ $siteSettings->get('site_name')?->value ?? 'MAC' }}"/></a>                    </div>
                     <div class="ct-header-navigation">
                         <nav class="ct-main-navigation">
                             <div class="ct-main-navigation-inner">
                                                                     <div class="ct-logo-mobile">
-                                        <a class="logo-mobile" href="/" title="MAC |" rel="home"><img src="{{ $siteSettings->get('site_logo')?->value ?? '/wp-content/uploads/2021/11/web-logo.png' }}" alt="MAC |"/></a><a class="logo-light" href="/" title="MAC |" rel="home"><img src="/wp-content/themes/itfirm/assets/images/logo-df.png" alt="MAC |"/></a>                                    </div>
-                                                                                                <ul id="menu-header-menu-2" class="ct-main-menu clearfix"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-9013"><a href="/"><span>Home</span></a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-9014"><a href="/about"><span>About</span></a>
-<ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9419"><a href="/customers-clients"><span>Customers/Clients</span></a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9418"><a href="/partners"><span>Our Partners</span></a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom megamenu megamenu-style-alt menu-item-has-children menu-item-9195"><a href="#"><span>Services</span></a><ul class="sub-menu"><li><div class="container">		<div data-elementor-type="wp-post" data-elementor-id="9051" class="elementor elementor-9051">
-				        <section class="elementor-section elementor-top-section elementor-element elementor-element-ceec42a elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none" data-id="ceec42a" data-element_type="section" data-e-type="section">
-                        <div class="elementor-container elementor-column-gap-extended ">
-    @foreach($navServiceCategories as $navCat)
-    @php $ids = $megaColIds[$loop->index] ?? $megaColIds[0]; @endphp
-    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-{{ $ids['col'] }} ct-column-none col-offset-none col-color-offset-none" data-id="{{ $ids['col'] }}" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-            <div class="elementor-element elementor-element-{{ $ids['h'] }} elementor-widget elementor-widget-ct_heading" data-id="{{ $ids['h'] }}" data-element_type="widget" data-e-type="widget" data-widget_type="ct_heading.default">
-				<div class="elementor-widget-container">
-					<div id="ct_heading-{{ $ids['h'] }}" class="ct-heading h-align- item-st-default highlight-style1">
-  <div class="ct-heading--inner">
-    <div class="ct-inline-css" data-css="                                "></div>
-	    <h3 class="item--title st-default " data-wow-delay="ms">
-        <span class="ct-text-inner">{{ $navCat->name }}</span></h3>
-  </div>
-</div>
-				</div>
-			</div>
-			<div class="elementor-element elementor-element-{{ $ids['m'] }} elementor-widget elementor-widget-ct_menu_item" data-id="{{ $ids['m'] }}" data-element_type="widget" data-e-type="widget" data-widget_type="ct_menu_item.default">
-				<div class="elementor-widget-container">
-					    <ul class="ct-menu-item style-default ">
-                        @foreach($navCat->services as $navService)
-                        <li><a href="/service/{{ $navService->slug }}"><i aria-hidden="true" class="far fa-dot-circle"></i> {{ $navService->title }}</a></li>
-                        @endforeach
-                    </ul>
-				</div>
-			</div>
-        </div>
-    </div>
-    @endforeach
-</div>
-        </section>
-        		</div>
-		</div></li></ul></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9016"><a href="#"><span>Products</span></a>
-<ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9382"><a href="/it-hardware-software"><span>IT Hardware &#038; Software</span></a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9395"><a href="/it-passive-equipment"><span>IT Passive Equipment</span></a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9635"><a href="/contact"><span>Contact</span></a></li>
-</ul>                            </div>
+                                        <a class="logo-mobile" href="/" title="{{ $siteSettings->get('site_name')?->value ?? 'MAC' }}" rel="home"><img src="{{ $siteSettings->get('site_logo')?->value ?? '/wp-content/uploads/2021/11/web-logo.png' }}" alt="{{ $siteSettings->get('site_name')?->value ?? 'MAC' }}"/></a><a class="logo-light" href="/" title="{{ $siteSettings->get('site_name')?->value ?? 'MAC' }}" rel="home"><img src="/wp-content/themes/itfirm/assets/images/logo-df.png" alt="{{ $siteSettings->get('site_name')?->value ?? 'MAC' }}"/></a>                                    </div>
+                                                                                                <ul id="menu-header-menu-2" class="ct-main-menu clearfix">@include('partials.nav-menu-simple')</ul>                            </div>
                         </nav>
                     </div>
                     <div class="ct-menu-overlay"></div>
@@ -917,7 +772,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
                 	    			        <span class="ct-contact-icon">
     		                <i aria-hidden="true" class="fas fa-phone-alt"></i>    		                    			        </span>
     			                        <span class="ct-contact-content">
-                	   {{ $siteSettings->get('phone')?->value ?? '+(966) 11 4002 03' }}                    </span>
+                	   {{ $siteSettings->get('phone')?->value ?? '' }}                    </span>
                                    </div>
             </div>
 				</div>

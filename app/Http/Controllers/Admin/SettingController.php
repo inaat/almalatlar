@@ -14,7 +14,7 @@ class SettingController extends Controller
     // Known text setting keys shown in the form
     protected array $textFields = [
         'site_name', 'site_tagline',
-        'address', 'phone', 'open_hours',
+        'contact_email', 'address', 'phone', 'open_hours',
         'footer_tagline', 'footer_cta_heading', 'footer_cta_description',
         'copyright', 'map_query',
         'social_facebook', 'social_twitter', 'social_linkedin',

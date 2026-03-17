@@ -76,6 +76,9 @@
         <a class="nav-link {{ request()->routeIs('admin.services.*') ? 'active' : '' }}" href="{{ route('admin.services.index') }}">
             <i class="bi bi-gear-wide-connected"></i> Services
         </a>
+        <a class="nav-link {{ request()->routeIs('admin.products.*') ? 'active' : '' }}" href="{{ route('admin.products.index') }}">
+            <i class="bi bi-box-seam"></i> Products
+        </a>
 
         <div class="nav-section">Partners & Clients</div>
         <a class="nav-link {{ request()->routeIs('admin.partners.*') ? 'active' : '' }}" href="{{ route('admin.partners.index') }}">

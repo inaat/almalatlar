@@ -12,6 +12,8 @@ use App\Http\Controllers\Admin\AdminServiceController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
@@ -20,8 +22,9 @@ Route::get('/contact', fn() => view('contact'));
 Route::get('/customers-clients', [CustomersClientsController::class, 'index']);
 Route::get('/partners', [PartnersController::class, 'index']);
 Route::get('/team-details', fn() => view('team-details'));
-Route::get('/it-hardware-software', fn() => view('it-hardware-software'));
-Route::get('/it-passive-equipment', fn() => view('it-passive-equipment'));
+
+
+Route::get('/product/{slug}', [ProductController::class, 'show']);
 
 // Services
 Route::get('/service', fn() => view('service.index'));
@@ -43,4 +46,6 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::resource('clients', ClientController::class);
     Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
     Route::post('settings', [SettingController::class, 'update'])->name('settings.update');
+
+    Route::resource('products', AdminProductController::class);
 });

@@ -45,10 +45,16 @@
         <div class="card-body">
             <div class="row g-3">
                 <div class="col-md-6">
+                    <label class="form-label fw-semibold">Email</label>
+                    <input type="email" name="contact_email" class="form-control"
+                           value="{{ old('contact_email', $settings['contact_email']->value ?? '') }}"
+                           placeholder="Info@almalath.com">
+                </div>
+                <div class="col-md-6">
                     <label class="form-label fw-semibold">Phone</label>
                     <input type="text" name="phone" class="form-control"
                            value="{{ old('phone', $settings['phone']->value ?? '') }}"
-                           placeholder="+(966) 11 4002 03">
+                           placeholder="">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label fw-semibold">Open Hours</label>
@@ -147,7 +153,7 @@
 
     {{-- Any extra settings already in DB --}}
     @php
-        $knownKeys = ['site_name','site_tagline','site_logo','site_logo_footer','address','phone','open_hours','footer_tagline','footer_cta_heading','footer_cta_description','copyright','map_query','social_facebook','social_twitter','social_linkedin','social_dribbble','social_behance','social_instagram'];
+        $knownKeys = ['site_name','site_tagline','site_logo','site_logo_footer','contact_email','address','phone','open_hours','footer_tagline','footer_cta_heading','footer_cta_description','copyright','map_query','social_facebook','social_twitter','social_linkedin','social_dribbble','social_behance','social_instagram'];
         $extras = $settings->except($knownKeys);
     @endphp
     @if($extras->count())

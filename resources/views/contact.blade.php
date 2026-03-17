@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Contact &#8211; MAC |')
+@section('title', 'Contact')
 
 @section('head_extra')
 <style id="ct_theme_options-dynamic-css" title="dynamic-css" class="redux-options-output">body #ct-pagetitle{background-image:url('../wp-content/uploads/2023/07/Untitled-design-5.png');}a{color:#3f69b1;}a:hover{color:#3f69b1;}a:active{color:#3f69b1;}</style>
@@ -160,7 +160,7 @@
                         <div class="item--meta">
             <h4 class="item--title">
                 Telephone number            </h4>
-            <div class="item--description">+(966) 11 4002 03</div>
+            <div class="item--description"></div>
         </div>
     </div>
 </div>				</div>
@@ -177,7 +177,7 @@
                         <div class="item--meta">
             <h4 class="item--title">
                 Mail address            </h4>
-            <div class="item--description">Info@almalath.com</div>
+            <div class="item--description">{{ $siteSettings->get('contact_email')?->value ?? 'Info@almalath.com' }}</div>
         </div>
     </div>
 </div>				</div>

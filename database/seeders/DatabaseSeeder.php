@@ -30,5 +30,6 @@ class DatabaseSeeder extends Seeder
         $this->call(AboutTabSeeder::class);
         $this->call(SiteSettingSeeder::class);
         $this->call(PartnerSeeder::class);
+        $this->call(ProductSeeder::class);
     }
 }

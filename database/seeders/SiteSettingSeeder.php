@@ -14,7 +14,7 @@ class SiteSettingSeeder extends Seeder
             ['key' => 'about_heading',          'value' => 'Choose The Best IT Service Company',      'type' => 'text'],
             ['key' => 'about_description',      'value' => 'Since its founding in 2011 Al Malath Al Arabia has grown to be one of the major IT solutions integrators in the Kingdom. Our most key strength is the quality of our team of seasoned experts with over 30 years in the IT space. We have a strong foundation built on legacy including specialties in IT Hardware, Software and Services, Business Concepts Development, and Consultancy.', 'type' => 'text'],
             ['key' => 'about_video_id',         'value' => 'SF4aHwxHtZ0',                            'type' => 'text'],
-            ['key' => 'phone',                  'value' => '+(966) 11 4002 03',                       'type' => 'text'],
+            ['key' => 'phone',                  'value' => '',                       'type' => 'text'],
             ['key' => 'services_subheading',    'value' => '~ Our Awesome Services ~',                'type' => 'text'],
             ['key' => 'services_heading',       'value' => 'We are dedicated to serve you all time.', 'type' => 'text'],
             ['key' => 'clients_heading',        'value' => 'Join over +15,000 happy clients!',        'type' => 'text'],

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Customers/Clients &#8211; MAC |')
+@section('title', 'Customers / Clients')
 
 @section('head_extra')
 <style id="ct_theme_options-dynamic-css" title="dynamic-css" class="redux-options-output">body #ct-pagetitle{background-image:url('../wp-content/uploads/2023/07/Untitled-design-5.png');}a{color:#3f69b1;}a:hover{color:#3f69b1;}a:active{color:#3f69b1;}</style>
