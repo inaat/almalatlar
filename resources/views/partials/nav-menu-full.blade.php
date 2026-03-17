@@ -1,8 +1,9 @@
 <li id="menu-item-9013" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-9013"><a href="/"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>Home</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a></li>
 <li id="menu-item-9014" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-9014"><a href="/about"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>About</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a>
 <ul class="sub-menu">
-	<li id="menu-item-9419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9419"><a href="/customers-clients"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>Customers/Clients</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a></li>
-	<li id="menu-item-9418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9418"><a href="/partners"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>Our Partners</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a></li>
+	@foreach($navAboutPages as $navAboutPage)
+	<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/about/{{ $navAboutPage->slug }}"><span class="ct-menu-item"><span class="ct-item--number"><span></span></span>{{ $navAboutPage->title }}</span><span class="ct-menu--plus"></span><span class="ct-menu--line"></span></a></li>
+	@endforeach
 </ul>
 </li>
 @php $megaColIds=[['col'=>'dd797c6','h'=>'2ad64e7','m'=>'cfec087'],['col'=>'d576266','h'=>'7cf32ec','m'=>'f2c17ab'],['col'=>'c737809','h'=>'094a9e7','m'=>'9cc1b2a'],['col'=>'820fea2','h'=>'50775e9','m'=>'1739158']]; @endphp

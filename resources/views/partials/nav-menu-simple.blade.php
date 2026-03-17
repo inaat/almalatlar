@@ -1,8 +1,9 @@
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-9013"><a href="/"><span>Home</span></a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-9014"><a href="/about"><span>About</span></a>
 <ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9419"><a href="/customers-clients"><span>Customers/Clients</span></a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9418"><a href="/partners"><span>Our Partners</span></a></li>
+	@foreach($navAboutPages as $navAboutPage)
+	<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/about/{{ $navAboutPage->slug }}"><span>{{ $navAboutPage->title }}</span></a></li>
+	@endforeach
 </ul>
 </li>
 @php $megaColIds=[['col'=>'dd797c6','h'=>'2ad64e7','m'=>'cfec087'],['col'=>'d576266','h'=>'7cf32ec','m'=>'f2c17ab'],['col'=>'c737809','h'=>'094a9e7','m'=>'9cc1b2a'],['col'=>'820fea2','h'=>'50775e9','m'=>'1739158']]; @endphp
