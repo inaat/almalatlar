@@ -1230,7 +1230,43 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 import detect from "https:\/\/almalath.com\/wp-content\/plugins\/optimization-detective\/detect.min.js?ver=1.0.0-beta3"; detect( {"minViewportAspectRatio":0.4,"maxViewportAspectRatio":2.5,"isDebug":false,"extensionModuleUrls":[],"restApiEndpoint":"https:\/\/almalath.com\/wp-json\/optimization-detective\/v1\/url-metrics:store","currentETag":"e9c47ba6404397761a3f6089c919bce2","currentUrl":"https:\/\/almalath.com\/service\/wireless-solutions\/","urlMetricSlug":"4042ed5e6bacab2c66d10c7f8761a0ec","cachePurgePostId":9258,"urlMetricHMAC":"d5a931c529db7ff0ee24813fcdc372c1","urlMetricGroupStatuses":[{"minimumViewportWidth":0,"maximumViewportWidth":480,"complete":false},{"minimumViewportWidth":480,"maximumViewportWidth":600,"complete":false},{"minimumViewportWidth":600,"maximumViewportWidth":782,"complete":false},{"minimumViewportWidth":782,"maximumViewportWidth":null,"complete":false}],"storageLockTTL":60,"freshnessTTL":604800,"webVitalsLibrarySrc":"https:\/\/almalath.com\/wp-content\/plugins\/optimization-detective\/build\/web-vitals.js?ver=4.2.4"} );
 /* ]]> */
 </script>
+<script type="text/javascript" src="/wp-content/plugins/elementor/assets/lib/jquery-numerator/jquery-numerator.min3958.js" id="jquery-numerator-js"></script>
+<script type="text/javascript" src="/wp-content/themes/itfirm/elementor/js/ct-counter-widget1159.js?ver=1.4.2" id="ct-counter-widget-js-js"></script>
 <script type="text/javascript" src="/wp-content/themes/itfirm/elementor/js/ct-tabs-widget1159.js?ver=1.4.2" id="ct-tabs-widget-js-js"></script>
+<script>
+jQuery(document).ready(function($){
+    // Counter animation
+    var animated = [];
+    function animateCounter($el) {
+        var id = $el.attr('id') || Math.random();
+        if (animated.indexOf(id) !== -1) return;
+        animated.push(id);
+        var data = $el.data();
+        var decimalDigits = String(data.toValue).match(/\.(.*)/);
+        if (decimalDigits) data.rounding = decimalDigits[1].length;
+        $el.numerator(data);
+    }
+    if ('IntersectionObserver' in window) {
+        var obs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(e) {
+                if (e.isIntersecting) animateCounter($(e.target));
+            });
+        }, { threshold: 0.1 });
+        $('.ct-counter-number-value').each(function() { obs.observe(this); });
+    } else {
+        $('.ct-counter-number-value').each(function() { animateCounter($(this)); });
+    }
+    $(".ct-tabs .ct-tabs-title .ct-tab-title, .ct-tab-form .ct-tabs-title .ct-tab-title").on("click", function(e){
+        e.preventDefault();
+        var target = $(this).data("target");
+        var parent = $(this).parents(".ct-tabs, .ct-tab-form");
+        parent.find(".ct-tabs-content .ct-tab-content").slideUp(300);
+        parent.find(".ct-tabs-title .ct-tab-title").removeClass("active");
+        $(this).addClass("active");
+        $(target).slideDown(300);
+    });
+});
+</script>
 @yield('footer_scripts')
 </body>
 
