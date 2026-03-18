@@ -20,6 +20,6 @@ class AboutPageController extends Controller
             $data['partners'] = Partner::where('is_active', true)->orderBy('sort_order')->get();
         }
 
-        return view('about-pages.' . $slug, $data);
+        return view('about-pages.show', $data);
     }
 }

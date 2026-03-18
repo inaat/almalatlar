@@ -10,6 +10,8 @@ use App\Http\Controllers\Admin\ServiceCategoryController;
 use App\Http\Controllers\Admin\AdminServiceController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\ClientController;
+use App\Http\Controllers\Admin\AboutPageController as AdminAboutPageController;
+use App\Http\Controllers\Admin\AboutSettingController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
@@ -44,5 +46,9 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
     Route::post('settings', [SettingController::class, 'update'])->name('settings.update');
 
+    Route::get('about', [AboutSettingController::class, 'index'])->name('about.index');
+    Route::post('about', [AboutSettingController::class, 'update'])->name('about.update');
+
     Route::resource('products', AdminProductController::class);
+    Route::resource('about-pages', AdminAboutPageController::class);
 });

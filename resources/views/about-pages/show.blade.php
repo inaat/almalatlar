@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Customers / Clients')
+@section('title', $page->title)
 
 @section('head_extra')
 <style id="ct_theme_options-dynamic-css" title="dynamic-css" class="redux-options-output">body #ct-pagetitle{background-image:url('../wp-content/uploads/2023/07/Untitled-design-5.png');}a{color:#3f69b1;}a:hover{color:#3f69b1;}a:active{color:#3f69b1;}</style>
@@ -12,9 +12,9 @@
     <div id="ct-pagetitle" class="ct-pagetitle bg-image">
         <div class="container">
             <div class="ct-page-title-holder">
-                                <h1 class="ct-page-title">Customers/Clients</h1>            </div>
+                                <h1 class="ct-page-title">{{ $page->title }}</h1>            </div>
 
-                            <ul class="ct-breadcrumb"><li><a class="breadcrumb-entry" href="/">Home</a></li><li><span class="breadcrumb-entry">Customers/Clients</span></li></ul>                    </div>
+                            <ul class="ct-breadcrumb"><li><a class="breadcrumb-entry" href="/">Home</a></li><li><a class="breadcrumb-entry" href="/about">About</a></li><li><span class="breadcrumb-entry">{{ $page->title }}</span></li></ul>                    </div>
     </div>
         <div id="content" class="site-content">
         	<div class="content-inner">
@@ -61,7 +61,7 @@
     </div>
   
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">Customers / Clients</span>    </h3>
+        <span class="ct-text-inner">{{ $page->title }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -75,7 +75,7 @@
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			Al Malath Al Arabia is partner with industry leading vendors and have approach to deliver any kind of IT hardware &amp; software. We can supply Desktops, Laptops Servers, Switches, Routers, storage, wireless access points, wireless access controllers soft &amp; hard security equipment&#8217;s from the well-know brands in the IT industry. We provide business applications like Microsoft 365,Power BI, Dynamics 365 Microsoft windows, Microsoft teams Azure as cloud and many more according to the customer requirements.		
+			{{ $page->content }}
 		</div>
 	</div>
 </div>				</div>
@@ -84,9 +84,10 @@
         </div>
                     </div>
         </section>
+                @isset($clients)
                 <section class="elementor-section elementor-top-section elementor-section-boxed" style="padding: 40px 0;">
                     <div class="elementor-container">
-                        <div class="ct-client-grid" style="display:flex;flex-wrap:wrap;gap:30px;justify-content:center;align-items:center;">
+                        <div style="display:flex;flex-wrap:wrap;gap:30px;justify-content:center;align-items:center;">
                             @foreach($clients as $client)
                             <div style="flex:0 0 180px;text-align:center;padding:15px;background:#fff;border:1px solid #eee;border-radius:8px;">
                                 <img src="{{ $client->logo }}" alt="{{ $client->name }}" style="max-width:150px;max-height:80px;object-fit:contain;" />
@@ -96,6 +97,22 @@
                         </div>
                     </div>
                 </section>
+                @endisset
+
+                @isset($partners)
+                <section class="elementor-section elementor-top-section elementor-section-boxed" style="padding: 40px 0;">
+                    <div class="elementor-container">
+                        <div style="display:flex;flex-wrap:wrap;gap:30px;justify-content:center;align-items:center;">
+                            @foreach($partners as $partner)
+                            <div style="flex:0 0 180px;text-align:center;padding:15px;background:#fff;border:1px solid #eee;border-radius:8px;">
+                                <img src="{{ $partner->logo }}" alt="{{ $partner->name }}" style="max-width:150px;max-height:80px;object-fit:contain;" />
+                                <p style="margin:8px 0 0;font-size:13px;color:#555;">{{ $partner->name }}</p>
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </section>
+                @endisset
         		</div>
 		    </div><!-- .entry-content -->
 </article><!-- #post-9396 -->

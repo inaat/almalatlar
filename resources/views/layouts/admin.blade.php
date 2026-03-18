@@ -92,6 +92,12 @@
         <a class="nav-link {{ request()->routeIs('admin.settings.*') ? 'active' : '' }}" href="{{ route('admin.settings.index') }}">
             <i class="bi bi-sliders"></i> Site Settings
         </a>
+        <a class="nav-link {{ request()->routeIs('admin.about.*') ? 'active' : '' }}" href="{{ route('admin.about.index') }}">
+            <i class="bi bi-info-circle"></i> About Page
+        </a>
+        <a class="nav-link {{ request()->routeIs('admin.about-pages.*') ? 'active' : '' }}" href="{{ route('admin.about-pages.index') }}">
+            <i class="bi bi-files"></i> About Sub-Pages
+        </a>
     </nav>
 </div>
 

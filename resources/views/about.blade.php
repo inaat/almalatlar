@@ -112,12 +112,10 @@
   
 			<div class="item--sub-title style-box-gr wow fadeInUp" data-wow-delay="ms">
                         <span>
-                About Our Conpany ~            </span>
+                {{ $siteSettings->get('about_subtitle')?->value ?? 'About Our Company ~' }}            </span>
                     </div>
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">Choose         <cite class="ct-text-highlight">
-            The Best        </cite>
-         IT Service Company</span>    </h3>
+        <span class="ct-text-inner">{{ $siteSettings->get('about_heading')?->value ?? 'Choose The Best IT Service Company' }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -131,7 +129,7 @@
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			<p>Since its founding in 2011 Al Malath Al Arabia has grown to be one of the major IT solutions integrators in the Kingdom. Our most key strength is the quality of our team of seasoned experts with over 30 years in the IT space. We have a strong foundation built on legacy including specialties in IT Hardware, Software and Services, Business Concepts Development, and Consultancy.</p><p>Striving for excellence is a vital part in any business. It involves putting quality into everything you do. That is why we are keen to deliver superior services that ensure our customers&#8217; business success is fully maintained.</p>		
+			<p>{{ $siteSettings->get('about_description')?->value }}</p>
 		</div>
 	</div>
 </div>				</div>
@@ -145,7 +143,7 @@
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			<p>Since our inception, we have embarked on developing our activities with dedication and confidence to take up our position today as one of the largest companies in the Kingdom within the scope of IT integrated solutions and vehicle preparations.</p><p>We have built our foundation on an ancient legacy of strong experience and multiple professional specialties in hardware, software, and services, developing business concepts and consultation.</p>		
+			<p>{{ $siteSettings->get('about_description_2')?->value }}</p>
 		</div>
 	</div>
 </div>				</div>
@@ -305,12 +303,10 @@
   
 			<div class="item--sub-title style-box-gr wow fadeInUp" data-wow-delay="ms">
                         <span>
-                ~ Why choose Us? ~            </span>
+                {{ $siteSettings->get('industries_subheading')?->value ?? '~ Why choose Us? ~' }}            </span>
                     </div>
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">We serve a wide         <cite class="ct-text-highlight">
-            variety        </cite>
-         of industries</span>    </h3>
+        <span class="ct-text-inner">{{ $siteSettings->get('industries_heading')?->value ?? 'We serve a wide variety of industries' }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -324,7 +320,7 @@
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			Below is just a small sample of some of the industries that we serve.		
+			{{ $siteSettings->get('industries_description')?->value }}
 		</div>
 	</div>
 </div>				</div>
@@ -417,7 +413,7 @@
                 Our Vision            </span>
                     </div>
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">vibrant society, thriving economy, ambitious nation</span>    </h3>
+        <span class="ct-text-inner">{{ $siteSettings->get('vision_heading')?->value }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -431,7 +427,7 @@
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			<p>To utilize advanced technology to help our customers extending their business, with added value to Saudi market and local community. To move in compliance with the kingdom&#8217;s vision 2030</p>		
+			<p>{{ $siteSettings->get('vision_text')?->value }}</p>
 		</div>
 	</div>
 </div>				</div>
@@ -544,7 +540,7 @@
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			<p>To offer an innovative set of technical solutions and services that add value to us and our success partners through an ambitious and effective team, advanced technologies and modern products that maintain the path of stability and growth</p>		
+			<p>{{ $siteSettings->get('goal_text')?->value }}</p>
 		</div>
 	</div>
 </div>				</div>
@@ -657,8 +653,7 @@
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			Adopting the evolving new IT technologies. Acting with strong ethics, Honesty, and transparency.
-Acknowledging accountability, definite Promise to Clients. Believe in Teamwork passion and maintaining high Quality.		
+			{{ $siteSettings->get('values_text')?->value }}
 		</div>
 	</div>
 </div>				</div>
