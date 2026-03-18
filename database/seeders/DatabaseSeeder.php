@@ -31,6 +31,9 @@ class DatabaseSeeder extends Seeder
         $this->call(SiteSettingSeeder::class);
         $this->call(PartnerSeeder::class);
         $this->call(ProductSeeder::class);
-         $this->call(AboutPageSeeder::class);
+        $this->call(AboutPageSeeder::class);
+        $this->call(AboutHistorySeeder::class);
+        $this->call(TeamMemberSeeder::class);
+        $this->call(TestimonialSeeder::class);
     }
 }

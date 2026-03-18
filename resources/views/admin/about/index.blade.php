@@ -99,6 +99,69 @@
         </div>
     </div>
 
+    {{-- Team Section --}}
+    <div class="card shadow-sm mb-4">
+        <div class="card-header fw-semibold">Team Section</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Badge / Subtitle</label>
+                    <input type="text" name="team_subtitle" value="{{ old('team_subtitle', $settings['team_subtitle']->value ?? 'Team Member') }}" class="form-control">
+                </div>
+                <div class="col-md-8">
+                    <label class="form-label">Heading</label>
+                    <input type="text" name="team_heading" value="{{ old('team_heading', $settings['team_heading']->value ?? '') }}" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Testimonials Section --}}
+    <div class="card shadow-sm mb-4">
+        <div class="card-header fw-semibold">Testimonials Section</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Badge / Subtitle</label>
+                    <input type="text" name="testimonials_subtitle" value="{{ old('testimonials_subtitle', $settings['testimonials_subtitle']->value ?? 'Testimonials') }}" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Heading</label>
+                    <input type="text" name="testimonials_heading" value="{{ old('testimonials_heading', $settings['testimonials_heading']->value ?? '') }}" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Label (e.g. "Clients Reviews:")</label>
+                    <input type="text" name="testimonials_label" value="{{ old('testimonials_label', $settings['testimonials_label']->value ?? 'Clients Reviews:') }}" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Counters --}}
+    <div class="card shadow-sm mb-4">
+        <div class="card-header fw-semibold">Counters (Stats Section)</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <label class="form-label">Team Members</label>
+                    <input type="number" name="counter_team" value="{{ old('counter_team', $settings['counter_team']->value ?? '105') }}" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Winning Awards</label>
+                    <input type="number" name="counter_awards" value="{{ old('counter_awards', $settings['counter_awards']->value ?? '15') }}" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Completed Projects (k)</label>
+                    <input type="number" name="counter_projects" value="{{ old('counter_projects', $settings['counter_projects']->value ?? '10') }}" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Client's Reviews</label>
+                    <input type="number" name="counter_reviews" value="{{ old('counter_reviews', $settings['counter_reviews']->value ?? '850') }}" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="mb-4">
         <button type="submit" class="btn btn-primary">
             <i class="bi bi-check-lg"></i> Save

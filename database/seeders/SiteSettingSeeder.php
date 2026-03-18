@@ -28,6 +28,21 @@ class SiteSettingSeeder extends Seeder
             ['key' => 'industries_description', 'value' => 'Below is just a small sample of some of the industries that we serve.', 'type' => 'text'],
             ['key' => 'cta_text',               'value' => 'You have better things to do than worry about IT for your small business. Let\'s Discuss about Project.', 'type' => 'text'],
 
+            // Team section
+            ['key' => 'team_subtitle', 'value' => 'Team Member',                                    'type' => 'text'],
+            ['key' => 'team_heading',  'value' => 'Passionate Personalities, Versatile Brains',     'type' => 'text'],
+
+            // Testimonials section
+            ['key' => 'testimonials_subtitle', 'value' => 'Testimonials',                          'type' => 'text'],
+            ['key' => 'testimonials_heading',  'value' => "Few of Our Client's feedback of users!", 'type' => 'text'],
+            ['key' => 'testimonials_label',    'value' => 'Clients Reviews:',                       'type' => 'text'],
+
+            // About page counters
+            ['key' => 'counter_team',       'value' => '105',  'type' => 'text'],
+            ['key' => 'counter_awards',     'value' => '15',   'type' => 'text'],
+            ['key' => 'counter_projects',   'value' => '10',   'type' => 'text'],
+            ['key' => 'counter_reviews',    'value' => '850',  'type' => 'text'],
+
             // Footer CTA bar
             ['key' => 'footer_cta_heading',     'value' => 'Looking for the Best IT Business Solutions?',                        'type' => 'text'],
             ['key' => 'footer_cta_description', 'value' => 'As a app web crawler expert, We will help to organize.',             'type' => 'text'],

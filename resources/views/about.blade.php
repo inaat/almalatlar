@@ -407,7 +407,7 @@
         </div>
                     </div>
         </section>
-                <section class="elementor-section elementor-top-section elementor-element elementor-element-371695e elementor-section-stretched elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none" data-id="371695e" data-element_type="section" data-e-type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+                <section class="elementor-section elementor-top-section elementor-element elementor-element-371695e elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none" data-id="371695e" data-element_type="section" data-e-type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
             
                         <div class="elementor-container elementor-column-gap-extended ">
                     <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-84fdb13 ct-column-none col-offset-none col-color-offset-none" data-id="84fdb13" data-element_type="column" data-e-type="column">
@@ -418,186 +418,32 @@
 					    <div class="ct-history ct-history-carousel1 ct-slick-slider">
         <div class="ct-carousel-inner">
             <div class="ct-slick-carousel" data-arrows="true" data-dots="" data-pauseOnHover="" data-autoplay="" data-autoplaySpeed="5000" data-infinite="true" data-speed="500" data-colxs="1" data-colsm="2" data-colmd="3" data-collg="4" data-colxl="4" data-dir="false" data-slidesToScroll="1">
+                                        @foreach($aboutHistories as $historyItem)
                                         <div class="slick-slide">
-                            <div id="ct_history-8f5f31e0" class="item--inner wow flipInY">
-                                <div class="ct-inline-css"  data-css="
-                                                                            .ct-history #ct_history-8f5f31e0 .item--year {
-                                            background-color: #00C6FF;
-                                        }
-                                        .ct-history #ct_history-8f5f31e0 .item--year:before {
-                                            border-color: transparent transparent transparent #00C6FF;
-                                        }
-                                        .ct-history #ct_history-8f5f31e0 .item--year span:before {
-                                            border-color: #00C6FF #00C6FF transparent transparent;
-                                        }
-                                        .ct-history #ct_history-8f5f31e0 .item--year span:after {
-                                            border-color: transparent #00C6FF #00C6FF transparent;
-                                        }
-                                    ">
+                            <div id="ct_history-{{ $loop->index }}" class="item--inner wow flipInY">
+                                <style>
+                                    #ct_history-{{ $loop->index }} .item--year { background-color: {{ $historyItem->color }}; }
+                                    #ct_history-{{ $loop->index }} .item--year:before { border-color: transparent transparent transparent {{ $historyItem->color }}; }
+                                    #ct_history-{{ $loop->index }} .item--year span:before { border-color: {{ $historyItem->color }} {{ $historyItem->color }} transparent transparent; }
+                                    #ct_history-{{ $loop->index }} .item--year span:after { border-color: transparent {{ $historyItem->color }} {{ $historyItem->color }} transparent; }
+                                </style>
+                                @if($historyItem->image)
+                                <div class="item--image">
+                                    <div class="item--mask bg-image" style="background-image: url({{ $historyItem->image }});"></div>
                                 </div>
-                                                                    <div class="item--image">
-                                        <div class="item--mask bg-image" style="background-image: url(../wp-content/uploads/2021/10/intime-01.jpg);"></div>
-                                    </div>
-                                                                <div class="item--holder">
+                                @endif
+                                <div class="item--holder">
                                     <div class="item--year">
-                                        <span>2010</span>
+                                        <span>{{ $historyItem->year }}</span>
                                     </div>
-                                    <h3 class="item--title">    
-                                        Started business                                    </h3>
-                                    <div class="item--description">We partner with you to enable your technology so you focus on your organization’s mission leverage our talent.</div>
+                                    <h3 class="item--title">{{ $historyItem->title }}</h3>
+                                    @if($historyItem->description)
+                                    <div class="item--description">{{ $historyItem->description }}</div>
+                                    @endif
                                 </div>
                             </div>
                         </div>
-                                        <div class="slick-slide">
-                            <div id="ct_history-8f5f31e1" class="item--inner wow flipInY">
-                                <div class="ct-inline-css"  data-css="
-                                                                            .ct-history #ct_history-8f5f31e1 .item--year {
-                                            background-color: #2093FF;
-                                        }
-                                        .ct-history #ct_history-8f5f31e1 .item--year:before {
-                                            border-color: transparent transparent transparent #2093FF;
-                                        }
-                                        .ct-history #ct_history-8f5f31e1 .item--year span:before {
-                                            border-color: #2093FF #2093FF transparent transparent;
-                                        }
-                                        .ct-history #ct_history-8f5f31e1 .item--year span:after {
-                                            border-color: transparent #2093FF #2093FF transparent;
-                                        }
-                                    ">
-                                </div>
-                                                                    <div class="item--image">
-                                        <div class="item--mask bg-image" style="background-image: url(../wp-content/uploads/2021/10/intime-04.jpg);"></div>
-                                    </div>
-                                                                <div class="item--holder">
-                                    <div class="item--year">
-                                        <span>2012</span>
-                                    </div>
-                                    <h3 class="item--title">    
-                                        Survival during <br/>wartime                                    </h3>
-                                    <div class="item--description">A People Ops leader who is committed to the growth and development of leaders.</div>
-                                </div>
-                            </div>
-                        </div>
-                                        <div class="slick-slide">
-                            <div id="ct_history-8f5f31e2" class="item--inner wow flipInY">
-                                <div class="ct-inline-css"  data-css="
-                                                                            .ct-history #ct_history-8f5f31e2 .item--year {
-                                            background-color: #0D5BEE;
-                                        }
-                                        .ct-history #ct_history-8f5f31e2 .item--year:before {
-                                            border-color: transparent transparent transparent #0D5BEE;
-                                        }
-                                        .ct-history #ct_history-8f5f31e2 .item--year span:before {
-                                            border-color: #0D5BEE #0D5BEE transparent transparent;
-                                        }
-                                        .ct-history #ct_history-8f5f31e2 .item--year span:after {
-                                            border-color: transparent #0D5BEE #0D5BEE transparent;
-                                        }
-                                    ">
-                                </div>
-                                                                    <div class="item--image">
-                                        <div class="item--mask bg-image" style="background-image: url(../wp-content/uploads/2021/10/intime-07.jpg);"></div>
-                                    </div>
-                                                                <div class="item--holder">
-                                    <div class="item--year">
-                                        <span>2016</span>
-                                    </div>
-                                    <h3 class="item--title">    
-                                        Crisis and <br/>opportunity                                    </h3>
-                                    <div class="item--description">Our support works around the clock to ensure your work is secure and monitored safely.</div>
-                                </div>
-                            </div>
-                        </div>
-                                        <div class="slick-slide">
-                            <div id="ct_history-8f5f31e3" class="item--inner wow flipInY">
-                                <div class="ct-inline-css"  data-css="
-                                                                            .ct-history #ct_history-8f5f31e3 .item--year {
-                                            background-color: #0925AA;
-                                        }
-                                        .ct-history #ct_history-8f5f31e3 .item--year:before {
-                                            border-color: transparent transparent transparent #0925AA;
-                                        }
-                                        .ct-history #ct_history-8f5f31e3 .item--year span:before {
-                                            border-color: #0925AA #0925AA transparent transparent;
-                                        }
-                                        .ct-history #ct_history-8f5f31e3 .item--year span:after {
-                                            border-color: transparent #0925AA #0925AA transparent;
-                                        }
-                                    ">
-                                </div>
-                                                                    <div class="item--image">
-                                        <div class="item--mask bg-image" style="background-image: url(../wp-content/uploads/2021/10/team-06.jpg);"></div>
-                                    </div>
-                                                                <div class="item--holder">
-                                    <div class="item--year">
-                                        <span>2017</span>
-                                    </div>
-                                    <h3 class="item--title">    
-                                        50+ Branches                                    </h3>
-                                    <div class="item--description">We cross industries and provide services to almost every business either as a co-managed or supplemental asset.</div>
-                                </div>
-                            </div>
-                        </div>
-                                        <div class="slick-slide">
-                            <div id="ct_history-8f5f31e4" class="item--inner wow flipInY">
-                                <div class="ct-inline-css"  data-css="
-                                                                            .ct-history #ct_history-8f5f31e4 .item--year {
-                                            background-color: #00C6FF;
-                                        }
-                                        .ct-history #ct_history-8f5f31e4 .item--year:before {
-                                            border-color: transparent transparent transparent #00C6FF;
-                                        }
-                                        .ct-history #ct_history-8f5f31e4 .item--year span:before {
-                                            border-color: #00C6FF #00C6FF transparent transparent;
-                                        }
-                                        .ct-history #ct_history-8f5f31e4 .item--year span:after {
-                                            border-color: transparent #00C6FF #00C6FF transparent;
-                                        }
-                                    ">
-                                </div>
-                                                                    <div class="item--image">
-                                        <div class="item--mask bg-image" style="background-image: url(../wp-content/uploads/2021/10/team-08.jpg);"></div>
-                                    </div>
-                                                                <div class="item--holder">
-                                    <div class="item--year">
-                                        <span>2019</span>
-                                    </div>
-                                    <h3 class="item--title">    
-                                        100+ Branches                                    </h3>
-                                    <div class="item--description">Whether providing consulting expertise on a specific vendor technology, strategizing on IT budget, providing a security.</div>
-                                </div>
-                            </div>
-                        </div>
-                                        <div class="slick-slide">
-                            <div id="ct_history-8f5f31e5" class="item--inner wow flipInY">
-                                <div class="ct-inline-css"  data-css="
-                                                                            .ct-history #ct_history-8f5f31e5 .item--year {
-                                            background-color: #2093FF;
-                                        }
-                                        .ct-history #ct_history-8f5f31e5 .item--year:before {
-                                            border-color: transparent transparent transparent #2093FF;
-                                        }
-                                        .ct-history #ct_history-8f5f31e5 .item--year span:before {
-                                            border-color: #2093FF #2093FF transparent transparent;
-                                        }
-                                        .ct-history #ct_history-8f5f31e5 .item--year span:after {
-                                            border-color: transparent #2093FF #2093FF transparent;
-                                        }
-                                    ">
-                                </div>
-                                                                    <div class="item--image">
-                                        <div class="item--mask bg-image" style="background-image: url(../wp-content/uploads/2021/10/team-07.jpg);"></div>
-                                    </div>
-                                                                <div class="item--holder">
-                                    <div class="item--year">
-                                        <span>2021</span>
-                                    </div>
-                                    <h3 class="item--title">    
-                                        Get Award                                    </h3>
-                                    <div class="item--description">Our people are held to the highest level accountability to ensure you are always satisfied with your results.</div>
-                                </div>
-                            </div>
-                        </div>
+                                        @endforeach
                             </div>
         </div>
     </div>
@@ -607,7 +453,11 @@
         </div>
                     </div>
         </section>
-                <section class="elementor-section elementor-top-section elementor-element elementor-element-23792ffb elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none" data-id="23792ffb" data-element_type="section" data-e-type="section">
+                @php
+                    $team_subtitle = $siteSettings->get('team_subtitle')?->value ?? 'Team Member';
+                    $team_heading  = $siteSettings->get('team_heading')?->value ?? 'Passionate Personalities, Versatile Brains';
+                @endphp
+                <section class="elementor-section elementor-top-section elementor-element elementor-element-23792ffb elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none" data-id="23792ffb" data-element_type="section" data-e-type="section">
             
                         <div class="elementor-container elementor-column-gap-extended ">
                     <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f3a8dce ct-column-none col-offset-none col-color-offset-none" data-id="f3a8dce" data-element_type="column" data-e-type="column">
@@ -684,7 +534,7 @@
                   </g>
                 </svg>
                         <span>
-                Team Member            </span>
+                {{ $team_subtitle }}            </span>
                             <svg class="svg-right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="21" viewBox="0 0 33 21">
                   <defs>
                     <style>
@@ -732,9 +582,7 @@
                 </svg>
                     </div>
 	    <h3 class="item--title st-default " data-wow-delay="ms">
-        <span class="ct-text-inner">Passionate Personalities,         <cite class="ct-text-highlight">
-            Versatile        </cite>
-         Brains</span>    </h3>
+        <span class="ct-text-inner">{{ $team_heading }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -748,111 +596,44 @@
         </div>
                     </div>
         </section>
-        		<div class="elementor-element elementor-element-1ecd4d4 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-ct_team_grid" data-id="1ecd4d4" data-element_type="widget" data-e-type="widget" data-widget_type="ct_team_grid.default">
+        		<div class="elementor-element elementor-element-1ecd4d4 elementor-widget elementor-widget-ct_team_grid" data-id="1ecd4d4" data-element_type="widget" data-e-type="widget" data-widget_type="ct_team_grid.default">
 				<div class="elementor-widget-container">
 					    <div class="ct-grid ct-team ct-team-grid1">
-        <div class="ct-grid-inner ct-grid-masonry row animate-time" data-gutter="7">
+        <div class="ct-grid-inner row" style="display:flex; flex-wrap:wrap;">
+                            @foreach($teamMembers as $member)
                             <div class="grid-item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="item--inner " data-wow-duration="1.2s">
-                    	                            <div class="item--image">
-                                <a href="/team-details"><img loading="lazy" decoding="async" width="740" height="1020" src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/10/team1.jpg" class="lazy lazy-hidden no-lazyload attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="740" height="1020" src="../wp-content/uploads/2021/10/team1.jpg" class="no-lazyload attachment-full" alt="" /></noscript></a>                            </div>
-                                                <div class="tem--meta">
-                             <h4 class="item--title">    
-                                <a href="/team-details">Ashish Sudra</a>                            </h4>
-                            <div class="item--position">Founder & CEO</div>
-                                                            <div class="item--social">
-                                                                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                                                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                                                                            <a href="#" target="_blank"><i class="fab fa-dribbble"></i></a>
-                                                                    </div>
-                             
+                    <div class="item--inner" data-wow-duration="1.2s">
+                        @if($member->image)
+                        <div class="item--image">
+                            <img loading="lazy" width="740" height="1020" src="{{ $member->image }}" class="attachment-full" alt="{{ $member->name }}" />
                         </div>
+                        @endif
+                        <div class="tem--meta">
+                            <h4 class="item--title">{{ $member->name }}</h4>
+                            <div class="item--position">{{ $member->position }}</div>
+                            <div class="item--social">
+                                @if($member->facebook_url)
+                                    <a href="{{ $member->facebook_url }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                @endif
+                                @if($member->twitter_url)
+                                    <a href="{{ $member->twitter_url }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                                @endif
+                                @if($member->dribbble_url)
+                                    <a href="{{ $member->dribbble_url }}" target="_blank"><i class="fab fa-dribbble"></i></a>
+                                @endif
+                            </div>
+                        </div>
+                        @if($member->description)
                         <div class="item--holder">
                             <div class="item--holder-inner">
-                                <div class="item--desc el-empty">
-                                    Lead the team of passionate developers, designers and the strategists with a lot of thought and analysis come true!                                </div>
-                                                                    <a class="item--details btn btn-primary" href="/team-details">Read more</a>
-                                                            </div>
+                                <div class="item--desc el-empty">{{ $member->description }}</div>
+                            </div>
                         </div>
+                        @endif
                         <div class="item--line"></div>
                    </div>
                 </div>
-                            <div class="grid-item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="item--inner " data-wow-duration="1.2s">
-                    	                            <div class="item--image">
-                                <a href="/team-details"><img loading="lazy" decoding="async" width="740" height="1020" src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/10/team2.jpg" class="lazy lazy-hidden no-lazyload attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="740" height="1020" src="../wp-content/uploads/2021/10/team2.jpg" class="no-lazyload attachment-full" alt="" /></noscript></a>                            </div>
-                                                <div class="tem--meta">
-                             <h4 class="item--title">    
-                                <a href="/team-details">Rachna Sheth</a>                            </h4>
-                            <div class="item--position">Business Head</div>
-                                                            <div class="item--social">
-                                                                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                                                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                                                                            <a href="#" target="_blank"><i class="fab fa-dribbble"></i></a>
-                                                                    </div>
-                             
-                        </div>
-                        <div class="item--holder">
-                            <div class="item--holder-inner">
-                                <div class="item--desc el-empty">
-                                    Rachna joined IT Solutions in 2003 and worked in a variety of technical support roles before becoming VP of Network.                                </div>
-                                                                    <a class="item--details btn btn-primary" href="/team-details">Read more</a>
-                                                            </div>
-                        </div>
-                        <div class="item--line"></div>
-                   </div>
-                </div>
-                            <div class="grid-item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="item--inner " data-wow-duration="1.2s">
-                    	                            <div class="item--image">
-                                <a href="/team-details"><img loading="lazy" decoding="async" width="740" height="1020" src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/10/team3.jpg" class="lazy lazy-hidden no-lazyload attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="740" height="1020" src="../wp-content/uploads/2021/10/team3.jpg" class="no-lazyload attachment-full" alt="" /></noscript></a>                            </div>
-                                                <div class="tem--meta">
-                             <h4 class="item--title">    
-                                <a href="/team-details">Tapak Meni</a>                            </h4>
-                            <div class="item--position">President, Principal</div>
-                                                            <div class="item--social">
-                                                                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                                                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                                                                            <a href="#" target="_blank"><i class="fab fa-dribbble"></i></a>
-                                                                    </div>
-                             
-                        </div>
-                        <div class="item--holder">
-                            <div class="item--holder-inner">
-                                <div class="item--desc el-empty">
-                                    As VP of Sales and Marketing since 1999, Jim oversees all new business acquisition at IT Solutions.                                </div>
-                                                                    <a class="item--details btn btn-primary" href="/team-details">Read more</a>
-                                                            </div>
-                        </div>
-                        <div class="item--line"></div>
-                   </div>
-                </div>
-                            <div class="grid-item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="item--inner " data-wow-duration="1.2s">
-                    	                            <div class="item--image">
-                                <a href="/team-details"><img loading="lazy" decoding="async" width="740" height="1020" src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/10/team5.jpg" class="lazy lazy-hidden no-lazyload attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="740" height="1020" src="../wp-content/uploads/2021/10/team5.jpg" class="no-lazyload attachment-full" alt="" /></noscript></a>                            </div>
-                                                <div class="tem--meta">
-                             <h4 class="item--title">    
-                                <a href="/team-details">Ergi Laura</a>                            </h4>
-                            <div class="item--position">Sales & Marketing</div>
-                                                            <div class="item--social">
-                                                                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                                                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                                                                            <a href="#" target="_blank"><i class="fab fa-dribbble"></i></a>
-                                                                    </div>
-                             
-                        </div>
-                        <div class="item--holder">
-                            <div class="item--holder-inner">
-                                <div class="item--desc el-empty">
-                                    Garrett serves as the lead VCIO (Virtual Chief Information Officer) to our clients and guides IT Solutions' technology strategy.                                </div>
-                                                                    <a class="item--details btn btn-primary" href="/team-details">Read more</a>
-                                                            </div>
-                        </div>
-                        <div class="item--line"></div>
-                   </div>
-                </div>
-                        <div class="grid-sizer col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12"></div>
+                            @endforeach
         </div>
     </div>
 				</div>
@@ -861,7 +642,7 @@
         </div>
                     </div>
         </section>
-                <section class="elementor-section elementor-top-section elementor-element elementor-element-4f80b19 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none" data-id="4f80b19" data-element_type="section" data-e-type="section">
+                <section class="elementor-section elementor-top-section elementor-element elementor-element-4f80b19 elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none" data-id="4f80b19" data-element_type="section" data-e-type="section">
             
                         <div class="elementor-container elementor-column-gap-extended ">
                     <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-48f65f0 ct-column-none col-offset-none col-color-offset-none" data-id="48f65f0" data-element_type="column" data-e-type="column">
@@ -881,7 +662,7 @@
                             <div class="ct-counter-icon">
                                             <i aria-hidden="true" class="flaticon flaticon-team"></i>                                                            </div>
                         <div class="ct-counter-number">
-                                <span class="ct-counter-number-value" data-duration="2000" data-to-value="105" data-delimiter="">1</span>
+                                <span class="ct-counter-number-value" data-duration="2000" data-to-value="{{ $siteSettings->get('counter_team')?->value ?? '105' }}" data-delimiter="">1</span>
                                     <span class="ct-counter-number-suffix">+</span>
                             </div>
         </div>
@@ -902,7 +683,7 @@
                             <div class="ct-counter-icon">
                                             <i aria-hidden="true" class="flaticon flaticon-success"></i>                                                            </div>
                         <div class="ct-counter-number">
-                                <span class="ct-counter-number-value" data-duration="2000" data-to-value="15" data-delimiter="">1</span>
+                                <span class="ct-counter-number-value" data-duration="2000" data-to-value="{{ $siteSettings->get('counter_awards')?->value ?? '15' }}" data-delimiter="">1</span>
                                     <span class="ct-counter-number-suffix">+</span>
                             </div>
         </div>
@@ -923,7 +704,7 @@
                             <div class="ct-counter-icon">
                                             <i aria-hidden="true" class="flaticon flaticon-approved"></i>                                                            </div>
                         <div class="ct-counter-number">
-                                <span class="ct-counter-number-value" data-duration="2000" data-to-value="10" data-delimiter="">1</span>
+                                <span class="ct-counter-number-value" data-duration="2000" data-to-value="{{ $siteSettings->get('counter_projects')?->value ?? '10' }}" data-delimiter="">1</span>
                                     <span class="ct-counter-number-suffix">k+</span>
                             </div>
         </div>
@@ -944,7 +725,7 @@
                             <div class="ct-counter-icon">
                                             <i aria-hidden="true" class="flaticon flaticon-expert"></i>                                                            </div>
                         <div class="ct-counter-number">
-                                <span class="ct-counter-number-value" data-duration="2000" data-to-value="850" data-delimiter="">1</span>
+                                <span class="ct-counter-number-value" data-duration="2000" data-to-value="{{ $siteSettings->get('counter_reviews')?->value ?? '850' }}" data-delimiter="">1</span>
                                     <span class="ct-counter-number-suffix">+</span>
                             </div>
         </div>
@@ -960,179 +741,38 @@
         </div>
                     </div>
         </section>
-                <section class="elementor-section elementor-top-section elementor-element elementor-element-8471de7 elementor-section-stretched elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none" data-id="8471de7" data-element_type="section" data-e-type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
-            
-                        <div class="elementor-container elementor-column-gap-extended ">
-                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-df51e7f ct-column-none col-offset-none col-color-offset-none" data-id="df51e7f" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-                    
-        		<div class="elementor-element elementor-element-1933fbea elementor-widget elementor-widget-ct_heading" data-id="1933fbea" data-element_type="widget" data-e-type="widget" data-widget_type="ct_heading.default">
-				<div class="elementor-widget-container">
-					<div id="ct_heading-1933fbea" class="ct-heading h-align- item-st-default highlight-style1">
-  <div class="ct-heading--inner"> 
-    <div class="ct-inline-css"  data-css="
-                                ">
-    </div>
-      <div class="item--text-below">
-      <div class="ct-inline-css"  data-css="
-        ">
-      </div>
-          </div>
-  
-			<div class="item--sub-title style-icon-right " data-wow-delay="ms">
-                        <span>
-                Testimonials            </span>
-                            <svg class="svg-right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="21" viewBox="0 0 33 21">
-                  <defs>
-                    <style>
-                      .h-cls-1, .h-cls-2 {
-                        fill: none;
-                        stroke-width: 3px;
-                        fill-rule: evenodd;
-                      }
-
-                      .h-cls-1 {
-                        filter: url(#filter);
-                      }
-
-                      .h-cls-2 {
-                        filter: url(#filter-2);
-                      }
-                    </style>
-                    <filter id="right-h-filterct_heading-1933fbea" x="-0.125" y="-0.094" width="32.406" height="12" filterUnits="userSpaceOnUse">
-                      <feFlood result="flood"/>
-                      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
-                      <feBlend result="blend" in2="SourceGraphic"/>
-                    </filter>
-                    <filter id="right-h-filter-2ct_heading-1933fbea" x="-10" y="14.594" width="29.656" height="6.406" filterUnits="userSpaceOnUse">
-                      <feFlood result="flood"/>
-                      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
-                      <feBlend result="blend" in2="SourceGraphic"/>
-                    </filter>
-
-                    <linearGradient id="right-h-grad1ct_heading-1933fbea" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" style="stop-color:#3f69b1;stop-opacity:1" />
-                      <stop offset="100%" style="stop-color:#3f69b1;stop-opacity:1" />
-                    </linearGradient>
-
-                  </defs>
-                  <g>
-                    <g style="fill: none; filter: url(#right-h-filterct_heading-1933fbea)">
-                      <path id="right-h-pathct_heading-1933fbea" class="h-cls-1" d="M-0.117,8.9H27.036s5.078-3.073,0-6.517" style="stroke: inherit; filter: none;"/>
-                    </g>
-                    <use xlink:href="#right-h-pathct_heading-1933fbea" style="stroke: url(#right-h-grad1ct_heading-1933fbea); filter: none; fill: none"/>
-                    <g style="fill: none; filter: url(#right-h-filter-2ct_heading-1933fbea)">
-                      <path id="right-h-bgct_heading-1933fbea" class="h-cls-2" d="M-9.991,14.594H17.352s5.114,3.027,0,6.422" style="stroke: inherit; filter: none;"/>
-                    </g>
-                    <use xlink:href="#right-h-bgct_heading-1933fbea" style="stroke: url(#right-h-grad1ct_heading-1933fbea); filter: none; fill: none"/>
-                  </g>
-                </svg>
-                    </div>
-	    <h3 class="item--title st-default " data-wow-delay="ms">
-        <span class="ct-text-inner">Few of Our Client’s feedback         <cite class="ct-text-highlight">
-            of users!        </cite>
-        
-</span>    </h3>
-  </div>
-</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-6a1a17e elementor-widget__width-auto elementor-widget elementor-widget-ct_text_editor" data-id="6a1a17e" data-element_type="widget" data-e-type="widget" data-widget_type="ct_text_editor.default">
-				<div class="elementor-widget-container">
-					<div id="ct_text_editor-6a1a17e" class="ct-text-editor " data-wow-delay="ms">
-	<div class="ct-item--inner">
-		<div class="ct-inline-css"  data-css="
-	        				            #ct_text_editor-6a1a17e .ct-text-editor {
-	                background-image: -webkit-gradient(linear, left top, left bottom, from(#0C65F8), to(#1227B8));
-					background-image: -webkit-linear-gradient(to left, #0C65F8, #1227B8);
-					background-image: -moz-linear-gradient(to left, #0C65F8, #1227B8);
-					background-image: -ms-linear-gradient(to left, #0C65F8, #1227B8);
-					background-image: -o-linear-gradient(to left, #0C65F8, #1227B8);
-					background-image: linear-gradient(to left, #0C65F8, #1227B8);
-					filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#0C65F8', endColorStr='#1227B8');
-					background-color: transparent;
-					background-clip: text;
-					-o-background-clip: text;
-					-ms-background-clip: text;
-					-moz-background-clip: text;
-					-webkit-background-clip: text;
-					text-fill-color: transparent;
-					-o-text-fill-color: transparent;
-					-ms-text-fill-color: transparent;
-					-moz-text-fill-color: transparent;
-					-webkit-text-fill-color: transparent;
-	            }
-	        ">
-
-	    </div>
-		<div class="ct-text-editor elementor-clearfix">
-			Clients Reviews:		
-		</div>
-	</div>
-</div>				</div>
-				</div>
-				<div class="elementor-element elementor-element-ce58ecc elementor-widget elementor-widget-ct_testimonial_carousel" data-id="ce58ecc" data-element_type="widget" data-e-type="widget" data-widget_type="ct_testimonial_carousel.default">
-				<div class="elementor-widget-container">
-					    <div class="ct-testimonial ct-testimonial-carousel3 ct-slick-slider slick-dots-style2">
-        <div class="ct-carousel-inner">
-            <div class="ct-slick-carousel" data-arrows="" data-dots="true" data-pauseOnHover="" data-autoplay="" data-autoplaySpeed="5000" data-infinite="" data-speed="500" data-colxs="1" data-colsm="1" data-colmd="1" data-collg="1" data-colxl="1" data-dir="false" data-slidesToScroll="1" data-vertical="true">
-                                        <div class="slick-slide">
-                            <div class="item--inner ">
-                                <div class="item--description">"Working with several word press themes and templates the last years, I only can say this is the best in every level. I use it for my company and the reviews that I have already are all excellent."</div>
-                                <div class="item--holder">
-                                                                            <div class="item--image">
-                                            <img loading="lazy" decoding="async" class="lazy lazy-hidden " src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/10/testimonial-01.jpg" width="80" height="80" alt="testimonial-01" title="testimonial-01" /><noscript><img loading="lazy" decoding="async" class="" src="../wp-content/uploads/2021/10/testimonial-01.jpg" width="80" height="80" alt="testimonial-01" title="testimonial-01" /></noscript>                                        </div>
-                                                                        <div class="item--meta">
-                                        <h3 class="item--title">    
-                                            Alina Lora                                        </h3>
-                                        <div class="item--position">Formar Manager, ITSoft</div>
+                @php
+                    $testimonials_subtitle = $siteSettings->get('testimonials_subtitle')?->value ?? 'Testimonials';
+                    $testimonials_heading  = $siteSettings->get('testimonials_heading')?->value ?? '';
+                    $testimonials_label    = $siteSettings->get('testimonials_label')?->value ?? 'Clients Reviews:';
+                @endphp
+                <section class="ct-testimonials-section" style="background: linear-gradient(135deg, #1a3a6e 0%, #3f69b1 100%); padding: 70px 0;">
+                    <div class="container">
+                        <div class="text-center mb-5">
+                            <span style="color:#a8c8f0; font-size:.9rem; text-transform:uppercase; letter-spacing:.1em;">{{ $testimonials_subtitle }}</span>
+                            <h2 style="color:#fff; font-size:2rem; font-weight:700; margin-top:.5rem;">{{ $testimonials_heading }}</h2>
+                            <p style="color:#a8c8f0;">{{ $testimonials_label }}</p>
+                        </div>
+                        <div class="ct-testimonial-slider" style="max-width:750px; margin:0 auto;">
+                            @foreach($testimonials as $testimonial)
+                            <div class="ct-testimonial-item">
+                                <p style="color:#e8f0fe; font-size:1.05rem; font-style:italic; margin-bottom:1.5rem;">"{{ $testimonial->description }}"</p>
+                                <div style="display:flex; align-items:center; gap:1rem;">
+                                    @if($testimonial->image)
+                                    <img src="{{ $testimonial->image }}" width="60" height="60" alt="{{ $testimonial->name }}"
+                                         style="border-radius:50%; object-fit:cover; border:3px solid rgba(255,255,255,0.3);">
+                                    @endif
+                                    <div>
+                                        <strong style="color:#fff; display:block;">{{ $testimonial->name }}</strong>
+                                        <span style="color:#a8c8f0; font-size:.88rem;">{{ $testimonial->position }}</span>
                                     </div>
                                 </div>
-                           </div>
-                        </div>
-                                        <div class="slick-slide">
-                            <div class="item--inner ">
-                                <div class="item--description">"This is one of the BEST THEMES I have ever worked with. The extra bells and whistles added to it are amazing. Elementor features add extra flavor. The customer support is very responsive."</div>
-                                <div class="item--holder">
-                                                                            <div class="item--image">
-                                            <img loading="lazy" decoding="async" class="lazy lazy-hidden " src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/10/testimonial-03.jpg" width="80" height="80" alt="testimonial-03" title="testimonial-03" /><noscript><img loading="lazy" decoding="async" class="" src="../wp-content/uploads/2021/10/testimonial-03.jpg" width="80" height="80" alt="testimonial-03" title="testimonial-03" /></noscript>                                        </div>
-                                                                        <div class="item--meta">
-                                        <h3 class="item--title">    
-                                            Rohan Jho                                        </h3>
-                                        <div class="item--position">Formar Manager, ITSoft</div>
-                                    </div>
-                                </div>
-                           </div>
-                        </div>
-                                        <div class="slick-slide">
-                            <div class="item--inner ">
-                                <div class="item--description">"Great theme, one of the best I have worked with in a while. Full featured and great support for the minor issues I had which were really my not being skilled/experienced enough."</div>
-                                <div class="item--holder">
-                                                                            <div class="item--image">
-                                            <img loading="lazy" decoding="async" class="lazy lazy-hidden " src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/10/testimonial-02.jpg" width="80" height="80" alt="testimonial-02" title="testimonial-02" /><noscript><img loading="lazy" decoding="async" class="" src="../wp-content/uploads/2021/10/testimonial-02.jpg" width="80" height="80" alt="testimonial-02" title="testimonial-02" /></noscript>                                        </div>
-                                                                        <div class="item--meta">
-                                        <h3 class="item--title">    
-                                            Donald Frew                                        </h3>
-                                        <div class="item--position">Formar Manager, ITSoft</div>
-                                    </div>
-                                </div>
-                           </div>
-                        </div>
                             </div>
-        </div>
-    </div>
-				</div>
-				</div>
-		            </div>
-        </div>
-                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-bc87556 ct-column-none col-offset-none col-color-offset-none" data-id="bc87556" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap">
-                    
+                            @endforeach
+                        </div>
                     </div>
-        </div>
-                    </div>
-        </section>
-                <section class="elementor-section elementor-top-section elementor-element elementor-element-1cf44f4 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none" data-id="1cf44f4" data-element_type="section" data-e-type="section">
+                </section>
+                <section class="elementor-section elementor-top-section elementor-element elementor-element-1cf44f4 elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none" data-id="1cf44f4" data-element_type="section" data-e-type="section">
             
                         <div class="elementor-container elementor-column-gap-extended ">
                     <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-793c15c ct-column-none col-offset-none col-color-offset-none" data-id="793c15c" data-element_type="column" data-e-type="column">
@@ -1193,5 +833,28 @@
     </div>
 	</div><!-- #content inner -->
 </div><!-- #content -->
+
+@section('footer_scripts')
+<script>
+jQuery(document).ready(function($) {
+    var $testimonialCarousel = $('.ct-testimonial-slider');
+    if ($testimonialCarousel.length && !$testimonialCarousel.hasClass('slick-initialized')) {
+        $testimonialCarousel.slick({
+            dots: true,
+            arrows: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            adaptiveHeight: true,
+            prevArrow: '<button class="slick-prev" style="left:-40px;"></button>',
+            nextArrow: '<button class="slick-next" style="right:-40px;"></button>'
+        });
+    }
+});
+</script>
+@endsection
 
 @endsection

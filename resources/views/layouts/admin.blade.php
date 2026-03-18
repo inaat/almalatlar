@@ -9,10 +9,11 @@
     <style>
         body { background: #f4f6f9; }
         .sidebar {
-            width: 250px; min-height: 100vh;
+            width: 250px; height: 100vh;
             background: #1e2a38;
             position: fixed; top: 0; left: 0;
             z-index: 100; padding-top: 0;
+            overflow-y: auto;
         }
         .sidebar-brand {
             padding: 1.2rem 1.5rem;
@@ -100,6 +101,17 @@
         </a>
         <a class="nav-link {{ request()->routeIs('admin.about-tabs.*') ? 'active' : '' }}" href="{{ route('admin.about-tabs.index') }}">
             <i class="bi bi-layout-tabs"></i> About Tabs
+        </a>
+        <a class="nav-link {{ request()->routeIs('admin.about-history.*') ? 'active' : '' }}" href="{{ route('admin.about-history.index') }}">
+            <i class="bi bi-clock-history"></i> About History
+        </a>
+
+        <div class="nav-section">Team & Reviews</div>
+        <a class="nav-link {{ request()->routeIs('admin.team-members.*') ? 'active' : '' }}" href="{{ route('admin.team-members.index') }}">
+            <i class="bi bi-people-fill"></i> Team Members
+        </a>
+        <a class="nav-link {{ request()->routeIs('admin.testimonials.*') ? 'active' : '' }}" href="{{ route('admin.testimonials.index') }}">
+            <i class="bi bi-chat-quote-fill"></i> Testimonials
         </a>
     </nav>
 </div>

@@ -21,6 +21,15 @@ class AboutSettingController extends Controller
         'industries_subheading',
         'industries_heading',
         'industries_description',
+        'counter_team',
+        'counter_awards',
+        'counter_projects',
+        'counter_reviews',
+        'testimonials_subtitle',
+        'testimonials_heading',
+        'testimonials_label',
+        'team_subtitle',
+        'team_heading',
     ];
 
     public function index()

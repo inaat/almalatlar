@@ -32,6 +32,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	}
 /*# sourceURL=wp-emoji-styles-inline-css */
 </style>
+<style>
+/* Testimonials section */
+.ct-testimonials-section .slick-dots li button:before { color: #fff; opacity:.6; }
+.ct-testimonials-section .slick-dots li.slick-active button:before { color: #fff; opacity:1; }
+.ct-testimonials-section .slick-prev:before,
+.ct-testimonials-section .slick-next:before { color: #fff; }
+</style>
 <style id='classic-theme-styles-inline-css' type='text/css'>
 /*! This file is auto-generated */
 .wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
@@ -88,6 +95,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
 <link rel='stylesheet' id='elementor-icons-fa-brands-css' href='/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min52d5.css?ver=5.15.3' type='text/css' media='all' />
 <script type="text/javascript" src="/wp-includes/js/jquery/jquery.minf43b.js?ver=3.7.1" id="jquery-core-js"></script>
 <script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/plugins/case-theme-core/assets/js/lib/slick.minc245.js?ver=1.8.1" id="slick-js"></script>
 <script type="text/javascript" src="/wp-content/plugins/case-theme-core/assets/js/lib/waypoints.minc1b4.js?ver=2.0.5" id="waypoints-js"></script>
 <script type="text/javascript" src="/wp-content/themes/itfirm/elementor/js/ct-inline-css1159.js?ver=1.4.2" id="ct-inline-css-js-js"></script>
 <link rel="https://api.w.org/" href="../../wp-json/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
