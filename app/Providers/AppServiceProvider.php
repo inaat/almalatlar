@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\AboutPage;
+use App\Models\AboutTab;
 use App\Models\Product;
 use App\Models\ServiceCategory;
 use App\Models\SiteSetting;
@@ -20,6 +21,12 @@ class AppServiceProvider extends ServiceProvider
             View::share('navServiceCategories', ServiceCategory::with('services')->where('is_active', true)->orderBy('sort_order')->get());
         } else {
             View::share('navServiceCategories', collect());
+        }
+
+        if (Schema::hasTable('about_tabs')) {
+            View::share('aboutTabs', AboutTab::orderBy('sort_order')->get());
+        } else {
+            View::share('aboutTabs', collect());
         }
 
         if (Schema::hasTable('about_pages')) {

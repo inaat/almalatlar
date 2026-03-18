@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\AdminServiceController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\AboutPageController as AdminAboutPageController;
+use App\Http\Controllers\Admin\AboutTabController;
 use App\Http\Controllers\Admin\AboutSettingController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\ProductController;
@@ -51,4 +52,5 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
 
     Route::resource('products', AdminProductController::class);
     Route::resource('about-pages', AdminAboutPageController::class);
+    Route::resource('about-tabs', AboutTabController::class);
 });

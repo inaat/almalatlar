@@ -98,6 +98,9 @@
         <a class="nav-link {{ request()->routeIs('admin.about-pages.*') ? 'active' : '' }}" href="{{ route('admin.about-pages.index') }}">
             <i class="bi bi-files"></i> About Sub-Pages
         </a>
+        <a class="nav-link {{ request()->routeIs('admin.about-tabs.*') ? 'active' : '' }}" href="{{ route('admin.about-tabs.index') }}">
+            <i class="bi bi-layout-tabs"></i> About Tabs
+        </a>
     </nav>
 </div>
 

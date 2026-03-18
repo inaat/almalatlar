@@ -339,357 +339,66 @@
 					<div class="ct-tabs ct-tabs3  content-type-template" data-wow-delay="ms">
     <div class="ct-tabs--main">
         <div class="ct-tabs-title">
-                            <span class="ct-tab-title active" data-target="#ct_tabs-130408a-b21d98c">
-                                                            Our Vision        
+            @foreach($aboutTabs as $tab)
+                <span class="ct-tab-title {{ $loop->first ? 'active' : '' }}" data-target="#ct_tab-{{ $tab->tab_key }}">
+                    {{ $tab->title }}
                 </span>
-                            <span class="ct-tab-title " data-target="#ct_tabs-130408a-870d555">
-                                                            Our Goal        
-                </span>
-                            <span class="ct-tab-title " data-target="#ct_tabs-130408a-4040682">
-                                                            Our Values        
-                </span>
-                    </div>
+            @endforeach
+        </div>
 
         <div class="ct-tabs-content">
-                            <div class="ct-tab-content " id="ct_tabs-130408a-b21d98c" style="display:block;">		<div data-elementor-type="section" data-elementor-id="2828" class="elementor elementor-2828">
-				        <section class="elementor-section elementor-top-section elementor-element elementor-element-f214e46 elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none" data-id="f214e46" data-element_type="section" data-e-type="section">
-            
-                        <div class="elementor-container elementor-column-gap-extended ">
-                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-499237a ct-column-none col-offset-none col-color-offset-none" data-id="499237a" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-                    
-        		<div class="elementor-element elementor-element-f3e75fa elementor-widget elementor-widget-ct_banner" data-id="f3e75fa" data-element_type="widget" data-e-type="widget" data-widget_type="ct_banner.default">
-				<div class="elementor-widget-container">
-						<div class="ct-banner ct-banner2 wow fadeInUp" data-wow-delay="ms">
-		<div class="ct-banner-inner">
-			<div class="ct-banner-image">
-				<img loading="lazy" decoding="async" class="lazy lazy-hidden " src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/11/Untitled-design-8.png" width="600" height="473" alt="Untitled design (8)" title="Untitled design (8)" /><noscript><img loading="lazy" decoding="async" class="" src="../wp-content/uploads/2021/11/Untitled-design-8.png" width="600" height="473" alt="Untitled design (8)" title="Untitled design (8)" /></noscript>			</div>
-							<div class="ct-banner-shape">
-					<img loading="lazy" decoding="async" width="123" height="242" src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/11/h2-shape2.png" class="lazy lazy-hidden attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="123" height="242" src="../wp-content/uploads/2021/11/h2-shape2.png" class="attachment-full" alt="" /></noscript>				</div>
-					</div>
-	</div>
-				</div>
-				</div>
-		            </div>
-        </div>
-                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-a449ec7 ct-column-none col-offset-none col-color-offset-none" data-id="a449ec7" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-                    
-        		<div class="elementor-element elementor-element-26fa349 elementor-widget elementor-widget-ct_heading" data-id="26fa349" data-element_type="widget" data-e-type="widget" data-widget_type="ct_heading.default">
-				<div class="elementor-widget-container">
-					<div id="ct_heading-26fa349" class="ct-heading h-align- item-st-default highlight-style1">
-  <div class="ct-heading--inner"> 
-    <div class="ct-inline-css"  data-css="
-                            #ct_heading-26fa349.ct-heading .item--sub-title span {
-                background-image: -webkit-gradient(linear, left top, left bottom, from(#3F69B1), to(#3F69B163));
-                background-image: -webkit-linear-gradient(to left, #3F69B1, #3F69B163);
-                background-image: -moz-linear-gradient(to left, #3F69B1, #3F69B163);
-                background-image: -ms-linear-gradient(to left, #3F69B1, #3F69B163);
-                background-image: -o-linear-gradient(to left, #3F69B1, #3F69B163);
-                background-image: linear-gradient(to left, #3F69B1, #3F69B163);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#3F69B1', endColorStr='#3F69B163');
-                background-color: transparent;
-                background-clip: text;
-                -o-background-clip: text;
-                -ms-background-clip: text;
-                -moz-background-clip: text;
-                -webkit-background-clip: text;
-                text-fill-color: transparent;
-                -o-text-fill-color: transparent;
-                -ms-text-fill-color: transparent;
-                -moz-text-fill-color: transparent;
-                -webkit-text-fill-color: transparent;
-            }
-                        ">
-    </div>
-      <div class="item--text-below">
-      <div class="ct-inline-css"  data-css="
-        ">
-      </div>
-          </div>
-  
-			<div class="item--sub-title style-default wow fadeInUp" data-wow-delay="ms">
-                        <span>
-                Our Vision            </span>
-                    </div>
-	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">{{ $siteSettings->get('vision_heading')?->value }}</span>    </h3>
-  </div>
-</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-3f510b4 elementor-widget elementor-widget-ct_text_editor" data-id="3f510b4" data-element_type="widget" data-e-type="widget" data-widget_type="ct_text_editor.default">
-				<div class="elementor-widget-container">
-					<div id="ct_text_editor-3f510b4" class="ct-text-editor wow fadeInUp" data-wow-delay="ms">
-	<div class="ct-item--inner">
-		<div class="ct-inline-css"  data-css="
-	        			">
-
-	    </div>
-		<div class="ct-text-editor elementor-clearfix">
-			<p>{{ $siteSettings->get('vision_text')?->value }}</p>
-		</div>
-	</div>
-</div>				</div>
-				</div>
-				<div class="elementor-element elementor-element-67724e1 pxl-button-icon-rtl elementor-widget elementor-widget-ct_button" data-id="67724e1" data-element_type="widget" data-e-type="widget" data-widget_type="ct_button.default">
-				<div class="elementor-widget-container">
-					<div id="ct_button-67724e1" class="ct-button-wrapper ct-button-layout1">
-    <div class="ct-inline-css"  data-css="
-                    #ct_button-67724e1.ct-button-wrapper .btn {
-                background-image: -webkit-linear-gradient(90deg, #3F69B1 0%, #3F69B163 50%, #3F69B1) !important;
-                background-image: -moz-linear-gradient(90deg, #3F69B1 0%, #3F69B163 50%, #3F69B1) !important;
-                background-image: -ms-linear-gradient(90deg, #3F69B1 0%, #3F69B163 50%, #3F69B1) !important;
-                background-image: -o-linear-gradient(90deg, #3F69B1 0%, #3F69B163 50%, #3F69B1) !important;
-                background-image: linear-gradient(90deg, #3F69B1 0%, #3F69B163 50%, #3F69B1) !important;
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#3F69B1', endColorStr='#3F69B163') !important;
-                background-color: transparent !important;
-
-            }
-        ">
-    </div>
-
-            <span class="ct-icon-active"></span>
-        <a href="/" class="btn btn-default wow fadeInUp icon-ps-right " data-wow-delay="ms">
-                            <span class="ct-button-icon ct-icon-normal ct-align-icon-right">
-                <i aria-hidden="true" class="flaticon flaticon-right-arrow"></i>            </span>
-                <span class="ct-button-text">
-            About Us        </span>
-    </a>
-</div>				</div>
-				</div>
-		            </div>
-        </div>
-                    </div>
-        </section>
-        		</div>
-		</div>
-                            <div class="ct-tab-content " id="ct_tabs-130408a-870d555">		<div data-elementor-type="section" data-elementor-id="2832" class="elementor elementor-2832">
-				        <section class="elementor-section elementor-top-section elementor-element elementor-element-2f2ad6e8 elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none" data-id="2f2ad6e8" data-element_type="section" data-e-type="section">
-            
-                        <div class="elementor-container elementor-column-gap-extended ">
-                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1594441a ct-column-none col-offset-none col-color-offset-none" data-id="1594441a" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-                    
-        		<div class="elementor-element elementor-element-5800473 elementor-widget elementor-widget-ct_banner" data-id="5800473" data-element_type="widget" data-e-type="widget" data-widget_type="ct_banner.default">
-				<div class="elementor-widget-container">
-						<div class="ct-banner ct-banner2 wow fadeInUp" data-wow-delay="ms">
-		<div class="ct-banner-inner">
-			<div class="ct-banner-image">
-				<img loading="lazy" decoding="async" class="lazy lazy-hidden " src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/11/Assets-3.png" width="437" height="403" alt="Assets (3)" title="Assets (3)" /><noscript><img loading="lazy" decoding="async" class="" src="../wp-content/uploads/2021/11/Assets-3.png" width="437" height="403" alt="Assets (3)" title="Assets (3)" /></noscript>			</div>
-							<div class="ct-banner-shape">
-					<img loading="lazy" decoding="async" width="123" height="242" src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/11/h2-shape2.png" class="lazy lazy-hidden attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="123" height="242" src="../wp-content/uploads/2021/11/h2-shape2.png" class="attachment-full" alt="" /></noscript>				</div>
-					</div>
-	</div>
-				</div>
-				</div>
-		            </div>
-        </div>
-                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-615a6dc7 ct-column-none col-offset-none col-color-offset-none" data-id="615a6dc7" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-                    
-        		<div class="elementor-element elementor-element-35553fce elementor-widget elementor-widget-ct_heading" data-id="35553fce" data-element_type="widget" data-e-type="widget" data-widget_type="ct_heading.default">
-				<div class="elementor-widget-container">
-					<div id="ct_heading-35553fce" class="ct-heading h-align- item-st-default highlight-style1">
-  <div class="ct-heading--inner"> 
-    <div class="ct-inline-css"  data-css="
-                            #ct_heading-35553fce.ct-heading .item--sub-title span {
-                background-image: -webkit-gradient(linear, left top, left bottom, from(#3F69B1), to(#3F69B163));
-                background-image: -webkit-linear-gradient(to left, #3F69B1, #3F69B163);
-                background-image: -moz-linear-gradient(to left, #3F69B1, #3F69B163);
-                background-image: -ms-linear-gradient(to left, #3F69B1, #3F69B163);
-                background-image: -o-linear-gradient(to left, #3F69B1, #3F69B163);
-                background-image: linear-gradient(to left, #3F69B1, #3F69B163);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#3F69B1', endColorStr='#3F69B163');
-                background-color: transparent;
-                background-clip: text;
-                -o-background-clip: text;
-                -ms-background-clip: text;
-                -moz-background-clip: text;
-                -webkit-background-clip: text;
-                text-fill-color: transparent;
-                -o-text-fill-color: transparent;
-                -ms-text-fill-color: transparent;
-                -moz-text-fill-color: transparent;
-                -webkit-text-fill-color: transparent;
-            }
-                        ">
-    </div>
-      <div class="item--text-below">
-      <div class="ct-inline-css"  data-css="
-        ">
-      </div>
-          </div>
-  
-			<div class="item--sub-title style-default wow fadeInUp" data-wow-delay="ms">
-                        <span>
-                Our Goal            </span>
-                    </div>
-	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">Our Goal</span>    </h3>
-  </div>
-</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-334f2b9d elementor-widget elementor-widget-ct_text_editor" data-id="334f2b9d" data-element_type="widget" data-e-type="widget" data-widget_type="ct_text_editor.default">
-				<div class="elementor-widget-container">
-					<div id="ct_text_editor-334f2b9d" class="ct-text-editor wow fadeInUp" data-wow-delay="ms">
-	<div class="ct-item--inner">
-		<div class="ct-inline-css"  data-css="
-	        			">
-
-	    </div>
-		<div class="ct-text-editor elementor-clearfix">
-			<p>{{ $siteSettings->get('goal_text')?->value }}</p>
-		</div>
-	</div>
-</div>				</div>
-				</div>
-				<div class="elementor-element elementor-element-525e5060 pxl-button-icon-rtl elementor-widget elementor-widget-ct_button" data-id="525e5060" data-element_type="widget" data-e-type="widget" data-widget_type="ct_button.default">
-				<div class="elementor-widget-container">
-					<div id="ct_button-525e5060" class="ct-button-wrapper ct-button-layout1">
-    <div class="ct-inline-css"  data-css="
-                    #ct_button-525e5060.ct-button-wrapper .btn {
-                background-image: -webkit-linear-gradient(90deg, #3F69B1 0%, #3F69B163 50%, #3F69B1) !important;
-                background-image: -moz-linear-gradient(90deg, #3F69B1 0%, #3F69B163 50%, #3F69B1) !important;
-                background-image: -ms-linear-gradient(90deg, #3F69B1 0%, #3F69B163 50%, #3F69B1) !important;
-                background-image: -o-linear-gradient(90deg, #3F69B1 0%, #3F69B163 50%, #3F69B1) !important;
-                background-image: linear-gradient(90deg, #3F69B1 0%, #3F69B163 50%, #3F69B1) !important;
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#3F69B1', endColorStr='#3F69B163') !important;
-                background-color: transparent !important;
-
-            }
-        ">
-    </div>
-
-            <span class="ct-icon-active"></span>
-        <a href="/" class="btn btn-default wow fadeInUp icon-ps-right " data-wow-delay="ms">
-                            <span class="ct-button-icon ct-icon-normal ct-align-icon-right">
-                <i aria-hidden="true" class="flaticon flaticon-right-arrow"></i>            </span>
-                <span class="ct-button-text">
-            About Us        </span>
-    </a>
-</div>				</div>
-				</div>
-		            </div>
-        </div>
-                    </div>
-        </section>
-        		</div>
-		</div>
-                            <div class="ct-tab-content " id="ct_tabs-130408a-4040682">		<div data-elementor-type="section" data-elementor-id="2835" class="elementor elementor-2835">
-				        <section class="elementor-section elementor-top-section elementor-element elementor-element-20558118 elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none" data-id="20558118" data-element_type="section" data-e-type="section">
-            
-                        <div class="elementor-container elementor-column-gap-extended ">
-                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4e41bc4 ct-column-none col-offset-none col-color-offset-none" data-id="4e41bc4" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-                    
-        		<div class="elementor-element elementor-element-6317543c elementor-widget elementor-widget-ct_banner" data-id="6317543c" data-element_type="widget" data-e-type="widget" data-widget_type="ct_banner.default">
-				<div class="elementor-widget-container">
-						<div class="ct-banner ct-banner2 wow fadeInUp" data-wow-delay="ms">
-		<div class="ct-banner-inner">
-			<div class="ct-banner-image">
-				<img loading="lazy" decoding="async" class="lazy lazy-hidden " src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/11/Untitled-design-9.png" width="600" height="473" alt="Untitled design (9)" title="Untitled design (9)" /><noscript><img loading="lazy" decoding="async" class="" src="../wp-content/uploads/2021/11/Untitled-design-9.png" width="600" height="473" alt="Untitled design (9)" title="Untitled design (9)" /></noscript>			</div>
-							<div class="ct-banner-shape">
-					<img loading="lazy" decoding="async" width="123" height="242" src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/11/h2-shape2.png" class="lazy lazy-hidden attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="123" height="242" src="../wp-content/uploads/2021/11/h2-shape2.png" class="attachment-full" alt="" /></noscript>				</div>
-					</div>
-	</div>
-				</div>
-				</div>
-		            </div>
-        </div>
-                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-55c1c311 ct-column-none col-offset-none col-color-offset-none" data-id="55c1c311" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-                    
-        		<div class="elementor-element elementor-element-2364a6e0 elementor-widget elementor-widget-ct_heading" data-id="2364a6e0" data-element_type="widget" data-e-type="widget" data-widget_type="ct_heading.default">
-				<div class="elementor-widget-container">
-					<div id="ct_heading-2364a6e0" class="ct-heading h-align- item-st-default highlight-style1">
-  <div class="ct-heading--inner"> 
-    <div class="ct-inline-css"  data-css="
-                            #ct_heading-2364a6e0.ct-heading .item--sub-title span {
-                background-image: -webkit-gradient(linear, left top, left bottom, from(#3F69B1), to(#3F69B163));
-                background-image: -webkit-linear-gradient(to left, #3F69B1, #3F69B163);
-                background-image: -moz-linear-gradient(to left, #3F69B1, #3F69B163);
-                background-image: -ms-linear-gradient(to left, #3F69B1, #3F69B163);
-                background-image: -o-linear-gradient(to left, #3F69B1, #3F69B163);
-                background-image: linear-gradient(to left, #3F69B1, #3F69B163);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#3F69B1', endColorStr='#3F69B163');
-                background-color: transparent;
-                background-clip: text;
-                -o-background-clip: text;
-                -ms-background-clip: text;
-                -moz-background-clip: text;
-                -webkit-background-clip: text;
-                text-fill-color: transparent;
-                -o-text-fill-color: transparent;
-                -ms-text-fill-color: transparent;
-                -moz-text-fill-color: transparent;
-                -webkit-text-fill-color: transparent;
-            }
-                        ">
-    </div>
-      <div class="item--text-below">
-      <div class="ct-inline-css"  data-css="
-        ">
-      </div>
-          </div>
-  
-			<div class="item--sub-title style-default wow fadeInUp" data-wow-delay="ms">
-                        <span>
-                Our Values            </span>
-                    </div>
-	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">Our Values</span>    </h3>
-  </div>
-</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-2f47447f elementor-widget elementor-widget-ct_text_editor" data-id="2f47447f" data-element_type="widget" data-e-type="widget" data-widget_type="ct_text_editor.default">
-				<div class="elementor-widget-container">
-					<div id="ct_text_editor-2f47447f" class="ct-text-editor wow fadeInUp" data-wow-delay="ms">
-	<div class="ct-item--inner">
-		<div class="ct-inline-css"  data-css="
-	        			">
-
-	    </div>
-		<div class="ct-text-editor elementor-clearfix">
-			{{ $siteSettings->get('values_text')?->value }}
-		</div>
-	</div>
-</div>				</div>
-				</div>
-				<div class="elementor-element elementor-element-5cc4c103 pxl-button-icon-rtl elementor-widget elementor-widget-ct_button" data-id="5cc4c103" data-element_type="widget" data-e-type="widget" data-widget_type="ct_button.default">
-				<div class="elementor-widget-container">
-					<div id="ct_button-5cc4c103" class="ct-button-wrapper ct-button-layout1">
-    <div class="ct-inline-css"  data-css="
-                    #ct_button-5cc4c103.ct-button-wrapper .btn {
-                background-image: -webkit-linear-gradient(90deg, #3F69B1 0%, #3F69B163 50%, #3F69B1) !important;
-                background-image: -moz-linear-gradient(90deg, #3F69B1 0%, #3F69B163 50%, #3F69B1) !important;
-                background-image: -ms-linear-gradient(90deg, #3F69B1 0%, #3F69B163 50%, #3F69B1) !important;
-                background-image: -o-linear-gradient(90deg, #3F69B1 0%, #3F69B163 50%, #3F69B1) !important;
-                background-image: linear-gradient(90deg, #3F69B1 0%, #3F69B163 50%, #3F69B1) !important;
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#3F69B1', endColorStr='#3F69B163') !important;
-                background-color: transparent !important;
-
-            }
-        ">
-    </div>
-
-            <span class="ct-icon-active"></span>
-        <a href="/" class="btn btn-default wow fadeInUp icon-ps-right " data-wow-delay="ms">
-                            <span class="ct-button-icon ct-icon-normal ct-align-icon-right">
-                <i aria-hidden="true" class="flaticon flaticon-right-arrow"></i>            </span>
-                <span class="ct-button-text">
-            About Us        </span>
-    </a>
-</div>				</div>
-				</div>
-		            </div>
-        </div>
-                    </div>
-        </section>
-        		</div>
-		</div>
+            @foreach($aboutTabs as $tab)
+                            <div class="ct-tab-content" id="ct_tab-{{ $tab->tab_key }}" @if($loop->first) style="display:block;" @endif>
+                                <section class="elementor-section elementor-top-section elementor-section-boxed elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none">
+                                    <div class="elementor-container elementor-column-gap-extended">
+                                        <div class="elementor-column elementor-col-50 elementor-top-column ct-column-none">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                @if($tab->image)
+                                                <div class="ct-banner ct-banner2 wow fadeInUp">
+                                                    <div class="ct-banner-inner">
+                                                        <div class="ct-banner-image">
+                                                            <img loading="lazy" decoding="async" src="{{ $tab->image }}" alt="{{ $tab->title }}" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @endif
+                                            </div>
+                                        </div>
+                                        <div class="elementor-column elementor-col-50 elementor-top-column ct-column-none">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <div class="ct-heading h-align- item-st-default highlight-style1">
+                                                    <div class="ct-heading--inner">
+                                                        <div class="item--sub-title style-default wow fadeInUp">
+                                                            <span>{{ $tab->subtitle }}</span>
+                                                        </div>
+                                                        <h3 class="item--title st-default wow fadeInUp">
+                                                            <span class="ct-text-inner">{{ $tab->title }}</span>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                                <div class="ct-text-editor wow fadeInUp">
+                                                    <div class="ct-item--inner">
+                                                        <div class="ct-text-editor elementor-clearfix">
+                                                            <p>{{ $tab->description }}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @if($tab->button_text)
+                                                <div class="ct-button-wrapper ct-button-layout1">
+                                                    <a href="{{ $tab->button_url ?? '#' }}" class="btn btn-default wow fadeInUp icon-ps-right">
+                                                        <span class="ct-button-icon ct-icon-normal ct-align-icon-right">
+                                                            <i aria-hidden="true" class="flaticon flaticon-right-arrow"></i>
+                                                        </span>
+                                                        <span class="ct-button-text">{{ $tab->button_text }}</span>
+                                                    </a>
+                                                </div>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+            @endforeach
                     </div>
     </div>
 </div>				</div>
