@@ -12,26 +12,26 @@ class ProductSeeder extends Seeder
     {
         Product::truncate();
 
-        // IT Hardware & Software
-        $hardwareName = 'IT Hardware & Software';
-        $hardwareContent = 'Al Malath Al Arabia is partner with industry leading vendors and have approach to deliver any kind of IT hardware & software. We can supply Desktops, Laptops Servers, Switches, Routers, storage, wireless access points, wireless access controllers soft & hard security equipment\'s from the well-know brands in the IT industry. We provide business applications like Microsoft 365, Power BI, Dynamics 365, Microsoft Windows, Microsoft Teams, Azure as cloud and many more according to the customer requirements.';
+        // Construction Materials Supply
+        $materialsName = 'Construction Materials Supply';
+        $materialsContent = 'SB Construction sources and supplies high-quality construction materials for all project types. We work with trusted suppliers across Saudi Arabia to provide structural steel, concrete, blocks, insulation, waterproofing membranes, and finishing materials. Our procurement team ensures materials meet specification, are delivered on time, and comply with Saudi building standards.';
 
         Product::create([
-            'name'       => $hardwareName,
-            'slug'       => Str::slug($hardwareName),
-            'content'    => $hardwareContent,
+            'name'       => $materialsName,
+            'slug'       => Str::slug($materialsName),
+            'content'    => $materialsContent,
             'image'      => 'https://almalath.com/wp-content/uploads/2023/08/Assets-9-600x420.png',
             'sort_order' => 1,
         ]);
 
-        // IT Passive Equipment
-        $passiveName = 'IT Passive Equipment';
-        $passiveContent = 'Al-Malaz Arabia Company specializes in supplying a wide range of artificially raised equipment such as raised data center flooring, electrical strips of various sizes, UTP and fiber cables, smart and regular patch panels, binding wires, and DC wires. We supply synthetic equipment from 3M, Corning, ComCub, R&M, Nexans, Wavyo, Lindner, Eaton, Saudi Middle East Fiber Optic Cable Manufacturing Company, Riyadh Cables, Datwyler, and many other similar product providers.';
+        // Specialist Subcontractor Network
+        $subcontractorName = 'Specialist Subcontractor Network';
+        $subcontractorContent = 'SB Construction maintains a vetted network of specialist subcontractors across all trades including MEP, joinery, glazing, landscaping, and steelwork. We manage the full subcontractor coordination process to ensure seamless delivery on complex, multi-trade projects. Our partners are selected for their quality of work, reliability, and compliance with Saudi safety regulations.';
 
         Product::create([
-            'name'       => $passiveName,
-            'slug'       => Str::slug($passiveName),
-            'content'    => $passiveContent,
+            'name'       => $subcontractorName,
+            'slug'       => Str::slug($subcontractorName),
+            'content'    => $subcontractorContent,
             'image'      => 'https://almalath.com/wp-content/uploads/2023/08/IT-Passive-Equipment-600x473.jpg',
             'sort_order' => 2,
         ]);

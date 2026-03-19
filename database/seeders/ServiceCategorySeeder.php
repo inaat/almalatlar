@@ -11,27 +11,27 @@ class ServiceCategorySeeder extends Seeder
     {
         $categories = [
             [
-                'name'       => 'IT Generated Solutions',
-                'slug'       => 'it-generated-solutions',
-                'icon_class' => 'flaticon flaticon-idea',
+                'name'       => 'General Contracting',
+                'slug'       => 'general-contracting',
+                'icon_class' => 'flaticon flaticon-building',
                 'sort_order' => 1,
             ],
             [
-                'name'       => 'Next Generation IT Services',
-                'slug'       => 'next-generation-it-services',
-                'icon_class' => 'flaticon flaticon-process',
+                'name'       => 'Fit-Out & Interior',
+                'slug'       => 'fit-out-interior',
+                'icon_class' => 'flaticon flaticon-idea',
                 'sort_order' => 2,
             ],
             [
-                'name'       => 'Consulting Services',
-                'slug'       => 'consulting-services',
-                'icon_class' => 'flaticon flaticon-best-seller',
+                'name'       => 'Infrastructure & Civil Works',
+                'slug'       => 'infrastructure-civil-works',
+                'icon_class' => 'flaticon flaticon-process',
                 'sort_order' => 3,
             ],
             [
-                'name'       => 'Low Current Services',
-                'slug'       => 'low-current-services',
-                'icon_class' => 'flaticon flaticon-cctv',
+                'name'       => 'MEP Services',
+                'slug'       => 'mep-services',
+                'icon_class' => 'flaticon flaticon-settings',
                 'sort_order' => 4,
             ],
         ];

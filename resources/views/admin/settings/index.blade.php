@@ -60,7 +60,13 @@
                     <label class="form-label fw-semibold">Open Hours</label>
                     <input type="text" name="open_hours" class="form-control"
                            value="{{ old('open_hours', $settings['open_hours']->value ?? '') }}"
-                           placeholder="Mon – Sat: 8 am – 5 pm, Sunday: CLOSED">
+                           placeholder="Mon – Fri: 8AM – 6PM">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">CR Number</label>
+                    <input type="text" name="cr_number" class="form-control"
+                           value="{{ old('cr_number', $settings['cr_number']->value ?? '') }}"
+                           placeholder="e.g. 7048793793">
                 </div>
                 <div class="col-12">
                     <label class="form-label fw-semibold">Address</label>
@@ -339,7 +345,7 @@
     @php
         $knownKeys = [
             'site_name','site_tagline','site_logo','site_logo_footer',
-            'contact_email','address','phone','open_hours',
+            'contact_email','address','phone','open_hours','cr_number',
             'footer_tagline','footer_cta_heading','footer_cta_description','copyright','map_query',
             'social_facebook','social_twitter','social_linkedin','social_dribbble','social_behance','social_instagram',
             'about_subtitle','about_heading','about_description','about_description_2','about_video_id',
