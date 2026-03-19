@@ -1032,7 +1032,7 @@ IT, possible!
     </div>
   
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">vibrant society, thriving economy, ambitious nation&#8221;</span>    </h3>
+        <span class="ct-text-inner">{{ $siteSettings['vision_heading']->value ?? '' }}</span>    </h3>
   </div>
 </div>
 				</div>

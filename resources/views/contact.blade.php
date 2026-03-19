@@ -95,8 +95,8 @@
                 </svg>
                     </div>
 	    <h3 class="item--title st-default " data-wow-delay="ms">
-        <span class="ct-text-inner">Grow Your Business With         <cite class="ct-text-highlight">
-            Our Expertise        </cite>
+        <span class="ct-text-inner">Let's Build Something         <cite class="ct-text-highlight">
+            Great Together        </cite>
         </span>    </h3>
   </div>
 </div>
@@ -116,7 +116,7 @@
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			We understand the importance of approaching each work integrally and believe in the power of simple.		
+			Have a project in mind? Get in touch with our team and we'll be happy to discuss how SB Construction can help bring your vision to life.
 		</div>
 	</div>
 </div>				</div>
@@ -143,7 +143,7 @@
                         <div class="item--meta">
             <h4 class="item--title">
                 Office address            </h4>
-            <div class="item--description">Office No. 3,Deem AlManahil Building 8775 prince Abdulaziz Ibn Musaid Ibn Jalawi Al Sulaimaniyah Dist</div>
+            <div class="item--description">{{ $siteSettings['address']->value ?? '' }}</div>
         </div>
     </div>
 </div>				</div>
@@ -160,7 +160,7 @@
                         <div class="item--meta">
             <h4 class="item--title">
                 Telephone number            </h4>
-            <div class="item--description"></div>
+            <div class="item--description">{{ $siteSettings['phone']->value ?? '' }}</div>
         </div>
     </div>
 </div>				</div>
@@ -177,7 +177,7 @@
                         <div class="item--meta">
             <h4 class="item--title">
                 Mail address            </h4>
-            <div class="item--description">{{ $siteSettings->get('contact_email')?->value ?? 'Info@almalath.com' }}</div>
+            <div class="item--description">{{ $siteSettings['contact_email']->value ?? '' }}</div>
         </div>
     </div>
 </div>				</div>
@@ -200,14 +200,15 @@
         		<div class="elementor-element elementor-element-73aa34b elementor-widget elementor-widget-google_maps" data-id="73aa34b" data-element_type="widget" data-e-type="widget" data-widget_type="google_maps.default">
 				<div class="elementor-widget-container">
 							<div class="elementor-custom-embed">
+@php $mapQuery = urlencode($siteSettings['map_query']->value ?? 'Riyadh, Saudi Arabia'); @endphp
 			<iframe class="lazy lazy-hidden" loading="lazy"
-				 data-lazy-type="iframe" data-src="https://maps.google.com/maps?q=Office%20No.%203%2CDeem%20AlManahil%20Building%208775%20prince%20Abdulaziz%20Ibn%20Musaid%20Ibn%20Jalawi%20Al%20Sulaimaniyah%20Dist&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near"
-					title="Office No. 3,Deem AlManahil Building 8775 prince Abdulaziz Ibn Musaid Ibn Jalawi Al Sulaimaniyah Dist"
-					aria-label="Office No. 3,Deem AlManahil Building 8775 prince Abdulaziz Ibn Musaid Ibn Jalawi Al Sulaimaniyah Dist"
+				 data-lazy-type="iframe" data-src="https://maps.google.com/maps?q={{ $mapQuery }}&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near"
+					title="{{ $siteSettings['map_query']->value ?? '' }}"
+					aria-label="{{ $siteSettings['map_query']->value ?? '' }}"
 			></iframe><noscript><iframe loading="lazy"
-					src="https://maps.google.com/maps?q=Office%20No.%203%2CDeem%20AlManahil%20Building%208775%20prince%20Abdulaziz%20Ibn%20Musaid%20Ibn%20Jalawi%20Al%20Sulaimaniyah%20Dist&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near"
-					title="Office No. 3,Deem AlManahil Building 8775 prince Abdulaziz Ibn Musaid Ibn Jalawi Al Sulaimaniyah Dist"
-					aria-label="Office No. 3,Deem AlManahil Building 8775 prince Abdulaziz Ibn Musaid Ibn Jalawi Al Sulaimaniyah Dist"
+					src="https://maps.google.com/maps?q={{ $mapQuery }}&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near"
+					title="{{ $siteSettings['map_query']->value ?? '' }}"
+					aria-label="{{ $siteSettings['map_query']->value ?? '' }}"
 			></iframe></noscript>
 		</div>
 						</div>
