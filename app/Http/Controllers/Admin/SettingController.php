@@ -19,6 +19,24 @@ class SettingController extends Controller
         'copyright', 'map_query',
         'social_facebook', 'social_twitter', 'social_linkedin',
         'social_dribbble', 'social_behance', 'social_instagram',
+        // About section
+        'about_subtitle', 'about_heading', 'about_description', 'about_description_2', 'about_video_id',
+        // Vision / Mission / Values
+        'vision_heading', 'vision_text', 'goal_text', 'values_text',
+        // Services section
+        'services_subheading', 'services_heading',
+        // Clients
+        'clients_heading',
+        // Industries
+        'industries_subheading', 'industries_heading', 'industries_description',
+        // CTA
+        'cta_text',
+        // Team
+        'team_subtitle', 'team_heading',
+        // Testimonials
+        'testimonials_subtitle', 'testimonials_heading', 'testimonials_label',
+        // Counters
+        'counter_team', 'counter_awards', 'counter_projects', 'counter_reviews',
     ];
 
     // Image setting keys that support file upload

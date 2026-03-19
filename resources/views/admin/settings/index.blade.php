@@ -151,10 +151,207 @@
         </div>
     </div>
 
-    {{-- Any extra settings already in DB --}}
+    {{-- About Section --}}
+    <div class="card mb-3">
+        <div class="card-header fw-semibold">About Section</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Subtitle</label>
+                    <input type="text" name="about_subtitle" class="form-control"
+                           value="{{ old('about_subtitle', $settings['about_subtitle']->value ?? '') }}">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Heading</label>
+                    <input type="text" name="about_heading" class="form-control"
+                           value="{{ old('about_heading', $settings['about_heading']->value ?? '') }}">
+                </div>
+                <div class="col-12">
+                    <label class="form-label fw-semibold">Description (paragraph 1)</label>
+                    <textarea name="about_description" class="form-control" rows="4">{{ old('about_description', $settings['about_description']->value ?? '') }}</textarea>
+                </div>
+                <div class="col-12">
+                    <label class="form-label fw-semibold">Description (paragraph 2)</label>
+                    <textarea name="about_description_2" class="form-control" rows="4">{{ old('about_description_2', $settings['about_description_2']->value ?? '') }}</textarea>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">YouTube Video ID</label>
+                    <input type="text" name="about_video_id" class="form-control"
+                           value="{{ old('about_video_id', $settings['about_video_id']->value ?? '') }}"
+                           placeholder="e.g. SF4aHwxHtZ0">
+                    <small class="text-muted">The part after <code>youtube.com/watch?v=</code></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Vision / Mission / Values --}}
+    <div class="card mb-3">
+        <div class="card-header fw-semibold">Vision / Mission / Values</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-12">
+                    <label class="form-label fw-semibold">Vision Heading</label>
+                    <input type="text" name="vision_heading" class="form-control"
+                           value="{{ old('vision_heading', $settings['vision_heading']->value ?? '') }}">
+                </div>
+                <div class="col-12">
+                    <label class="form-label fw-semibold">Vision Text</label>
+                    <textarea name="vision_text" class="form-control" rows="3">{{ old('vision_text', $settings['vision_text']->value ?? '') }}</textarea>
+                </div>
+                <div class="col-12">
+                    <label class="form-label fw-semibold">Goal Text</label>
+                    <textarea name="goal_text" class="form-control" rows="3">{{ old('goal_text', $settings['goal_text']->value ?? '') }}</textarea>
+                </div>
+                <div class="col-12">
+                    <label class="form-label fw-semibold">Values Text</label>
+                    <textarea name="values_text" class="form-control" rows="3">{{ old('values_text', $settings['values_text']->value ?? '') }}</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Services Section --}}
+    <div class="card mb-3">
+        <div class="card-header fw-semibold">Services Section</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Subheading</label>
+                    <input type="text" name="services_subheading" class="form-control"
+                           value="{{ old('services_subheading', $settings['services_subheading']->value ?? '') }}">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Heading</label>
+                    <input type="text" name="services_heading" class="form-control"
+                           value="{{ old('services_heading', $settings['services_heading']->value ?? '') }}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Clients & Industries --}}
+    <div class="card mb-3">
+        <div class="card-header fw-semibold">Clients & Industries Section</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-12">
+                    <label class="form-label fw-semibold">Clients Heading</label>
+                    <input type="text" name="clients_heading" class="form-control"
+                           value="{{ old('clients_heading', $settings['clients_heading']->value ?? '') }}">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Industries Subheading</label>
+                    <input type="text" name="industries_subheading" class="form-control"
+                           value="{{ old('industries_subheading', $settings['industries_subheading']->value ?? '') }}">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Industries Heading</label>
+                    <input type="text" name="industries_heading" class="form-control"
+                           value="{{ old('industries_heading', $settings['industries_heading']->value ?? '') }}">
+                </div>
+                <div class="col-12">
+                    <label class="form-label fw-semibold">Industries Description</label>
+                    <input type="text" name="industries_description" class="form-control"
+                           value="{{ old('industries_description', $settings['industries_description']->value ?? '') }}">
+                </div>
+                <div class="col-12">
+                    <label class="form-label fw-semibold">CTA Text</label>
+                    <textarea name="cta_text" class="form-control" rows="2">{{ old('cta_text', $settings['cta_text']->value ?? '') }}</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Team Section --}}
+    <div class="card mb-3">
+        <div class="card-header fw-semibold">Team Section</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Subtitle</label>
+                    <input type="text" name="team_subtitle" class="form-control"
+                           value="{{ old('team_subtitle', $settings['team_subtitle']->value ?? '') }}">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Heading</label>
+                    <input type="text" name="team_heading" class="form-control"
+                           value="{{ old('team_heading', $settings['team_heading']->value ?? '') }}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Testimonials Section --}}
+    <div class="card mb-3">
+        <div class="card-header fw-semibold">Testimonials Section</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold">Subtitle</label>
+                    <input type="text" name="testimonials_subtitle" class="form-control"
+                           value="{{ old('testimonials_subtitle', $settings['testimonials_subtitle']->value ?? '') }}">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold">Heading</label>
+                    <input type="text" name="testimonials_heading" class="form-control"
+                           value="{{ old('testimonials_heading', $settings['testimonials_heading']->value ?? '') }}">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold">Label</label>
+                    <input type="text" name="testimonials_label" class="form-control"
+                           value="{{ old('testimonials_label', $settings['testimonials_label']->value ?? '') }}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Page Counters --}}
+    <div class="card mb-3">
+        <div class="card-header fw-semibold">Page Counters (About Page)</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <label class="form-label fw-semibold">Team Members</label>
+                    <input type="number" name="counter_team" class="form-control"
+                           value="{{ old('counter_team', $settings['counter_team']->value ?? '') }}">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label fw-semibold">Awards</label>
+                    <input type="number" name="counter_awards" class="form-control"
+                           value="{{ old('counter_awards', $settings['counter_awards']->value ?? '') }}">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label fw-semibold">Projects</label>
+                    <input type="number" name="counter_projects" class="form-control"
+                           value="{{ old('counter_projects', $settings['counter_projects']->value ?? '') }}">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label fw-semibold">Reviews</label>
+                    <input type="number" name="counter_reviews" class="form-control"
+                           value="{{ old('counter_reviews', $settings['counter_reviews']->value ?? '') }}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Any truly extra settings still in DB --}}
     @php
-        $knownKeys = ['site_name','site_tagline','site_logo','site_logo_footer','contact_email','address','phone','open_hours','footer_tagline','footer_cta_heading','footer_cta_description','copyright','map_query','social_facebook','social_twitter','social_linkedin','social_dribbble','social_behance','social_instagram'];
-        $extras = $settings->except($knownKeys);
+        $knownKeys = [
+            'site_name','site_tagline','site_logo','site_logo_footer',
+            'contact_email','address','phone','open_hours',
+            'footer_tagline','footer_cta_heading','footer_cta_description','copyright','map_query',
+            'social_facebook','social_twitter','social_linkedin','social_dribbble','social_behance','social_instagram',
+            'about_subtitle','about_heading','about_description','about_description_2','about_video_id',
+            'vision_heading','vision_text','goal_text','values_text',
+            'services_subheading','services_heading',
+            'clients_heading',
+            'industries_subheading','industries_heading','industries_description','cta_text',
+            'team_subtitle','team_heading',
+            'testimonials_subtitle','testimonials_heading','testimonials_label',
+            'counter_team','counter_awards','counter_projects','counter_reviews',
+        ];
+        $extras = $settings->filter(fn($v, $k) => !in_array($k, $knownKeys));
     @endphp
     @if($extras->count())
     <div class="card mb-3">
