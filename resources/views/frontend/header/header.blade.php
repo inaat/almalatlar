@@ -49,9 +49,9 @@
                         <div class="item--contact-info">
                 	    			        <span class="ct-contact-icon">
     		                <i aria-hidden="true" class="flaticon flaticon-telephone-call"></i>    		                    			        </span>
-    			                        <span class="ct-contact-content">
+    			                        <span class="ct-contact-content" dir="ltr">
                 	   {{ $siteSettings->get('phone')?->value }}                    </span>
-                                            <a class="pxl-item--link" href="tel:+96611400203" target="_blank"></a>
+                                            <a class="pxl-item--link" href="tel:{{ $siteSettings->get('phone')?->value }}" target="_blank"></a>
                                    </div>
             </div>
 			</div>
@@ -116,7 +116,7 @@
     		                <i aria-hidden="true" class="flaticon flaticon-inbox"></i>    		                    			        </span>
     			                        <span class="ct-contact-content">
                 	   {{ $siteSettings->get('contact_email')?->value }}                    </span>
-                                            <a class="pxl-item--link" href="mailto:envato@mail.com" target="_blank"></a>
+                                            <a class="pxl-item--link" href="mailto:{{ $siteSettings->get('contact_email')?->value }}" target="_blank"></a>
                                    </div>
             </div>
 			</div>

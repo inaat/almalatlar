@@ -162,7 +162,7 @@
                                                             </div>
                                                             <div class="item--contact-info">
                                                                 <span class="ct-contact-icon"><i aria-hidden="true" class="fas fa-phone-alt"></i></span>
-                                                                <span class="ct-contact-content">
+                                                                <span class="ct-contact-content" dir="ltr">
                                                                     {{ $siteSettings->get('phone')?->value }}
                                                                 </span>
                                                             </div>

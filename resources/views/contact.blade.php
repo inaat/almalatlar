@@ -160,7 +160,7 @@
                         <div class="item--meta">
             <h4 class="item--title">
                 {{ __('Telephone number') }}            </h4>
-            <div class="item--description">{{ $siteSettings->get('phone')?->value }}</div>
+            <div class="item--description" dir="ltr">{{ $siteSettings->get('phone')?->value }}</div>
         </div>
     </div>
 </div>				</div>
