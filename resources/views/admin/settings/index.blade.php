@@ -16,16 +16,28 @@
         <div class="card-body">
             <div class="row g-3">
                 <div class="col-md-6">
-                    <label class="form-label fw-semibold">Site Name</label>
+                    <label class="form-label fw-semibold">Site Name <span class="badge bg-secondary">EN</span></label>
                     <input type="text" name="site_name" class="form-control"
                            value="{{ old('site_name', $settings['site_name']->value ?? '') }}"
                            placeholder="">
                     <small class="text-muted">Used in browser tab title on all pages.</small>
                 </div>
                 <div class="col-md-6">
-                    <label class="form-label fw-semibold">Site Tagline</label>
+                    <label class="form-label fw-semibold">Site Name <span class="badge bg-warning text-dark">AR</span></label>
+                    <input type="text" name="site_name_ar" class="form-control" dir="rtl"
+                           value="{{ old('site_name_ar', $settings['site_name_ar']->value ?? '') }}"
+                           placeholder="اسم الموقع بالعربية">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Site Tagline <span class="badge bg-secondary">EN</span></label>
                     <input type="text" name="site_tagline" class="form-control"
                            value="{{ old('site_tagline', $settings['site_tagline']->value ?? '') }}">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Site Tagline <span class="badge bg-warning text-dark">AR</span></label>
+                    <input type="text" name="site_tagline_ar" class="form-control" dir="rtl"
+                           value="{{ old('site_tagline_ar', $settings['site_tagline_ar']->value ?? '') }}"
+                           placeholder="الشعار بالعربية">
                 </div>
                 <div class="col-md-6">
                     <x-image-upload name="site_logo" label="Header Logo"
@@ -163,22 +175,40 @@
         <div class="card-body">
             <div class="row g-3">
                 <div class="col-md-6">
-                    <label class="form-label fw-semibold">Subtitle</label>
+                    <label class="form-label fw-semibold">Subtitle <span class="badge bg-secondary">EN</span></label>
                     <input type="text" name="about_subtitle" class="form-control"
                            value="{{ old('about_subtitle', $settings['about_subtitle']->value ?? '') }}">
                 </div>
                 <div class="col-md-6">
-                    <label class="form-label fw-semibold">Heading</label>
+                    <label class="form-label fw-semibold">Subtitle <span class="badge bg-warning text-dark">AR</span></label>
+                    <input type="text" name="about_subtitle_ar" class="form-control" dir="rtl"
+                           value="{{ old('about_subtitle_ar', $settings['about_subtitle_ar']->value ?? '') }}" placeholder="عن شركتنا">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Heading <span class="badge bg-secondary">EN</span></label>
                     <input type="text" name="about_heading" class="form-control"
                            value="{{ old('about_heading', $settings['about_heading']->value ?? '') }}">
                 </div>
-                <div class="col-12">
-                    <label class="form-label fw-semibold">Description (paragraph 1)</label>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Heading <span class="badge bg-warning text-dark">AR</span></label>
+                    <input type="text" name="about_heading_ar" class="form-control" dir="rtl"
+                           value="{{ old('about_heading_ar', $settings['about_heading_ar']->value ?? '') }}" placeholder="العنوان بالعربية">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Description (paragraph 1) <span class="badge bg-secondary">EN</span></label>
                     <textarea name="about_description" class="form-control" rows="4">{{ old('about_description', $settings['about_description']->value ?? '') }}</textarea>
                 </div>
-                <div class="col-12">
-                    <label class="form-label fw-semibold">Description (paragraph 2)</label>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Description (paragraph 1) <span class="badge bg-warning text-dark">AR</span></label>
+                    <textarea name="about_description_ar" class="form-control" rows="4" dir="rtl">{{ old('about_description_ar', $settings['about_description_ar']->value ?? '') }}</textarea>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Description (paragraph 2) <span class="badge bg-secondary">EN</span></label>
                     <textarea name="about_description_2" class="form-control" rows="4">{{ old('about_description_2', $settings['about_description_2']->value ?? '') }}</textarea>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Description (paragraph 2) <span class="badge bg-warning text-dark">AR</span></label>
+                    <textarea name="about_description_2_ar" class="form-control" rows="4" dir="rtl">{{ old('about_description_2_ar', $settings['about_description_2_ar']->value ?? '') }}</textarea>
                 </div>
                 <div class="col-md-6">
                     <label class="form-label fw-semibold">YouTube Video ID</label>
@@ -196,22 +226,39 @@
         <div class="card-header fw-semibold">Vision / Mission / Values</div>
         <div class="card-body">
             <div class="row g-3">
-                <div class="col-12">
-                    <label class="form-label fw-semibold">Vision Heading</label>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Vision Heading <span class="badge bg-secondary">EN</span></label>
                     <input type="text" name="vision_heading" class="form-control"
                            value="{{ old('vision_heading', $settings['vision_heading']->value ?? '') }}">
                 </div>
-                <div class="col-12">
-                    <label class="form-label fw-semibold">Vision Text</label>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Vision Heading <span class="badge bg-warning text-dark">AR</span></label>
+                    <input type="text" name="vision_heading_ar" class="form-control" dir="rtl"
+                           value="{{ old('vision_heading_ar', $settings['vision_heading_ar']->value ?? '') }}" placeholder="عنوان الرؤية">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Vision Text <span class="badge bg-secondary">EN</span></label>
                     <textarea name="vision_text" class="form-control" rows="3">{{ old('vision_text', $settings['vision_text']->value ?? '') }}</textarea>
                 </div>
-                <div class="col-12">
-                    <label class="form-label fw-semibold">Goal Text</label>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Vision Text <span class="badge bg-warning text-dark">AR</span></label>
+                    <textarea name="vision_text_ar" class="form-control" rows="3" dir="rtl">{{ old('vision_text_ar', $settings['vision_text_ar']->value ?? '') }}</textarea>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Goal Text <span class="badge bg-secondary">EN</span></label>
                     <textarea name="goal_text" class="form-control" rows="3">{{ old('goal_text', $settings['goal_text']->value ?? '') }}</textarea>
                 </div>
-                <div class="col-12">
-                    <label class="form-label fw-semibold">Values Text</label>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Goal Text <span class="badge bg-warning text-dark">AR</span></label>
+                    <textarea name="goal_text_ar" class="form-control" rows="3" dir="rtl">{{ old('goal_text_ar', $settings['goal_text_ar']->value ?? '') }}</textarea>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Values Text <span class="badge bg-secondary">EN</span></label>
                     <textarea name="values_text" class="form-control" rows="3">{{ old('values_text', $settings['values_text']->value ?? '') }}</textarea>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Values Text <span class="badge bg-warning text-dark">AR</span></label>
+                    <textarea name="values_text_ar" class="form-control" rows="3" dir="rtl">{{ old('values_text_ar', $settings['values_text_ar']->value ?? '') }}</textarea>
                 </div>
             </div>
         </div>
@@ -345,16 +392,25 @@
     @php
         $knownKeys = [
             'site_name','site_tagline','site_logo','site_logo_footer',
+            'site_name_ar','site_tagline_ar',
             'contact_email','address','phone','open_hours','cr_number',
+            'address_ar','open_hours_ar',
             'footer_tagline','footer_cta_heading','footer_cta_description','copyright','map_query',
+            'footer_tagline_ar','footer_cta_heading_ar','footer_cta_description_ar','copyright_ar',
             'social_facebook','social_twitter','social_linkedin','social_dribbble','social_behance','social_instagram',
             'about_subtitle','about_heading','about_description','about_description_2','about_video_id',
+            'about_subtitle_ar','about_heading_ar','about_description_ar','about_description_2_ar',
             'vision_heading','vision_text','goal_text','values_text',
+            'vision_heading_ar','vision_text_ar','goal_text_ar','values_text_ar',
             'services_subheading','services_heading',
-            'clients_heading',
+            'services_subheading_ar','services_heading_ar',
+            'clients_heading','clients_heading_ar',
             'industries_subheading','industries_heading','industries_description','cta_text',
+            'industries_subheading_ar','industries_heading_ar','industries_description_ar','cta_text_ar',
             'team_subtitle','team_heading',
+            'team_subtitle_ar','team_heading_ar',
             'testimonials_subtitle','testimonials_heading','testimonials_label',
+            'testimonials_subtitle_ar','testimonials_heading_ar','testimonials_label_ar',
             'counter_team','counter_awards','counter_projects','counter_reviews',
         ];
         $extras = $settings->filter(fn($v, $k) => !in_array($k, $knownKeys));

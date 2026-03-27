@@ -34,24 +34,41 @@
                 </div>
 
                 <div class="col-md-4">
-                    <label class="form-label">Title <span class="text-danger">*</span></label>
+                    <label class="form-label">Title <span class="text-danger">*</span> <span class="badge bg-secondary">EN</span></label>
                     <input type="text" name="title" value="{{ old('title', $tab->title) }}"
                            class="form-control @error('title') is-invalid @enderror" required>
                     @error('title')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
 
                 <div class="col-md-4">
-                    <label class="form-label">Subtitle</label>
+                    <label class="form-label">Title <span class="badge bg-warning text-dark">AR</span></label>
+                    <input type="text" name="title_ar" value="{{ old('title_ar', $tab->title_ar) }}"
+                           class="form-control" dir="rtl">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Subtitle <span class="badge bg-secondary">EN</span></label>
                     <input type="text" name="subtitle" value="{{ old('subtitle', $tab->subtitle) }}"
                            class="form-control @error('subtitle') is-invalid @enderror">
                     @error('subtitle')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
 
+                <div class="col-md-4">
+                    <label class="form-label">Subtitle <span class="badge bg-warning text-dark">AR</span></label>
+                    <input type="text" name="subtitle_ar" value="{{ old('subtitle_ar', $tab->subtitle_ar) }}"
+                           class="form-control" dir="rtl">
+                </div>
+
                 <div class="col-12">
-                    <label class="form-label">Description</label>
+                    <label class="form-label">Description <span class="badge bg-secondary">EN</span></label>
                     <textarea name="description" rows="4"
                               class="form-control @error('description') is-invalid @enderror">{{ old('description', $tab->description) }}</textarea>
                     @error('description')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Description <span class="badge bg-warning text-dark">AR</span></label>
+                    <textarea name="description_ar" rows="4" class="form-control" dir="rtl">{{ old('description_ar', $tab->description_ar) }}</textarea>
                 </div>
 
                 <div class="col-md-6">
@@ -61,9 +78,14 @@
                 </div>
 
                 <div class="col-md-3">
-                    <label class="form-label">Button Text</label>
+                    <label class="form-label">Button Text <span class="badge bg-secondary">EN</span></label>
                     <input type="text" name="button_text" value="{{ old('button_text', $tab->button_text) }}"
                            class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Button Text <span class="badge bg-warning text-dark">AR</span></label>
+                    <input type="text" name="button_text_ar" value="{{ old('button_text_ar', $tab->button_text_ar) }}"
+                           class="form-control" dir="rtl">
                 </div>
 
                 <div class="col-md-3">

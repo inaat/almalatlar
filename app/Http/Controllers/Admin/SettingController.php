@@ -14,27 +14,36 @@ class SettingController extends Controller
     // Known text setting keys shown in the form
     protected array $textFields = [
         'site_name', 'site_tagline',
+        'site_name_ar', 'site_tagline_ar',
         'contact_email', 'address', 'phone', 'open_hours', 'cr_number',
+        'address_ar', 'open_hours_ar',
         'footer_tagline', 'footer_cta_heading', 'footer_cta_description',
-        'copyright', 'map_query',
+        'footer_tagline_ar', 'footer_cta_heading_ar', 'footer_cta_description_ar',
+        'copyright', 'copyright_ar', 'map_query',
         'social_facebook', 'social_twitter', 'social_linkedin',
         'social_dribbble', 'social_behance', 'social_instagram',
         // About section
         'about_subtitle', 'about_heading', 'about_description', 'about_description_2', 'about_video_id',
+        'about_subtitle_ar', 'about_heading_ar', 'about_description_ar', 'about_description_2_ar',
         // Vision / Mission / Values
         'vision_heading', 'vision_text', 'goal_text', 'values_text',
+        'vision_heading_ar', 'vision_text_ar', 'goal_text_ar', 'values_text_ar',
         // Services section
         'services_subheading', 'services_heading',
+        'services_subheading_ar', 'services_heading_ar',
         // Clients
-        'clients_heading',
+        'clients_heading', 'clients_heading_ar',
         // Industries
         'industries_subheading', 'industries_heading', 'industries_description',
+        'industries_subheading_ar', 'industries_heading_ar', 'industries_description_ar',
         // CTA
-        'cta_text',
+        'cta_text', 'cta_text_ar',
         // Team
         'team_subtitle', 'team_heading',
+        'team_subtitle_ar', 'team_heading_ar',
         // Testimonials
         'testimonials_subtitle', 'testimonials_heading', 'testimonials_label',
+        'testimonials_subtitle_ar', 'testimonials_heading_ar', 'testimonials_label_ar',
         // Counters
         'counter_team', 'counter_awards', 'counter_projects', 'counter_reviews',
     ];

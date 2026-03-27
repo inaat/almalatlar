@@ -16,10 +16,15 @@
 
             <div class="row g-3">
                 <div class="col-md-6">
-                    <label class="form-label fw-semibold">Name <span class="text-danger">*</span></label>
+                    <label class="form-label fw-semibold">Name <span class="text-danger">*</span> <span class="badge bg-secondary">EN</span></label>
                     <input type="text" name="name" class="form-control @error('name') is-invalid @enderror"
                            value="{{ old('name', $category->name) }}" required>
                     @error('name') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Name <span class="badge bg-warning text-dark">AR</span></label>
+                    <input type="text" name="name_ar" class="form-control" dir="rtl"
+                           value="{{ old('name_ar', $category->name_ar) }}">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label fw-semibold">Slug <small class="text-muted">(auto-generated if empty)</small></label>

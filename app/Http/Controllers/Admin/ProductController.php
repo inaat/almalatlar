@@ -27,13 +27,15 @@ class ProductController extends Controller
     {
         $request->validate([
             'name'       => 'required|string|max:255',
+            'name_ar'    => 'nullable|string|max:255',
             'content'    => 'nullable|string',
+            'content_ar' => 'nullable|string',
             'image'      => 'nullable|image|max:4096',
             'icon_class' => 'nullable|string|max:100',
             'sort_order' => 'nullable|integer',
         ]);
 
-        $data = $request->only(['name', 'content', 'icon_class', 'sort_order']);
+        $data = $request->only(['name', 'name_ar', 'content', 'content_ar', 'icon_class', 'sort_order']);
         $data['slug']       = Str::slug($request->name);
         $data['image']      = $this->handleImageUpload($request, 'image', 'products');
         $data['sort_order'] = $data['sort_order'] ?? 0;
@@ -53,13 +55,15 @@ class ProductController extends Controller
     {
         $request->validate([
             'name'       => 'required|string|max:255',
+            'name_ar'    => 'nullable|string|max:255',
             'content'    => 'nullable|string',
+            'content_ar' => 'nullable|string',
             'image'      => 'nullable|image|max:4096',
             'icon_class' => 'nullable|string|max:100',
             'sort_order' => 'nullable|integer',
         ]);
 
-        $data = $request->only(['name', 'content', 'icon_class', 'sort_order']);
+        $data = $request->only(['name', 'name_ar', 'content', 'content_ar', 'icon_class', 'sort_order']);
         $data['slug']       = Str::slug($request->name);
         $data['image']      = $this->handleImageUpload($request, 'image', 'products', $product->image);
         $data['sort_order'] = $data['sort_order'] ?? 0;

@@ -34,10 +34,15 @@
                 </div>
 
                 <div class="col-md-5">
-                    <label class="form-label">Title <span class="text-danger">*</span></label>
+                    <label class="form-label">Title <span class="text-danger">*</span> <span class="badge bg-secondary">EN</span></label>
                     <input type="text" name="title" value="{{ old('title', $item->title) }}"
                            class="form-control @error('title') is-invalid @enderror" required>
                     @error('title')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                </div>
+                <div class="col-md-5">
+                    <label class="form-label">Title <span class="badge bg-warning text-dark">AR</span></label>
+                    <input type="text" name="title_ar" value="{{ old('title_ar', $item->title_ar) }}"
+                           class="form-control" dir="rtl">
                 </div>
 
                 <div class="col-md-2">
@@ -53,10 +58,14 @@
                 </div>
 
                 <div class="col-12">
-                    <label class="form-label">Description</label>
+                    <label class="form-label">Description <span class="badge bg-secondary">EN</span></label>
                     <textarea name="description" rows="3"
                               class="form-control @error('description') is-invalid @enderror">{{ old('description', $item->description) }}</textarea>
                     @error('description')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Description <span class="badge bg-warning text-dark">AR</span></label>
+                    <textarea name="description_ar" rows="3" class="form-control" dir="rtl">{{ old('description_ar', $item->description_ar) }}</textarea>
                 </div>
 
                 <div class="col-md-6">

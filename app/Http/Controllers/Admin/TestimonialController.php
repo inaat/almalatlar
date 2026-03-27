@@ -26,14 +26,16 @@ class TestimonialController extends Controller
     {
         $request->validate([
             'name'        => 'required|string|max:255',
-            'position'    => 'nullable|string|max:255',
-            'image'       => 'nullable|image|max:4096',
-            'description' => 'required|string',
+            'position'       => 'nullable|string|max:255',
+            'position_ar'    => 'nullable|string|max:255',
+            'image'          => 'nullable|image|max:4096',
+            'description'    => 'required|string',
+            'description_ar' => 'nullable|string',
             'sort_order'  => 'nullable|integer',
             'is_active'   => 'nullable|boolean',
         ]);
 
-        $data = $request->only(['name', 'position', 'description', 'sort_order']);
+        $data = $request->only(['name', 'position', 'position_ar', 'description', 'description_ar', 'sort_order']);
         $data['image']      = $this->handleImageUpload($request, 'image', 'testimonials');
         $data['is_active']  = $request->boolean('is_active');
         $data['sort_order'] = $data['sort_order'] ?? 0;
@@ -52,14 +54,16 @@ class TestimonialController extends Controller
     {
         $request->validate([
             'name'        => 'required|string|max:255',
-            'position'    => 'nullable|string|max:255',
-            'image'       => 'nullable|image|max:4096',
-            'description' => 'required|string',
+            'position'       => 'nullable|string|max:255',
+            'position_ar'    => 'nullable|string|max:255',
+            'image'          => 'nullable|image|max:4096',
+            'description'    => 'required|string',
+            'description_ar' => 'nullable|string',
             'sort_order'  => 'nullable|integer',
             'is_active'   => 'nullable|boolean',
         ]);
 
-        $data = $request->only(['name', 'position', 'description', 'sort_order']);
+        $data = $request->only(['name', 'position', 'position_ar', 'description', 'description_ar', 'sort_order']);
         $data['image']      = $this->handleImageUpload($request, 'image', 'testimonials', $testimonial->image);
         $data['is_active']  = $request->boolean('is_active');
         $data['sort_order'] = $data['sort_order'] ?? 0;

@@ -26,14 +26,16 @@ class AboutHistoryController extends Controller
     {
         $request->validate([
             'year'        => 'required|string|max:10',
-            'title'       => 'required|string|max:255',
-            'description' => 'nullable|string',
+            'title'          => 'required|string|max:255',
+            'title_ar'       => 'nullable|string|max:255',
+            'description'    => 'nullable|string',
+            'description_ar' => 'nullable|string',
             'image'       => 'nullable|image|max:4096',
             'color'       => 'nullable|string|max:20',
             'sort_order'  => 'nullable|integer',
         ]);
 
-        $data = $request->only(['year', 'title', 'description', 'color', 'sort_order']);
+        $data = $request->only(['year', 'title', 'title_ar', 'description', 'description_ar', 'color', 'sort_order']);
         $data['image']      = $this->handleImageUpload($request, 'image', 'about-history');
         $data['sort_order'] = $data['sort_order'] ?? 0;
 
@@ -51,14 +53,16 @@ class AboutHistoryController extends Controller
     {
         $request->validate([
             'year'        => 'required|string|max:10',
-            'title'       => 'required|string|max:255',
-            'description' => 'nullable|string',
+            'title'          => 'required|string|max:255',
+            'title_ar'       => 'nullable|string|max:255',
+            'description'    => 'nullable|string',
+            'description_ar' => 'nullable|string',
             'image'       => 'nullable|image|max:4096',
             'color'       => 'nullable|string|max:20',
             'sort_order'  => 'nullable|integer',
         ]);
 
-        $data = $request->only(['year', 'title', 'description', 'color', 'sort_order']);
+        $data = $request->only(['year', 'title', 'title_ar', 'description', 'description_ar', 'color', 'sort_order']);
         $data['image']      = $this->handleImageUpload($request, 'image', 'about-history', $aboutHistory->image);
         $data['sort_order'] = $data['sort_order'] ?? 0;
 

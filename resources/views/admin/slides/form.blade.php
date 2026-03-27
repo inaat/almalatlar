@@ -18,20 +18,36 @@
 
             <div class="row g-3">
                 <div class="col-md-6">
-                    <label class="form-label fw-semibold">Title</label>
+                    <label class="form-label fw-semibold">Title <span class="badge bg-secondary">EN</span></label>
                     <input type="text" name="title" class="form-control" value="{{ old('title', $slide->title) }}">
                 </div>
                 <div class="col-md-6">
-                    <label class="form-label fw-semibold">Subtitle</label>
-                    <input type="text" name="subtitle" class="form-control" value="{{ old('subtitle', $slide->subtitle) }}">
-                </div>
-                <div class="col-12">
-                    <label class="form-label fw-semibold">Description</label>
-                    <textarea name="description" class="form-control" rows="3">{{ old('description', $slide->description) }}</textarea>
+                    <label class="form-label fw-semibold">Title <span class="badge bg-warning text-dark">AR</span></label>
+                    <input type="text" name="title_ar" class="form-control" dir="rtl" value="{{ old('title_ar', $slide->title_ar) }}">
                 </div>
                 <div class="col-md-6">
-                    <label class="form-label fw-semibold">Button Text</label>
+                    <label class="form-label fw-semibold">Subtitle <span class="badge bg-secondary">EN</span></label>
+                    <input type="text" name="subtitle" class="form-control" value="{{ old('subtitle', $slide->subtitle) }}">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Subtitle <span class="badge bg-warning text-dark">AR</span></label>
+                    <input type="text" name="subtitle_ar" class="form-control" dir="rtl" value="{{ old('subtitle_ar', $slide->subtitle_ar) }}">
+                </div>
+                <div class="col-12">
+                    <label class="form-label fw-semibold">Description <span class="badge bg-secondary">EN</span></label>
+                    <textarea name="description" class="form-control" rows="3">{{ old('description', $slide->description) }}</textarea>
+                </div>
+                <div class="col-12">
+                    <label class="form-label fw-semibold">Description <span class="badge bg-warning text-dark">AR</span></label>
+                    <textarea name="description_ar" class="form-control" rows="3" dir="rtl">{{ old('description_ar', $slide->description_ar) }}</textarea>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Button Text <span class="badge bg-secondary">EN</span></label>
                     <input type="text" name="button_text" class="form-control" value="{{ old('button_text', $slide->button_text) }}">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Button Text <span class="badge bg-warning text-dark">AR</span></label>
+                    <input type="text" name="button_text_ar" class="form-control" dir="rtl" value="{{ old('button_text_ar', $slide->button_text_ar) }}">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label fw-semibold">Button URL</label>

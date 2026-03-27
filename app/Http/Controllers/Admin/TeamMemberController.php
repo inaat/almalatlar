@@ -26,9 +26,11 @@ class TeamMemberController extends Controller
     {
         $request->validate([
             'name'         => 'required|string|max:255',
-            'position'     => 'nullable|string|max:255',
-            'image'        => 'nullable|image|max:4096',
-            'description'  => 'nullable|string',
+            'position'       => 'nullable|string|max:255',
+            'position_ar'    => 'nullable|string|max:255',
+            'image'          => 'nullable|image|max:4096',
+            'description'    => 'nullable|string',
+            'description_ar' => 'nullable|string',
             'facebook_url' => 'nullable|string|max:255',
             'twitter_url'  => 'nullable|string|max:255',
             'dribbble_url' => 'nullable|string|max:255',
@@ -36,7 +38,7 @@ class TeamMemberController extends Controller
             'is_active'    => 'nullable|boolean',
         ]);
 
-        $data = $request->only(['name', 'position', 'description', 'facebook_url', 'twitter_url', 'dribbble_url', 'sort_order']);
+        $data = $request->only(['name', 'position', 'position_ar', 'description', 'description_ar', 'facebook_url', 'twitter_url', 'dribbble_url', 'sort_order']);
         $data['image']      = $this->handleImageUpload($request, 'image', 'team-members');
         $data['is_active']  = $request->boolean('is_active');
         $data['sort_order'] = $data['sort_order'] ?? 0;
@@ -55,9 +57,11 @@ class TeamMemberController extends Controller
     {
         $request->validate([
             'name'         => 'required|string|max:255',
-            'position'     => 'nullable|string|max:255',
-            'image'        => 'nullable|image|max:4096',
-            'description'  => 'nullable|string',
+            'position'       => 'nullable|string|max:255',
+            'position_ar'    => 'nullable|string|max:255',
+            'image'          => 'nullable|image|max:4096',
+            'description'    => 'nullable|string',
+            'description_ar' => 'nullable|string',
             'facebook_url' => 'nullable|string|max:255',
             'twitter_url'  => 'nullable|string|max:255',
             'dribbble_url' => 'nullable|string|max:255',
@@ -65,7 +69,7 @@ class TeamMemberController extends Controller
             'is_active'    => 'nullable|boolean',
         ]);
 
-        $data = $request->only(['name', 'position', 'description', 'facebook_url', 'twitter_url', 'dribbble_url', 'sort_order']);
+        $data = $request->only(['name', 'position', 'position_ar', 'description', 'description_ar', 'facebook_url', 'twitter_url', 'dribbble_url', 'sort_order']);
         $data['image']      = $this->handleImageUpload($request, 'image', 'team-members', $teamMember->image);
         $data['is_active']  = $request->boolean('is_active');
         $data['sort_order'] = $data['sort_order'] ?? 0;

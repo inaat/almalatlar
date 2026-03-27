@@ -26,16 +26,20 @@ class AboutTabController extends Controller
     {
         $request->validate([
             'tab_key'     => 'required|string|max:50',
-            'title'       => 'required|string|max:255',
-            'subtitle'    => 'nullable|string|max:255',
-            'description' => 'nullable|string',
-            'image'       => 'nullable|image|max:4096',
-            'button_text' => 'nullable|string|max:100',
+            'title'          => 'required|string|max:255',
+            'title_ar'       => 'nullable|string|max:255',
+            'subtitle'       => 'nullable|string|max:255',
+            'subtitle_ar'    => 'nullable|string|max:255',
+            'description'    => 'nullable|string',
+            'description_ar' => 'nullable|string',
+            'image'          => 'nullable|image|max:4096',
+            'button_text'    => 'nullable|string|max:100',
+            'button_text_ar' => 'nullable|string|max:100',
             'button_url'  => 'nullable|string|max:255',
             'sort_order'  => 'nullable|integer',
         ]);
 
-        $data = $request->only(['tab_key', 'title', 'subtitle', 'description', 'button_text', 'button_url', 'sort_order']);
+        $data = $request->only(['tab_key', 'title', 'title_ar', 'subtitle', 'subtitle_ar', 'description', 'description_ar', 'button_text', 'button_text_ar', 'button_url', 'sort_order']);
         $data['image']      = $this->handleImageUpload($request, 'image', 'about-tabs');
         $data['sort_order'] = $data['sort_order'] ?? 0;
 
@@ -53,16 +57,20 @@ class AboutTabController extends Controller
     {
         $request->validate([
             'tab_key'     => 'required|string|max:50',
-            'title'       => 'required|string|max:255',
-            'subtitle'    => 'nullable|string|max:255',
-            'description' => 'nullable|string',
-            'image'       => 'nullable|image|max:4096',
-            'button_text' => 'nullable|string|max:100',
+            'title'          => 'required|string|max:255',
+            'title_ar'       => 'nullable|string|max:255',
+            'subtitle'       => 'nullable|string|max:255',
+            'subtitle_ar'    => 'nullable|string|max:255',
+            'description'    => 'nullable|string',
+            'description_ar' => 'nullable|string',
+            'image'          => 'nullable|image|max:4096',
+            'button_text'    => 'nullable|string|max:100',
+            'button_text_ar' => 'nullable|string|max:100',
             'button_url'  => 'nullable|string|max:255',
             'sort_order'  => 'nullable|integer',
         ]);
 
-        $data = $request->only(['tab_key', 'title', 'subtitle', 'description', 'button_text', 'button_url', 'sort_order']);
+        $data = $request->only(['tab_key', 'title', 'title_ar', 'subtitle', 'subtitle_ar', 'description', 'description_ar', 'button_text', 'button_text_ar', 'button_url', 'sort_order']);
         $data['image']      = $this->handleImageUpload($request, 'image', 'about-tabs', $aboutTab->image);
         $data['sort_order'] = $data['sort_order'] ?? 0;
 

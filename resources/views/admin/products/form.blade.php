@@ -26,10 +26,23 @@
 
             <div class="row g-3">
                 <div class="col-md-6">
-                    <label class="form-label">Name <span class="text-danger">*</span></label>
+                    <label class="form-label">Name <span class="text-danger">*</span> <span class="badge bg-secondary">EN</span></label>
                     <input type="text" name="name" value="{{ old('name', $product->name) }}"
                            class="form-control @error('name') is-invalid @enderror" required>
                     @error('name')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Name <span class="badge bg-warning text-dark">AR</span></label>
+                    <input type="text" name="name_ar" value="{{ old('name_ar', $product->name_ar) }}"
+                           class="form-control" dir="rtl">
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Content <span class="badge bg-secondary">EN</span></label>
+                    <textarea name="content" rows="4" class="form-control">{{ old('content', $product->content) }}</textarea>
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Content <span class="badge bg-warning text-dark">AR</span></label>
+                    <textarea name="content_ar" rows="4" class="form-control" dir="rtl">{{ old('content_ar', $product->content_ar) }}</textarea>
                 </div>
 
                 <div class="col-md-6">

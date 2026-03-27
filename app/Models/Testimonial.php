@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Testimonial extends Model
 {
     protected $fillable = [
-        'name', 'position', 'image', 'description',
+        'name', 'position', 'position_ar', 'image', 'description', 'description_ar',
         'sort_order', 'is_active',
     ];
 

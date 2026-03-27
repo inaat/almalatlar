@@ -24,6 +24,7 @@ class ServiceCategoryController extends Controller
     {
         $data = $request->validate([
             'name'       => 'required|string|max:255',
+            'name_ar'    => 'nullable|string|max:255',
             'slug'       => 'nullable|string|max:255|unique:service_categories,slug',
             'icon_class' => 'nullable|string|max:100',
             'sort_order' => 'nullable|integer',
@@ -48,6 +49,7 @@ class ServiceCategoryController extends Controller
     {
         $data = $request->validate([
             'name'       => 'required|string|max:255',
+            'name_ar'    => 'nullable|string|max:255',
             'slug'       => 'nullable|string|max:255|unique:service_categories,slug,' . $category->id,
             'icon_class' => 'nullable|string|max:100',
             'sort_order' => 'nullable|integer',

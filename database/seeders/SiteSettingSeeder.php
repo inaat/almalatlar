@@ -71,6 +71,36 @@ class SiteSettingSeeder extends Seeder
             // Logos
             ['key' => 'site_logo',              'value' => '/wp-content/uploads/2021/11/web-logo.png',  'type' => 'image'],
             ['key' => 'site_logo_footer',       'value' => '/wp-content/uploads/2021/11/web-logo1.png', 'type' => 'image'],
+
+            // ── Arabic (_ar) translations ─────────────────────────────────────
+            ['key' => 'site_name_ar',              'value' => 'إس بي للإنشاءات',                          'type' => 'text'],
+            ['key' => 'site_tagline_ar',           'value' => 'نبني التميز في أرجاء المملكة العربية السعودية', 'type' => 'text'],
+            ['key' => 'about_subtitle_ar',         'value' => 'عن شركتنا ~',                              'type' => 'text'],
+            ['key' => 'about_heading_ar',          'value' => 'اختر أفضل شركة إنشاءات',                   'type' => 'text'],
+            ['key' => 'about_description_ar',      'value' => 'إس بي للإنشاءات شركة رائدة في مجال البناء والإنشاء تتخذ من الرياض مقراً لها، وتلتزم بتقديم مشاريع بناء وبنية تحتية عالية الجودة. بفريق من المتخصصين ذوي الخبرة والكفاءة، نقدم خبرتنا في مجالات البناء السكني والتجاري والصناعي. قوتنا تكمن في كفاءة فريقنا، ودقة عملنا، وشغفنا ببناء منشآت تصمد أمام اختبار الزمن.', 'type' => 'text'],
+            ['key' => 'about_description_2_ar',   'value' => 'منذ تأسيسها، بنت إس بي للإنشاءات سمعة راسخة تقوم على النزاهة والحرفية ورضا العملاء. نجمع بين أحدث تقنيات البناء والمعرفة المحلية العميقة لإنجاز المشاريع في الوقت المحدد وضمن الميزانية المرصودة. من الأساسات حتى التشطيب، نحافظ على أعلى المعايير في كل مرحلة من مراحل البناء.', 'type' => 'text'],
+            ['key' => 'vision_heading_ar',         'value' => 'نبني غداً أفضل للمملكة العربية السعودية', 'type' => 'text'],
+            ['key' => 'vision_text_ar',            'value' => 'أن نكون شريكاً موثوقاً في مجال الإنشاء يسهم في تطوير البيئة العمرانية في المملكة العربية السعودية بجودة وابتكار والتزام، منسجمين مع طموحات رؤية 2030.', 'type' => 'text'],
+            ['key' => 'goal_text_ar',              'value' => 'تقديم مشاريع إنشاء متميزة من خلال فرق عمل ماهرة ومواد عالية الجودة وأساليب مبتكرة، مما يخلق قيمة دائمة لعملائنا والمجتمعات التي نبني فيها.', 'type' => 'text'],
+            ['key' => 'values_text_ar',            'value' => 'الالتزام بالجودة في كل مشروع. التصرف بنزاهة وصدق وشفافية. الوفاء بوعودنا للعملاء. الإيمان بروح الفريق والسلامة والتحسين المستمر.', 'type' => 'text'],
+            ['key' => 'services_subheading_ar',    'value' => '~ خدماتنا الإنشائية ~',                   'type' => 'text'],
+            ['key' => 'services_heading_ar',       'value' => 'نبني بجودة ودقة.',                         'type' => 'text'],
+            ['key' => 'clients_heading_ar',        'value' => 'يثق بنا المئات من العملاء الراضين!',       'type' => 'text'],
+            ['key' => 'industries_subheading_ar',  'value' => '~ لماذا تختارنا؟ ~',                       'type' => 'text'],
+            ['key' => 'industries_heading_ar',     'value' => 'نبني في مجموعة واسعة من القطاعات',         'type' => 'text'],
+            ['key' => 'industries_description_ar', 'value' => 'من الفلل السكنية إلى المشاريع التجارية والصناعية الكبرى، لدينا الخبرة اللازمة للتنفيذ.', 'type' => 'text'],
+            ['key' => 'cta_text_ar',               'value' => 'هل لديك مشروع إنشائي في ذهنك؟ دعنا نناقش كيف يمكن لإس بي للإنشاءات أن تحوّل رؤيتك إلى واقع.', 'type' => 'text'],
+            ['key' => 'team_subtitle_ar',          'value' => 'فريقنا',                                   'type' => 'text'],
+            ['key' => 'team_heading_ar',           'value' => 'محترفون مهرة ونتائج موثوقة',               'type' => 'text'],
+            ['key' => 'testimonials_subtitle_ar',  'value' => 'آراء العملاء',                             'type' => 'text'],
+            ['key' => 'testimonials_heading_ar',   'value' => 'ماذا يقول عملاؤنا عنا!',                  'type' => 'text'],
+            ['key' => 'testimonials_label_ar',     'value' => 'تقييمات العملاء:',                         'type' => 'text'],
+            ['key' => 'footer_cta_heading_ar',     'value' => 'هل تبحث عن شريك إنشاء موثوق؟',           'type' => 'text'],
+            ['key' => 'footer_cta_description_ar', 'value' => 'إس بي للإنشاءات تنجز مشاريع عالية الجودة في الوقت المحدد وضمن الميزانية. لنبني معاً شيئاً رائعاً.', 'type' => 'text'],
+            ['key' => 'footer_tagline_ar',         'value' => 'ملتزمون بجودة البناء. نتصرف بنزاهة وصدق وشفافية.', 'type' => 'text'],
+            ['key' => 'address_ar',                'value' => 'شارع العليا، الرياض',                      'type' => 'text'],
+            ['key' => 'open_hours_ar',             'value' => 'الاثنين – الجمعة: 8 صباحاً – 6 مساءً',   'type' => 'text'],
+            ['key' => 'copyright_ar',              'value' => 'إس بي للإنشاءات. جميع الحقوق محفوظة. تصميم وتطوير <a href="https://abq.com.sa/">شركة ABQ للتقنية</a>', 'type' => 'html'],
         ];
 
         foreach ($settings as $setting) {

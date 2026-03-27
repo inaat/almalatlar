@@ -24,14 +24,18 @@ class AboutPageController extends Controller
     {
         $request->validate([
             'title'      => 'required|string|max:255',
+            'title_ar'   => 'nullable|string|max:255',
             'content'    => 'nullable|string',
+            'content_ar' => 'nullable|string',
             'sort_order' => 'nullable|integer',
         ]);
 
         AboutPage::create([
             'title'      => $request->title,
+            'title_ar'   => $request->title_ar,
             'slug'       => Str::slug($request->title),
             'content'    => $request->content,
+            'content_ar' => $request->content_ar,
             'sort_order' => $request->sort_order ?? 0,
             'is_active'  => $request->boolean('is_active'),
         ]);
@@ -48,14 +52,18 @@ class AboutPageController extends Controller
     {
         $request->validate([
             'title'      => 'required|string|max:255',
+            'title_ar'   => 'nullable|string|max:255',
             'content'    => 'nullable|string',
+            'content_ar' => 'nullable|string',
             'sort_order' => 'nullable|integer',
         ]);
 
         $aboutPage->update([
             'title'      => $request->title,
+            'title_ar'   => $request->title_ar,
             'slug'       => Str::slug($request->title),
             'content'    => $request->content,
+            'content_ar' => $request->content_ar,
             'sort_order' => $request->sort_order ?? 0,
             'is_active'  => $request->boolean('is_active'),
         ]);

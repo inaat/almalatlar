@@ -20,6 +20,18 @@ use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use Illuminate\Support\Facades\Route;
+Route::get('/welcome', function () {
+    return view('welcomeEnglish');
+});
+Route::get('/welcome-ar', function () {
+    return view('welcomeArabic');
+});
+Route::get('/lang/{locale}', function (string $locale) {
+    if (in_array($locale, ['en', 'ar'])) {
+        session(['locale' => $locale]);
+    }
+    return redirect()->back();
+})->name('lang.switch');
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', fn() => view('about'));

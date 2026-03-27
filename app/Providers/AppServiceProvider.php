@@ -51,7 +51,24 @@ class AppServiceProvider extends ServiceProvider
         }
 
         if (Schema::hasTable('site_settings')) {
-            View::share('siteSettings', SiteSetting::all()->keyBy('key'));
+            View::composer('*', function ($view) {
+                $all = SiteSetting::all()->keyBy('key');
+                $locale = app()->getLocale();
+
+                // For each base key, if an _ar version exists and locale is ar, swap value
+                $settings = $all->filter(fn($s) => !str_ends_with($s->key, '_ar'));
+
+                if ($locale === 'ar') {
+                    $settings->each(function ($setting) use ($all) {
+                        $arKey = $setting->key . '_ar';
+                        if ($all->has($arKey) && !empty($all[$arKey]->value)) {
+                            $setting->value = $all[$arKey]->value;
+                        }
+                    });
+                }
+
+                $view->with('siteSettings', $settings);
+            });
         } else {
             View::share('siteSettings', collect());
         }

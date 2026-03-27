@@ -25,11 +25,16 @@
             @if(isset($page->id)) @method('PUT') @endif
 
             <div class="row g-3">
-                <div class="col-md-8">
-                    <label class="form-label">Title <span class="text-danger">*</span></label>
+                <div class="col-md-5">
+                    <label class="form-label">Title <span class="text-danger">*</span> <span class="badge bg-secondary">EN</span></label>
                     <input type="text" name="title" value="{{ old('title', $page->title) }}"
                            class="form-control @error('title') is-invalid @enderror" required>
                     @error('title')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                </div>
+                <div class="col-md-5">
+                    <label class="form-label">Title <span class="badge bg-warning text-dark">AR</span></label>
+                    <input type="text" name="title_ar" value="{{ old('title_ar', $page->title_ar) }}"
+                           class="form-control" dir="rtl">
                 </div>
 
                 <div class="col-md-2">
@@ -47,10 +52,14 @@
                 </div>
 
                 <div class="col-12">
-                    <label class="form-label">Content</label>
+                    <label class="form-label">Content <span class="badge bg-secondary">EN</span></label>
                     <textarea name="content" rows="5"
                               class="form-control @error('content') is-invalid @enderror">{{ old('content', $page->content) }}</textarea>
                     @error('content')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Content <span class="badge bg-warning text-dark">AR</span></label>
+                    <textarea name="content_ar" rows="5" class="form-control" dir="rtl">{{ old('content_ar', $page->content_ar) }}</textarea>
                 </div>
             </div>
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-US">
+<html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}">
 
 
 <head>
@@ -38,6 +38,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .ct-testimonials-section .slick-dots li.slick-active button:before { color: #fff; opacity:1; }
 .ct-testimonials-section .slick-prev:before,
 .ct-testimonials-section .slick-next:before { color: #fff; }
+/* RTL: fix stretched sections pushed off-screen by Elementor JS */
+body.rtl .elementor-section-stretched {
+    left: 0 !important;
+    right: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
 </style>
 <style id='classic-theme-styles-inline-css' type='text/css'>
 /*! This file is auto-generated */
@@ -185,9 +192,14 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
 		  };</script>
 
 @yield('head_extra')
+@if(app()->getLocale() === 'ar')
+<style>
+    body.rtl { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+</style>
+@endif
 </head>
 
-<body class="@yield('body_class')">
+<body class="@yield('body_class') {{ app()->getLocale() === 'ar' ? 'rtl' : '' }}">
         <div id="page" class="site">
                 <div id="ct-loadding" class="ct-loader style13">
                                 <div class="ct-loading-ito">
@@ -397,7 +409,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
 				<div class="elementor-widget-container">
 					<div class="ct-search-form1">
 	<form role="search" method="get" action="{{ url('/') }}">
-        <input type="text" placeholder="Search..." name="s" class="search-field" />
+        <input type="text" placeholder="{{ app()->getLocale() === 'ar' ? 'بحث...' : 'Search...' }}" name="s" class="search-field" />
         <button type="submit" class="search-submit"><i class="caseicon-search"></i></button>
     </form>
 </div>				</div>
@@ -407,22 +419,16 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
 					    <div class="ct-language-switcher1 dr-left">
         <div class="current--item">
             <svg height="22" viewBox="0 0 32 32" width="22" xmlns="http://www.w3.org/2000/svg" data-name="Layer 3"><path d="m21.386 10c-1.055-4.9-3.305-8-5.386-8s-4.331 3.1-5.386 8z"/><path d="m10 16a30.013 30.013 0 0 0 .267 4h11.466a30.013 30.013 0 0 0 .267-4 30.013 30.013 0 0 0 -.267-4h-11.466a30.013 30.013 0 0 0 -.267 4z"/><path d="m10.614 22c1.055 4.9 3.305 8 5.386 8s4.331-3.1 5.386-8z"/><path d="m23.434 10h6.3a15.058 15.058 0 0 0 -10.449-8.626c1.897 1.669 3.385 4.755 4.149 8.626z"/><path d="m30.453 12h-6.7a32.332 32.332 0 0 1 .247 4 32.332 32.332 0 0 1 -.248 4h6.7a14.9 14.9 0 0 0 0-8z"/><path d="m19.285 30.626a15.058 15.058 0 0 0 10.451-8.626h-6.3c-.766 3.871-2.254 6.957-4.151 8.626z"/><path d="m8.566 22h-6.3a15.058 15.058 0 0 0 10.451 8.626c-1.899-1.669-3.387-4.755-4.151-8.626z"/><path d="m12.715 1.374a15.058 15.058 0 0 0 -10.451 8.626h6.3c.766-3.871 2.254-6.957 4.151-8.626z"/><path d="m8 16a32.332 32.332 0 0 1 .248-4h-6.7a14.9 14.9 0 0 0 0 8h6.7a32.332 32.332 0 0 1 -.248-4z"/></svg>
-            <label>English</label>
+            <label>{{ app()->getLocale() === 'ar' ? 'العربية' : 'English' }}</label>
         </div>
         <ul>
-                                <li>
-                        <a href="#">
-                            France                        </a>
-                    </li>
-                                <li>
-                        <a href="#">
-                            Germany                        </a>
-                    </li>
-                                <li>
-                        <a href="#">
-                            Russia                        </a>
-                    </li>
-                    </ul>
+            <li>
+                <a href="{{ route('lang.switch', 'en') }}">🇺🇸 English</a>
+            </li>
+            <li>
+                <a href="{{ route('lang.switch', 'ar') }}">🇸🇦 العربية</a>
+            </li>
+        </ul>
     </div>
 				</div>
 				</div>
@@ -448,7 +454,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
                             <span class="ct-button-icon ct-icon-normal ct-align-icon-right">
                 <i aria-hidden="true" class="flaticon flaticon-right-arrow"></i>            </span>
                 <span class="ct-button-text">
-            Get a quote now        </span>
+            {{ app()->getLocale() === 'ar' ? 'احصل على عرض سعر' : 'Get a quote now' }}        </span>
     </a>
 </div>				</div>
 				</div>
@@ -512,7 +518,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
 				<div class="elementor-widget-container">
 					<div class="ct-search-form1">
 	<form role="search" method="get" action="{{ url('/') }}">
-        <input type="text" placeholder="Search..." name="s" class="search-field" />
+        <input type="text" placeholder="{{ app()->getLocale() === 'ar' ? 'بحث...' : 'Search...' }}" name="s" class="search-field" />
         <button type="submit" class="search-submit"><i class="caseicon-search"></i></button>
     </form>
 </div>				</div>
@@ -522,22 +528,16 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
 					    <div class="ct-language-switcher1 dr-left">
         <div class="current--item">
             <svg height="22" viewBox="0 0 32 32" width="22" xmlns="http://www.w3.org/2000/svg" data-name="Layer 3"><path d="m21.386 10c-1.055-4.9-3.305-8-5.386-8s-4.331 3.1-5.386 8z"/><path d="m10 16a30.013 30.013 0 0 0 .267 4h11.466a30.013 30.013 0 0 0 .267-4 30.013 30.013 0 0 0 -.267-4h-11.466a30.013 30.013 0 0 0 -.267 4z"/><path d="m10.614 22c1.055 4.9 3.305 8 5.386 8s4.331-3.1 5.386-8z"/><path d="m23.434 10h6.3a15.058 15.058 0 0 0 -10.449-8.626c1.897 1.669 3.385 4.755 4.149 8.626z"/><path d="m30.453 12h-6.7a32.332 32.332 0 0 1 .247 4 32.332 32.332 0 0 1 -.248 4h6.7a14.9 14.9 0 0 0 0-8z"/><path d="m19.285 30.626a15.058 15.058 0 0 0 10.451-8.626h-6.3c-.766 3.871-2.254 6.957-4.151 8.626z"/><path d="m8.566 22h-6.3a15.058 15.058 0 0 0 10.451 8.626c-1.899-1.669-3.387-4.755-4.151-8.626z"/><path d="m12.715 1.374a15.058 15.058 0 0 0 -10.451 8.626h6.3c.766-3.871 2.254-6.957 4.151-8.626z"/><path d="m8 16a32.332 32.332 0 0 1 .248-4h-6.7a14.9 14.9 0 0 0 0 8h6.7a32.332 32.332 0 0 1 -.248-4z"/></svg>
-            <label>English</label>
+            <label>{{ app()->getLocale() === 'ar' ? 'العربية' : 'English' }}</label>
         </div>
         <ul>
-                                <li>
-                        <a href="#">
-                            France                        </a>
-                    </li>
-                                <li>
-                        <a href="#">
-                            Germany                        </a>
-                    </li>
-                                <li>
-                        <a href="#">
-                            Russia                        </a>
-                    </li>
-                    </ul>
+            <li>
+                <a href="{{ route('lang.switch', 'en') }}">🇺🇸 English</a>
+            </li>
+            <li>
+                <a href="{{ route('lang.switch', 'ar') }}">🇸🇦 العربية</a>
+            </li>
+        </ul>
     </div>
 				</div>
 				</div>
@@ -563,7 +563,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
                             <span class="ct-button-icon ct-icon-normal ct-align-icon-right">
                 <i aria-hidden="true" class="flaticon flaticon-right-arrow"></i>            </span>
                 <span class="ct-button-text">
-            Get a quote now        </span>
+            {{ app()->getLocale() === 'ar' ? 'احصل على عرض سعر' : 'Get a quote now' }}        </span>
     </a>
 </div>				</div>
 				</div>
@@ -621,7 +621,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
     </div>
   
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">{{ $siteSettings->get('footer_cta_heading')?->value ?? 'Looking for the Best IT Business Solutions?' }}</span>    </h3>
+        <span class="ct-text-inner">{{ app()->getLocale() === 'ar' ? ($siteSettings->get('footer_cta_heading_ar')?->value ?? 'هل تبحث عن شريك إنشاء موثوق؟') : ($siteSettings->get('footer_cta_heading')?->value ?? 'Looking for the Best Construction Solutions?') }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -635,7 +635,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			{{ $siteSettings->get('footer_cta_description')?->value ?? 'As a app web crawler expert, We will help to organize.' }}
+			{{ app()->getLocale() === 'ar' ? ($siteSettings->get('footer_cta_description_ar')?->value ?? 'إس بي للإنشاءات تنجز مشاريع عالية الجودة في الوقت المحدد وضمن الميزانية.') : ($siteSettings->get('footer_cta_description')?->value ?? '') }}
 		</div>
 	</div>
 </div>				</div>
@@ -667,7 +667,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
                             <span class="ct-button-icon ct-icon-normal ct-align-icon-">
                             </span>
                 <span class="ct-button-text">
-            Get a quote        </span>
+            {{ app()->getLocale() === 'ar' ? 'احصل على عرض سعر' : 'Get a quote' }}        </span>
     </a>
 </div>				</div>
 				</div>
@@ -705,7 +705,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			{{ $siteSettings->get('footer_tagline')?->value ?? 'Adopting the evolving new IT technologies. Acting with strong ethics, Honesty, and transparency.' }}
+			{{ app()->getLocale() === 'ar' ? ($siteSettings->get('footer_tagline_ar')?->value ?? 'ملتزمون بجودة البناء. نتصرف بنزاهة وصدق وشفافية.') : ($siteSettings->get('footer_tagline')?->value ?? '') }}
 		</div>
 	</div>
 </div>				</div>
@@ -732,7 +732,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
                             <span class="ct-button-icon ct-icon-normal ct-align-icon-">
                             </span>
                 <span class="ct-button-text">
-            About us        </span>
+            {{ app()->getLocale() === 'ar' ? 'من نحن' : 'About us' }}        </span>
     </a>
 </div>				</div>
 				</div>
@@ -750,7 +750,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
     </div>
   
 	    <h3 class="item--title st-default " data-wow-delay="ms">
-        <span class="ct-text-inner">Official info:</span>    </h3>
+        <span class="ct-text-inner">{{ app()->getLocale() === 'ar' ? 'المعلومات الرسمية:' : 'Official info:' }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -774,7 +774,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
                 	    			        <span class="ct-contact-icon">
     		                <i aria-hidden="true" class="fas fa-map-marker-alt"></i>    		                    			        </span>
     			                        <span class="ct-contact-content">
-                	   {{ $siteSettings->get('address')?->value ?? 'P.O. Box 12234 - Riyadh 2949 Kingdom of Saudi Arabia' }}                    </span>
+                	   {{ app()->getLocale() === 'ar' ? ($siteSettings->get('address_ar')?->value ?? $siteSettings->get('address')?->value ?? 'شارع العليا، الرياض') : ($siteSettings->get('address')?->value ?? '') }}                    </span>
                                    </div>
                         <div class="item--contact-info">
                 	    			        <span class="ct-contact-icon">
@@ -794,7 +794,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			Open Hours:		
+			{{ app()->getLocale() === 'ar' ? 'ساعات العمل:' : 'Open Hours:' }}
 		</div>
 	</div>
 </div>				</div>
@@ -808,7 +808,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			{{ $siteSettings->get('open_hours')?->value ?? 'Mon – Sat: 8 am – 5 pm, Sunday: CLOSED' }}
+			{{ app()->getLocale() === 'ar' ? ($siteSettings->get('open_hours_ar')?->value ?? 'الاثنين – الجمعة: 8 صباحاً – 6 مساءً') : ($siteSettings->get('open_hours')?->value ?? 'Mon – Fri: 8 am – 6 pm') }}
 		</div>
 	</div>
 </div>				</div>
@@ -827,7 +827,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
     </div>
   
 	    <h3 class="item--title st-default " data-wow-delay="ms">
-        <span class="ct-text-inner">MAP</span>    </h3>
+        <span class="ct-text-inner">{{ app()->getLocale() === 'ar' ? 'الموقع' : 'MAP' }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -870,7 +870,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			<p>© <span class="ct-year">{{ date('Y') }}</span> {!! $siteSettings->get('copyright')?->value ?? 'Al Malath Al Arabia. All rights reserved.' !!}</p>
+			<p>© <span class="ct-year">{{ date('Y') }}</span> {!! app()->getLocale() === 'ar' ? ($siteSettings->get('copyright_ar')?->value ?? $siteSettings->get('copyright')?->value ?? 'إس بي للإنشاءات. جميع الحقوق محفوظة.') : ($siteSettings->get('copyright')?->value ?? 'Al Malath Al Arabia. All rights reserved.') !!}</p>
 		</div>
 	</div>
 </div>				</div>
@@ -965,19 +965,22 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
 		<script type="speculationrules">
 {"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/itfirm/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prerender, .no-prerender a"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"moderate"}]}
 </script>
-        <div id="trp-floater-ls" onclick="" data-no-translation class="trp-language-switcher-container trp-floater-ls-names trp-bottom-right trp-color-dark flags-full-names" >
+        <div id="trp-floater-ls" class="trp-language-switcher-container trp-floater-ls-names trp-bottom-right trp-color-dark flags-full-names">
             <div id="trp-floater-ls-current-language" class="trp-with-flags">
-
-                <a href="#" class="trp-floater-ls-disabled-language trp-ls-disabled-language" onclick="event.preventDefault()">
-					<img class="trp-flag-image" src="/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_US.png" width="18" height="12" alt="en_US" title="English">English				</a>
-
+                <a href="#" onclick="event.preventDefault()">
+                    @if(app()->getLocale() === 'ar')
+                        🇸🇦 العربية
+                    @else
+                        🇺🇸 English
+                    @endif
+                </a>
             </div>
-            <div id="trp-floater-ls-language-list" class="trp-with-flags" >
-
-                <div class="trp-language-wrap trp-language-wrap-bottom">                    <a href="../../ar/service/wireless-solutions/index.html"
-                         title="Arabic">
-          						  <img class="trp-flag-image" src="/wp-content/plugins/translatepress-multilingual/assets/images/flags/ar.png" width="18" height="12" alt="ar" title="Arabic">Arabic					          </a>
-                <a href="#" class="trp-floater-ls-disabled-language trp-ls-disabled-language" onclick="event.preventDefault()"><img class="trp-flag-image" src="/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_US.png" width="18" height="12" alt="en_US" title="English">English</a></div>            </div>
+            <div id="trp-floater-ls-language-list" class="trp-with-flags">
+                <div class="trp-language-wrap trp-language-wrap-bottom">
+                    <a href="{{ route('lang.switch', 'en') }}">🇺🇸 English</a>
+                    <a href="{{ route('lang.switch', 'ar') }}">🇸🇦 العربية</a>
+                </div>
+            </div>
         </div>
 
         <script type="text/javascript">

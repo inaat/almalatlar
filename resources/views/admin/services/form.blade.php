@@ -18,10 +18,15 @@
 
             <div class="row g-3">
                 <div class="col-md-6">
-                    <label class="form-label fw-semibold">Title <span class="text-danger">*</span></label>
+                    <label class="form-label fw-semibold">Title <span class="text-danger">*</span> <span class="badge bg-secondary">EN</span></label>
                     <input type="text" name="title" class="form-control @error('title') is-invalid @enderror"
                            value="{{ old('title', $service->title) }}" required>
                     @error('title') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Title <span class="badge bg-warning text-dark">AR</span></label>
+                    <input type="text" name="title_ar" class="form-control" dir="rtl"
+                           value="{{ old('title_ar', $service->title_ar) }}">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label fw-semibold">Slug <small class="text-muted">(auto-generated if empty)</small></label>
@@ -46,8 +51,12 @@
                            value="{{ old('icon_class', $service->icon_class) }}">
                 </div>
                 <div class="col-12">
-                    <label class="form-label fw-semibold">Description</label>
+                    <label class="form-label fw-semibold">Description <span class="badge bg-secondary">EN</span></label>
                     <textarea name="description" class="form-control" rows="4">{{ old('description', $service->description) }}</textarea>
+                </div>
+                <div class="col-12">
+                    <label class="form-label fw-semibold">Description <span class="badge bg-warning text-dark">AR</span></label>
+                    <textarea name="description_ar" class="form-control" rows="4" dir="rtl">{{ old('description_ar', $service->description_ar) }}</textarea>
                 </div>
                 <div class="col-12">
                     <x-image-upload name="image" label="Service Image" :current="$service->image" />

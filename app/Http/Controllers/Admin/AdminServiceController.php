@@ -29,16 +29,18 @@ class AdminServiceController extends Controller
     {
         $request->validate([
             'category_id' => 'nullable|exists:service_categories,id',
-            'title'       => 'required|string|max:255',
-            'slug'        => 'nullable|string|max:255|unique:services,slug',
-            'description' => 'nullable|string',
+            'title'          => 'required|string|max:255',
+            'title_ar'       => 'nullable|string|max:255',
+            'slug'           => 'nullable|string|max:255|unique:services,slug',
+            'description'    => 'nullable|string',
+            'description_ar' => 'nullable|string',
             'icon_class'  => 'nullable|string|max:100',
             'image'       => 'nullable|image|max:4096',
             'sort_order'  => 'nullable|integer',
             'is_active'   => 'boolean',
         ]);
 
-        $data = $request->only(['category_id', 'title', 'slug', 'description', 'icon_class', 'sort_order']);
+        $data = $request->only(['category_id', 'title', 'title_ar', 'slug', 'description', 'description_ar', 'icon_class', 'sort_order']);
         $data['slug']       = $data['slug'] ?: Str::slug($data['title']);
         $data['image']      = $this->handleImageUpload($request, 'image', 'services');
         $data['sort_order'] = $data['sort_order'] ?? 0;
@@ -60,7 +62,7 @@ class AdminServiceController extends Controller
         $request->validate([
             'category_id' => 'nullable|exists:service_categories,id',
             'title'       => 'required|string|max:255',
-            'slug'        => 'nullable|string|max:255|unique:services,slug,' . $service->id,
+            'slug'           => 'nullable|string|max:255|unique:services,slug,' . $service->id,
             'description' => 'nullable|string',
             'icon_class'  => 'nullable|string|max:100',
             'image'       => 'nullable|image|max:4096',
@@ -68,7 +70,7 @@ class AdminServiceController extends Controller
             'is_active'   => 'boolean',
         ]);
 
-        $data = $request->only(['category_id', 'title', 'slug', 'description', 'icon_class', 'sort_order']);
+        $data = $request->only(['category_id', 'title', 'title_ar', 'slug', 'description', 'description_ar', 'icon_class', 'sort_order']);
         $data['slug']       = $data['slug'] ?: Str::slug($data['title']);
         $data['image']      = $this->handleImageUpload($request, 'image', 'services', $service->image);
         $data['sort_order'] = $data['sort_order'] ?? 0;

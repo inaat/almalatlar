@@ -10,6 +10,7 @@
 @section('body_class', 'home wp-singular page-template-default page page-id-2392 wp-theme-itfirm translatepress-en_US redux-page  site-h2401 body-default-font heading-default-font  site-404-default elementor-default elementor-kit-6 elementor-page elementor-page-2392')
 
 @section('content')
+@php $isAr = app()->getLocale() === 'ar'; @endphp
         <div id="content" class="site-content">
         	<div class="content-inner">
     <div class="container content-container">
@@ -29,16 +30,17 @@
         		<div class="elementor-element elementor-element-db72988 elementor-widget elementor-widget-slider_revolution" data-id="db72988" data-element_type="widget" data-e-type="widget" data-widget_type="slider_revolution.default">
 				<div class="elementor-widget-container">
 					
-		<div class="wp-block-themepunch-revslider">
+		<div class="wp-block-themepunch-revslider" dir="ltr">
 			<!-- START Slider 2 REVOLUTION SLIDER 6.7.34 --><p class="rs-p-wp-fix"></p>
-			<rs-module-wrap id="rev_slider_3_1_wrapper" data-source="gallery" style="visibility:hidden;background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
-				<rs-module id="rev_slider_3_1" style="" data-version="6.7.34">
+			<rs-module-wrap id="rev_slider_3_1_wrapper" dir="ltr" data-source="gallery" style="visibility:hidden;background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
+				<rs-module id="rev_slider_3_1" dir="ltr" style="" data-version="6.7.34">
 					<rs-slides style="overflow: hidden; position: absolute;">
-						<rs-slide style="position: absolute;" data-key="rs-5" data-title="Slide" data-thumb="//almalath.com/wp-content/uploads/2023/07/Untitled-design-7-50x100.png" data-anim="adpr:false;" data-in="o:0;" data-out="a:false;">
-							<img loading="lazy" decoding="async" src="/wp-content/plugins/revslider/sr6/assets/assets/dummy.png" alt="" title="Untitled design (7)" width="1920" height="759" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//almalath.com/wp-content/uploads/2023/07/Untitled-design-7.png" data-parallax="4" data-panzoom="d:10000;ss:110%;se:100;" data-no-retina>
+						@foreach($slides as $slide)
+						<rs-slide style="position: absolute;" data-key="rs-{{ $slide->id }}" data-title="{{ $slide->title }}" data-anim="adpr:false;" data-in="o:0;" data-out="a:false;">
+							<img loading="lazy" decoding="async" src="/wp-content/plugins/revslider/sr6/assets/assets/dummy.png" alt="" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="{{ $slide->image }}" data-parallax="4" data-panzoom="d:10000;ss:110%;se:100;" data-no-retina>
 <!--
 							--><rs-group
-								id="slider-3-slide-5-layer-1" 
+								id="slider-3-slide-{{ $slide->id }}-layer-1"
 								data-type="group"
 								data-xy="xo:30px,30px,15px,15px;y:m;yo:-50px,-50px,0,0;"
 								data-text="w:normal;s:20,16,12,7;l:0,20,15,9;"
@@ -50,7 +52,7 @@
 								style="z-index:13;"
 							><!--
 								--><a
-									id="slider-3-slide-5-layer-5" 
+									id="slider-3-slide-{{ $slide->id }}-layer-5"
 									class="rs-layer btn-effect1 rev-btn"
 									href="/contact" target="_self"
 									data-type="button"
@@ -67,11 +69,11 @@
 									data-frame_999="o:0;st:w;sR:7400;"
 									data-frame_hover="c:#fff;bgc:linear-gradient(90deg, rgba(113,20,239,1) 0%, rgba(20,117,247,1) 100%);bor:55px,55px,55px,55px;"
 									style="z-index:12;background:linear-gradient(90deg, rgba(113,20,239,1) 0%, rgba(20,117,247,1) 100%);font-family:'Fira Sans';"
-								>Contact Us<i class="flaticon flaticon-right-arrow space-left"></i> 
+								>{{ app()->getLocale() === 'ar' && $slide->button_text_ar ? $slide->button_text_ar : ($slide->button_text ?: 'Contact Us') }}<i class="flaticon flaticon-right-arrow space-left"></i>
 								</a><!--
 
 								--><rs-layer
-									id="slider-3-slide-5-layer-4" 
+									id="slider-3-slide-{{ $slide->id }}-layer-4"
 									data-type="text"
 									data-xy="yo:248px,248px,165px,143px;"
 									data-pos="a"
@@ -83,11 +85,11 @@
 									data-frame_1="e:back.inOut;st:1100;sp:1000;"
 									data-frame_999="o:0;st:w;sR:7600;"
 									style="z-index:11;font-family:'Roboto';"
-								>We place you at the centre of international networks to advance your strategic interests. 
+								>{{ app()->getLocale() === 'ar' && $slide->description_ar ? $slide->description_ar : $slide->description }}
 								</rs-layer><!--
 
 								--><rs-layer
-									id="slider-3-slide-5-layer-3" 
+									id="slider-3-slide-{{ $slide->id }}-layer-3"
 									class="slider-title-shadow1"
 									data-type="text"
 									data-xy="yo:68px,68px,55px,55px;"
@@ -99,12 +101,11 @@
 									data-frame_1="e:back.inOut;st:900;sp:1000;"
 									data-frame_999="o:0;st:w;sR:7800;"
 									style="z-index:10;font-family:'Fira Sans';"
-								>Prosper in this volatile<br />
-market funding. 
+								>{{ app()->getLocale() === 'ar' && $slide->title_ar ? $slide->title_ar : $slide->title }}
 								</rs-layer><!--
 
 								--><rs-layer
-									id="slider-3-slide-5-layer-2" 
+									id="slider-3-slide-{{ $slide->id }}-layer-2"
 									data-type="text"
 									data-color="#1475f7"
 									data-xy="xo:6px;yo:6px;"
@@ -118,12 +119,12 @@ market funding.
 									data-frame_1="e:back.inOut;st:700;sp:1000;"
 									data-frame_999="o:0;st:w;sR:8000;"
 									style="z-index:9;background-color:#ffffff;font-family:'Roboto';"
-								><span class="text-gradient">We are IT service agency ~</span> 
+								><span class="text-gradient">{{ app()->getLocale() === 'ar' && $slide->subtitle_ar ? $slide->subtitle_ar : $slide->subtitle }}</span>
 								</rs-layer><!--
 							--></rs-group><!--
 
 							--><rs-layer
-								id="slider-3-slide-5-layer-0" 
+								id="slider-3-slide-{{ $slide->id }}-layer-0"
 								data-type="shape"
 								data-rsp_ch="on"
 								data-xy="x:c;y:m;"
@@ -135,113 +136,9 @@ market funding.
 								data-frame_999="o:0;st:w;sR:8700;"
 								style="z-index:8;background-color:rgba(0,0,0,0);"
 							><rs-bg-elem style="background: url('wp-content/uploads/2021/11/h2-bg-slider1-overlay.png') no-repeat center center; background-size: cover;"></rs-bg-elem>
- 
 							</rs-layer><!--
 -->					</rs-slide>
-						<rs-slide style="position: absolute;" data-key="rs-6" data-title="Slide" data-thumb="//almalath.com/wp-content/uploads/2023/07/Untitled-design-5-50x100.png" data-anim="adpr:false;" data-in="o:0;" data-out="a:false;">
-							<img loading="lazy" decoding="async" src="/wp-content/plugins/revslider/sr6/assets/assets/dummy.png" alt="" title="Untitled design (5)" width="1920" height="759" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//almalath.com/wp-content/uploads/2023/07/Untitled-design-5.png" data-parallax="4" data-panzoom="d:10000;ss:110%;se:100;" data-no-retina>
-<!--
-							--><rs-group
-								id="slider-3-slide-6-layer-1" 
-								data-type="group"
-								data-xy="xo:30px,30px,15px,15px;y:m;yo:-50px,-50px,0,0;"
-								data-text="w:normal;s:20,16,12,7;l:0,20,15,9;"
-								data-dim="w:900px,900px,600px,360px;h:410px,410px,310px,270px;"
-								data-rsp_o="off"
-								data-rsp_bd="off"
-								data-frame_0="o:1;"
-								data-frame_999="o:0;st:w;sR:8700;sA:9000;"
-								style="z-index:13;"
-							><!--
-								--><a
-									id="slider-3-slide-6-layer-5" 
-									class="rs-layer btn-effect1 rev-btn"
-									href="/contact" target="_self"
-									data-type="button"
-									data-xy="xo:-2px;y:b;yo:30px;"
-									data-pos="a"
-									data-text="w:normal;s:16,16,16,15;l:55,55,55,48;fw:700;"
-									data-dim="minh:0px,none,none,none;"
-									data-rsp_o="off"
-									data-rsp_bd="off"
-									data-padding="r:45,45,45,32;l:45,45,45,32;"
-									data-border="bor:55px,55px,55px,55px;"
-									data-frame_0="x:50;"
-									data-frame_1="e:back.inOut;st:1300;sp:1000;"
-									data-frame_999="o:0;st:w;sR:7400;"
-									data-frame_hover="c:#fff;bgc:linear-gradient(90deg, rgba(113,20,239,1) 0%, rgba(20,117,247,1) 100%);bor:55px,55px,55px,55px;"
-									style="z-index:12;background:linear-gradient(90deg, rgba(113,20,239,1) 0%, rgba(20,117,247,1) 100%);font-family:'Fira Sans';"
-								>Contact Us<i class="flaticon flaticon-right-arrow space-left"></i> 
-								</a><!--
-
-								--><rs-layer
-									id="slider-3-slide-6-layer-4" 
-									data-type="text"
-									data-xy="yo:248px,248px,165px,143px;"
-									data-pos="a"
-									data-text="w:normal;s:20,20,16,14;l:30,30,28,24;"
-									data-dim="w:500px,500px,420px,290px;"
-									data-rsp_o="off"
-									data-rsp_bd="off"
-									data-frame_0="x:50;"
-									data-frame_1="e:back.inOut;st:1100;sp:1000;"
-									data-frame_999="o:0;st:w;sR:7600;"
-									style="z-index:11;font-family:'Roboto';"
-								>We place you at the centre of international networks to advance your strategic interests. 
-								</rs-layer><!--
-
-								--><rs-layer
-									id="slider-3-slide-6-layer-3" 
-									class="slider-title-shadow1"
-									data-type="text"
-									data-xy="yo:68px,68px,55px,55px;"
-									data-pos="a"
-									data-text="w:normal;s:75,70,40,28;l:80,80,46,36;fw:700;"
-									data-rsp_o="off"
-									data-rsp_bd="off"
-									data-frame_0="x:50;"
-									data-frame_1="e:back.inOut;st:900;sp:1000;"
-									data-frame_999="o:0;st:w;sR:7800;"
-									style="z-index:10;font-family:'Fira Sans';"
-								>Think Big. We make<br />
-IT, possible! 
-								</rs-layer><!--
-
-								--><rs-layer
-									id="slider-3-slide-6-layer-2" 
-									data-type="text"
-									data-color="#1475f7"
-									data-xy=""
-									data-pos="a"
-									data-text="w:normal;s:22,22,18,15;l:42,42,40,38;fw:700;a:center;"
-									data-rsp_o="off"
-									data-rsp_bd="off"
-									data-padding="r:30,30,30,22;l:30,30,30,22;"
-									data-border="bor:30px,30px,30px,30px;"
-									data-frame_0="y:50;"
-									data-frame_1="e:back.inOut;st:700;sp:1000;"
-									data-frame_999="o:0;st:w;sR:8000;"
-									style="z-index:9;background-color:#ffffff;font-family:'Roboto';"
-								><span class="text-gradient">We are IT service agency ~</span> 
-								</rs-layer><!--
-							--></rs-group><!--
-
-							--><rs-layer
-								id="slider-3-slide-6-layer-0" 
-								data-type="shape"
-								data-rsp_ch="on"
-								data-xy="x:c;y:m;"
-								data-text="w:normal;s:20,16,12,7;l:0,20,15,9;"
-								data-dim="w:100%;h:100%;"
-								data-basealign="slide"
-								data-frame_0="x:-50,-41,-31,-19;"
-								data-frame_1="st:300;sp:1000;"
-								data-frame_999="o:0;st:w;sR:8700;"
-								style="z-index:8;background-color:rgba(0,0,0,0);"
-							><rs-bg-elem style="background: url('wp-content/uploads/2021/11/h2-bg-slider1-overlay.png') no-repeat center center; background-size: cover;"></rs-bg-elem>
- 
-							</rs-layer><!--
--->					</rs-slide>
+						@endforeach
 					</rs-slides>
 				</rs-module>
 				<script>
@@ -299,7 +196,7 @@ IT, possible!
                     <div class="item--icon">
                 <i aria-hidden="true" class="flaticon flaticon-sketch-2"></i>            </div>
                         <h4 class="item--title">
-            IT Integrated Solutions        </h4>
+            {{ $isAr ? 'حلول متكاملة' : 'Integrated Solutions' }}        </h4>
                 <div class="item--overlay"></div>
     </div>
 </div>				</div>
@@ -339,7 +236,7 @@ IT, possible!
                     <div class="item--icon">
                 <i aria-hidden="true" class="flaticon flaticon-process"></i>            </div>
                         <h4 class="item--title">
-            Next Generation IT Services        </h4>
+            {{ $isAr ? 'خدمات البناء والإنشاء' : 'Construction Services' }}        </h4>
                 <div class="item--overlay"></div>
     </div>
 </div>				</div>
@@ -379,7 +276,7 @@ IT, possible!
                     <div class="item--icon">
                 <i aria-hidden="true" class="flaticon flaticon-coding-1"></i>            </div>
                         <h4 class="item--title">
-            Consulting Services        </h4>
+            {{ $isAr ? 'خدمات الاستشارات' : 'Consulting Services' }}        </h4>
                 <div class="item--overlay"></div>
     </div>
 </div>				</div>
@@ -419,7 +316,7 @@ IT, possible!
                     <div class="item--icon">
                 <i aria-hidden="true" class="flaticon flaticon-discussion"></i>            </div>
                         <h4 class="item--title">
-            Low Current Services        </h4>
+            {{ $isAr ? 'خدمات التشطيبات' : 'Finishing Services' }}        </h4>
                 <div class="item--overlay"></div>
     </div>
 </div>				</div>
@@ -443,7 +340,7 @@ IT, possible!
     </div>
   
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">{{ $siteSettings->get('clients_heading')?->value ?? 'Join over +15,000 happy clients!' }}</span>    </h3>
+        <span class="ct-text-inner">{{ $isAr ? ($siteSettings->get('clients_heading_ar')?->value ?? $siteSettings->get('clients_heading')?->value ?? 'يثق بنا المئات من العملاء الراضين!') : ($siteSettings->get('clients_heading')?->value ?? 'Join over +15,000 happy clients!') }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -575,10 +472,10 @@ IT, possible!
   
 			<div class="item--sub-title style-box-gr wow fadeInUp" data-wow-delay="ms">
                         <span>
-                {{ $siteSettings->get('about_subtitle')?->value ?? 'About Our Company ~' }}            </span>
+                {{ $isAr ? ($siteSettings->get('about_subtitle_ar')?->value ?? $siteSettings->get('about_subtitle')?->value ?? 'عن شركتنا ~') : ($siteSettings->get('about_subtitle')?->value ?? 'About Our Company ~') }}            </span>
                     </div>
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">{{ $siteSettings->get('about_heading')?->value ?? 'Choose The Best IT Service Company' }}</span>    </h3>
+        <span class="ct-text-inner">{{ $isAr ? ($siteSettings->get('about_heading_ar')?->value ?? $siteSettings->get('about_heading')?->value ?? 'اختر أفضل شركة إنشاءات') : ($siteSettings->get('about_heading')?->value ?? 'Choose The Best Construction Company') }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -592,7 +489,7 @@ IT, possible!
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			<p>{{ $siteSettings->get('about_description')?->value ?? '' }}</p>
+			<p>{{ $isAr ? ($siteSettings->get('about_description_ar')?->value ?? $siteSettings->get('about_description')?->value ?? '') : ($siteSettings->get('about_description')?->value ?? '') }}</p>
 		</div>
 	</div>
 </div>				</div>
@@ -632,7 +529,7 @@ IT, possible!
                             <div class="item--icon icon-psb">
                     <i aria-hidden="true" class="flaticon flaticon-operation"></i>                </div>
                                     <h4 class="item--title">
-                Technical Support            </h4>
+                {{ $isAr ? 'الدعم الفني' : 'Technical Support' }}            </h4>
         </div>
         <div class="item--description el-empty"></div>
     </div>
@@ -672,7 +569,7 @@ IT, possible!
                             <span class="ct-button-icon ct-icon-normal ct-align-icon-right">
                 <i aria-hidden="true" class="flaticon flaticon-right-arrow"></i>            </span>
                 <span class="ct-button-text">
-            Contact Us!        </span>
+            {{ $isAr ? 'تواصل معنا' : 'Contact Us!' }}        </span>
     </a>
 </div>				</div>
 				</div>
@@ -696,7 +593,7 @@ IT, possible!
                 <i aria-hidden="true" class="flaticon flaticon-phone-call"></i>                                    <a class="ct-info-link" href="tel:9112434672345"></a>
                             </div>
         		<div class="item--meta">
-    		<div class="item--title el-empty">Call for help</div>
+    		<div class="item--title el-empty">{{ $isAr ? 'اتصل للمساعدة' : 'Call for help' }}</div>
     		<div class="item--phone el-empty"></div>
         </div>
 	</div>
@@ -758,10 +655,10 @@ IT, possible!
   
 			<div class="item--sub-title style-box-gr wow fadeInUp" data-wow-delay="ms">
                         <span>
-                {{ $siteSettings->get('services_subheading')?->value ?? '~ Our Awesome Services ~' }}            </span>
+                {{ $isAr ? ($siteSettings->get('services_subheading_ar')?->value ?? '~ خدماتنا الإنشائية ~') : ($siteSettings->get('services_subheading')?->value ?? '~ Our Awesome Services ~') }}            </span>
                     </div>
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">{{ $siteSettings->get('services_heading')?->value ?? 'We are dedicated to serve you all time.' }}</span>    </h3>
+        <span class="ct-text-inner">{{ $isAr ? ($siteSettings->get('services_heading_ar')?->value ?? 'نبني بجودة ودقة.') : ($siteSettings->get('services_heading')?->value ?? 'We are dedicated to serve you all time.') }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -876,10 +773,10 @@ IT, possible!
   
 			<div class="item--sub-title style-box-gr wow fadeInUp" data-wow-delay="ms">
                         <span>
-                {{ $siteSettings->get('industries_subheading')?->value ?? '~ Why choose Us? ~' }}            </span>
+                {{ $isAr ? ($siteSettings->get('industries_subheading_ar')?->value ?? '~ لماذا تختارنا؟ ~') : ($siteSettings->get('industries_subheading')?->value ?? '~ Why choose Us? ~') }}            </span>
                     </div>
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">{{ $siteSettings->get('industries_heading')?->value ?? 'We serve a wide variety of industries' }}</span>    </h3>
+        <span class="ct-text-inner">{{ $isAr ? ($siteSettings->get('industries_heading_ar')?->value ?? 'نبني في مجموعة واسعة من القطاعات') : ($siteSettings->get('industries_heading')?->value ?? 'We serve a wide variety of industries') }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -893,7 +790,7 @@ IT, possible!
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			{{ $siteSettings->get('industries_description')?->value ?? 'Below is just a small sample of some of the industries that we serve.' }}
+			{{ $isAr ? ($siteSettings->get('industries_description_ar')?->value ?? 'من الفلل السكنية إلى المشاريع التجارية والصناعية الكبرى، لدينا الخبرة اللازمة للتنفيذ.') : ($siteSettings->get('industries_description')?->value ?? 'Below is just a small sample of some of the industries that we serve.') }}
 		</div>
 	</div>
 </div>				</div>
@@ -984,7 +881,7 @@ IT, possible!
                             <span class="ct-button-icon ct-icon-normal ct-align-icon-right">
                 <i aria-hidden="true" class="flaticon flaticon-right-arrow"></i>            </span>
                 <span class="ct-button-text">
-            About Us        </span>
+            {{ $isAr ? 'من نحن' : 'About Us' }}        </span>
     </a>
 </div>				</div>
 				</div>
@@ -1072,7 +969,7 @@ IT, possible!
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			<p>{!! $siteSettings->get('cta_text')?->value ?? '' !!}</p>
+			<p>{!! $isAr ? ($siteSettings->get('cta_text_ar')?->value ?? $siteSettings->get('cta_text')?->value ?? '') : ($siteSettings->get('cta_text')?->value ?? '') !!}</p>
 		</div>
 	</div>
 </div>				</div>

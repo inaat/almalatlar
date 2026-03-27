@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class AboutTab extends Model
 {
-    protected $fillable = ['tab_key', 'title', 'subtitle', 'description', 'image', 'button_text', 'button_url', 'sort_order'];
+    protected $fillable = ['tab_key', 'title', 'title_ar', 'subtitle', 'subtitle_ar', 'description', 'description_ar', 'image', 'button_text', 'button_text_ar', 'button_url', 'sort_order'];
 }
