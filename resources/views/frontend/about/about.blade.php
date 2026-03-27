@@ -1,3 +1,4 @@
+@extends('layouts.app')
 
 @section('title', 'About')
 
@@ -333,75 +334,7 @@
         </div>
                     </div>
         </section>
-        		<div class="elementor-element elementor-element-130408a elementor-widget elementor-widget-ct_tabs" data-id="130408a" data-element_type="widget" data-e-type="widget" data-widget_type="ct_tabs.default">
-				<div class="elementor-widget-container">
-					<div class="ct-tabs ct-tabs3  content-type-template" data-wow-delay="ms">
-    <div class="ct-tabs--main">
-        <div class="ct-tabs-title">
-            @foreach($aboutTabs as $tab)
-                <span class="ct-tab-title {{ $loop->first ? 'active' : '' }}" data-target="#ct_tab-{{ $tab->tab_key }}">
-                    {{ $tab->title }}
-                </span>
-            @endforeach
-        </div>
-
-        <div class="ct-tabs-content">
-            @foreach($aboutTabs as $tab)
-                            <div class="ct-tab-content" id="ct_tab-{{ $tab->tab_key }}" @if($loop->first) style="display:block;" @endif>
-                                <section class="elementor-section elementor-top-section elementor-section-boxed elementor-section-height-default ct-header-fixed-none ct-column-none ct-row-scroll-none ct-row-gradient--none">
-                                    <div class="elementor-container elementor-column-gap-extended">
-                                        <div class="elementor-column elementor-col-50 elementor-top-column ct-column-none">
-                                            <div class="elementor-widget-wrap elementor-element-populated">
-                                                @if($tab->image)
-                                                <div class="ct-banner ct-banner2 wow fadeInUp">
-                                                    <div class="ct-banner-inner">
-                                                        <div class="ct-banner-image">
-                                                            <img loading="lazy" decoding="async" src="{{ $tab->image }}" alt="{{ $tab->title }}" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                @endif
-                                            </div>
-                                        </div>
-                                        <div class="elementor-column elementor-col-50 elementor-top-column ct-column-none">
-                                            <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="ct-heading h-align- item-st-default highlight-style1">
-                                                    <div class="ct-heading--inner">
-                                                        <div class="item--sub-title style-default wow fadeInUp">
-                                                            <span>{{ $tab->subtitle }}</span>
-                                                        </div>
-                                                        <h3 class="item--title st-default wow fadeInUp">
-                                                            <span class="ct-text-inner">{{ $tab->title }}</span>
-                                                        </h3>
-                                                    </div>
-                                                </div>
-                                                <div class="ct-text-editor wow fadeInUp">
-                                                    <div class="ct-item--inner">
-                                                        <div class="ct-text-editor elementor-clearfix">
-                                                            <p>{{ $tab->description }}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                @if($tab->button_text)
-                                                <div class="ct-button-wrapper ct-button-layout1">
-                                                    <a href="{{ $tab->button_url ?? '#' }}" class="btn btn-default wow fadeInUp icon-ps-right">
-                                                        <span class="ct-button-icon ct-icon-normal ct-align-icon-right">
-                                                            <i aria-hidden="true" class="flaticon flaticon-right-arrow"></i>
-                                                        </span>
-                                                        <span class="ct-button-text">{{ $tab->button_text }}</span>
-                                                    </a>
-                                                </div>
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
-            @endforeach
-                    </div>
-    </div>
-</div>				</div>
-				</div>
+        		@include('frontend.about.tabs', ['aboutTabs' => $aboutTabs, 'lang' => app()->getLocale()])
 		            </div>
         </div>
                     </div>

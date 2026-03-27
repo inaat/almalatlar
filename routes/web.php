@@ -27,16 +27,7 @@ Route::get('/welcome', function () {
     $aboutTabs   = \App\Models\AboutTab::orderBy('sort_order')->get();
     $partners    = \App\Models\Partner::where('is_active', true)->orderBy('sort_order')->get();
     $counters    = \App\Models\Counter::where('is_active', true)->orderBy('sort_order')->get();
-    return view('welcomeEnglish', compact('slides', 'categories', 'services', 'aboutTabs', 'partners', 'counters'));
-});
-Route::get('/welcome-ar', function () {
-    $slides      = \App\Models\SliderSlide::where('is_active', true)->orderBy('sort_order')->get();
-    $categories  = \App\Models\ServiceCategory::where('is_active', true)->orderBy('sort_order')->get();
-    $services    = \App\Models\Service::where('is_active', true)->orderBy('sort_order')->get();
-    $aboutTabs   = \App\Models\AboutTab::orderBy('sort_order')->get();
-    $partners    = \App\Models\Partner::where('is_active', true)->orderBy('sort_order')->get();
-    $counters    = \App\Models\Counter::where('is_active', true)->orderBy('sort_order')->get();
-    return view('welcomeArabic', compact('slides', 'categories', 'services', 'aboutTabs', 'partners', 'counters'));
+    return view('welcome', compact('slides', 'categories', 'services', 'aboutTabs', 'partners', 'counters'));
 });
 Route::get('/lang/{locale}', function (string $locale) {
     if (in_array($locale, ['en', 'ar'])) {
@@ -46,7 +37,7 @@ Route::get('/lang/{locale}', function (string $locale) {
 })->name('lang.switch');
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/about', fn() => view('about'));
+Route::get('/about', fn() => view('frontend.about.about', ['lang' => app()->getLocale()]));
 Route::get('/contact', fn() => view('contact'));
 Route::get('/about/{slug}', [AboutPageController::class, 'show']);
 
