@@ -21,10 +21,12 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use Illuminate\Support\Facades\Route;
 Route::get('/welcome', function () {
-    return view('welcomeEnglish');
+    $slides = \App\Models\SliderSlide::where('is_active', true)->orderBy('sort_order')->get();
+    return view('welcomeEnglish', compact('slides'));
 });
 Route::get('/welcome-ar', function () {
-    return view('welcomeArabic');
+    $slides = \App\Models\SliderSlide::where('is_active', true)->orderBy('sort_order')->get();
+    return view('welcomeArabic', compact('slides'));
 });
 Route::get('/lang/{locale}', function (string $locale) {
     if (in_array($locale, ['en', 'ar'])) {

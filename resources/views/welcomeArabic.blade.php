@@ -1100,54 +1100,110 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
 					
 		<div class="wp-block-themepunch-revslider">
 			<!-- START Slider 2 REVOLUTION SLIDER 6.7.34 -->
-			<rs-fullwidth-wrap id="rev_slider_3_1_forcefullwidth" style="margin-top:0px;margin-bottom:0px;"><rs-module-wrap id="rev_slider_3_1_wrapper" data-source="gallery" style="visibility: visible; background: transparent; padding: 0px; margin: 0px auto; height: 663px; display: block; width: 1073px; position: absolute; overflow: visible; left: -15px;"><rs-module id="rev_slider_3_1" style="height: 663px; width: 1073px; max-height: 663px;" data-version="6.7.34" data-idcheck="true" class="revslider-initialised rev_redraw_on_blurfocus" data-slideactive="rs-5">
+			<rs-fullwidth-wrap id="rev_slider_3_1_forcefullwidth" style="margin-top:0px;margin-bottom:0px;"><rs-module-wrap id="rev_slider_3_1_wrapper" data-source="gallery" style="visibility:hidden;background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;"><rs-module id="rev_slider_3_1" style="" data-version="6.7.34">
 					
-				<rs-arrow style="opacity: 0; transform: translate(30px, -25px); top: 50%; left: 0px;" class="tp-leftarrow tparrows hesperiden"></rs-arrow><rs-arrow style="opacity: 0; transform: translate(-80px, -25px); top: 50%; left: 100%;" class="tp-rightarrow tparrows hesperiden"></rs-arrow><rs-slides style="overflow: hidden; position: absolute; visibility: visible; max-height: none; height: 100%; width: 100%;">
-						<rs-slide style="position: absolute; display: block; overflow: hidden; height: 100%; width: 100%; z-index: 20; opacity: 1; visibility: inherit;" data-key="rs-5" data-title="Slide" data-thumb="//almalath.com/wp-content/uploads/2023/07/Untitled-design-7-50x100.png" data-anim="adpr:false;" data-in="o:0;" data-out="a:false;" data-originalindex="1" data-origindex="0" data-description="" data-sba="" data-scroll-based="false" data-rspausetimeronce="0"><rs-sbg-px style="transform: translate(0px, -8.3594px); backface-visibility: hidden; left: 0px; top: 0px; position: absolute;"><rs-sbg-wrap data-key="rs-5"><!--Runtime Modification - Img tag is Still Available for SEO Goals in Source - <img loading="lazy" decoding="async" src="wp-content/plugins/revslider/sr6/assets/assets/dummy.png" alt="" title="Untitled design (7)" width="1920" height="759" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//almalath.com/wp-content/uploads/2023/07/Untitled-design-7.png" data-parallax="4" data-panzoom="d:10000;ss:110%;se:100;" data-no-retina="">--><rs-sbg data-lazyload="//almalath.com/wp-content/uploads/2023/07/Untitled-design-7.png" class="" data-bgcolor="transparent" style="width: 100%; height: 100%;" data-src-rs-ref="//almalath.com/wp-content/uploads/2023/07/Untitled-design-7.png"><canvas width="1073" height="663" style="width: 100%; height: 100%; background-color: transparent; opacity: 1; filter: none;"></canvas></rs-sbg></rs-sbg-wrap></rs-sbg-px>
-							
+				<rs-slides style="overflow: hidden; position: absolute;">
+@foreach($slides as $slide)
+<rs-slide style="position: absolute;" data-key="rs-{{ $loop->iteration + 4 }}" data-title="Slide" data-thumb="{{ $slide->image }}" data-anim="adpr:false;" data-in="o:0;" data-out="a:false;">
+<img loading="lazy" decoding="async" src="wp-content/plugins/revslider/sr6/assets/assets/dummy.png" alt="" title="{{ $slide->title_ar }}" width="1920" height="759" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="{{ $slide->image }}" data-parallax="4" data-panzoom="d:10000;ss:110%;se:100;" data-no-retina>
 <!--
-							--><rs-group-wrap class="rs-parallax-wrap" style="vertical-align: top; position: absolute; pointer-events: auto; height: 410px; left: 930px; top: 76px; z-index: 13; visibility: visible; perspective: 601px;"><rs-loop-wrap style="position:absolute;"><rs-mask-wrap style="position: absolute; overflow: visible;"><rs-group id="slider-3-slide-5-layer-1" data-type="group" data-xy="xo:30px,30px,15px,15px;y:m;yo:-50px,-50px,0,0;" data-text="w:normal;s:20,16,12,7;l:0,20,15,9;" data-dim="w:900px,900px,600px,360px;h:410px,410px,310px,270px;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="o:1;" data-frame_999="o:0;st:w;sR:8700;sA:9000;" style="z-index: 13; text-align: left; vertical-align: top; line-height: 0px; color: rgb(255, 255, 255); white-space: normal; width: 900px; height: 410px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; backdrop-filter: none; filter: none; transform-origin: 50% 50%; transform: translate(0px, 0px); opacity: 1; visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><!--
-								--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 115px; top: 322px; z-index: 12; visibility: visible; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><a id="slider-3-slide-5-layer-5" class="rs-layer btn-effect1 rev-btn" href="contact/index.html" target="_self" data-type="button" data-xy="xo:-1px;y:b;yo:31px;" data-pos="a" data-text="w:normal;s:16,16,16,15;l:55,55,55,48;fw:700;" data-dim="minh:0px,none,none,none;" data-rsp_o="off" data-rsp_bd="off" data-padding="r:45,45,45,32;l:45,45,45,32;" data-border="bor:55px,55px,55px,55px;" data-frame_0="x:50;" data-frame_1="e:back.inOut;st:1300;sp:1000;" data-frame_999="o:0;st:w;sR:7400;" data-frame_hover="c:#fff;bgc:linear-gradient(90deg, rgba(113,20,239,1) 0%, rgba(20,117,247,1) 100%);bor:55px,55px,55px,55px;" style="z-index: 12; background: linear-gradient(90deg, rgb(113, 20, 239) 0%, rgb(20, 117, 247) 100%); font-family: &quot;Fira Sans&quot;; height: auto; width: auto; color: rgb(255, 255, 255); text-decoration: none; white-space: nowrap; min-height: 0px; min-width: 0px; max-height: none; max-width: none; text-align: left; line-height: 55px; letter-spacing: 0px; font-weight: 700; font-size: 16px; padding-left: 45px; border-radius: 55px; padding-right: 45px; backdrop-filter: none; filter: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" data-idcheck="true" data-stylerecorder="true" data-initialised="true">تواصل  معنا<i class="flaticon flaticon-right-arrow space-left"></i> 
-								</a></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
-
-								--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 500px; top: 248px; z-index: 11; visibility: visible; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-3-slide-5-layer-4" data-type="text" data-xy="yo:248px,248px,165px,143px;" data-pos="a" data-text="w:normal;s:20,20,16,14;l:30,30,28,24;" data-dim="w:500px,500px,420px,290px;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50;" data-frame_1="e:back.inOut;st:1100;sp:1000;" data-frame_999="o:0;st:w;sR:7600;" style="z-index: 11; font-family: Roboto; height: auto; color: rgb(255, 255, 255); text-decoration: none; white-space: normal; width: 500px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; text-align: left; line-height: 30px; letter-spacing: 0px; font-weight: 400; font-size: 20px; backdrop-filter: none; filter: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true">نضعك في  وسط الشبكات العالمية  لتحسين وتعزيز مصالحك الاستراتيجية 
-								</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
-
-								--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 446px; top: 68px; z-index: 10; visibility: visible; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-3-slide-5-layer-3" class="slider-title-shadow1 rs-layer" data-type="text" data-xy="yo:68px,68px,55px,55px;" data-pos="a" data-text="w:normal;s:75,70,40,28;l:80,80,46,36;fw:700;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50;" data-frame_1="e:back.inOut;st:900;sp:1000;" data-frame_999="o:0;st:w;sR:7800;" style="z-index: 10; font-family: &quot;Fira Sans&quot;; height: auto; width: auto; color: rgb(255, 255, 255); text-decoration: none; white-space: nowrap; min-height: 0px; min-width: 0px; max-height: none; max-width: none; text-align: left; line-height: 80px; letter-spacing: 0px; font-weight: 700; font-size: 75px; backdrop-filter: none; filter: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" data-idcheck="true" data-stylerecorder="true" data-initialised="true">ازدهر في  النمو مع<br>
-.متطلبات السوق 
-								</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
-
-								--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 66px; top: 6px; z-index: 9; visibility: visible; perspective: 601px;"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position: absolute; display: block; overflow: visible;"><rs-layer id="slider-3-slide-5-layer-2" data-type="text" data-color="#1475f7" data-xy="xo:6px;yo:6px;" data-pos="a" data-text="w:normal;s:22,22,18,15;l:42,42,40,38;fw:700;" data-rsp_o="off" data-rsp_bd="off" data-padding="r:30,30,30,22;l:30,30,30,22;" data-border="bor:30px,30px,30px,30px;" data-frame_0="y:50;" data-frame_1="e:back.inOut;st:700;sp:1000;" data-frame_999="o:0;st:w;sR:8000;" style="z-index: 9; background-color: rgb(255, 255, 255); font-family: Roboto; height: auto; width: auto; color: rgb(20, 117, 247); text-decoration: none; white-space: nowrap; min-height: 0px; min-width: 0px; max-height: none; max-width: none; text-align: left; line-height: 42px; letter-spacing: 0px; font-weight: 700; font-size: 22px; padding-left: 30px; border-radius: 30px; padding-right: 30px; backdrop-filter: none; filter: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><span class="text-gradient">نحن وكالة  خدمات تكنولوجيا المعلومات ~</span> 
-								</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
-							--></rs-group></rs-mask-wrap></rs-loop-wrap></rs-group-wrap><!--
-
-							--><rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; min-height: 100%; min-width: 100%; left: 0px; top: 0px; z-index: 8; visibility: visible; perspective: 601px;"><rs-loop-wrap style="position: absolute; display: block; height: 100%; width: 100%;"><rs-mask-wrap style="position: absolute; display: block; height: 100%; width: 100%; overflow: visible;"><rs-layer id="slider-3-slide-5-layer-0" data-type="shape" data-rsp_ch="on" data-xy="x:c;y:m;" data-text="w:normal;s:20,16,12,7;l:0,20,15,9;" data-dim="w:100%;h:100%;" data-basealign="slide" data-frame_0="x:-50,-41,-31,-19;" data-frame_1="st:300;sp:1000;" data-frame_999="o:0;st:w;sR:8700;" style="z-index: 8; background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); width: 100%; height: 100%; min-height: 0px; min-width: 0px; max-height: none; max-width: none; backdrop-filter: none; filter: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"><rs-bg-elem style="background: url('wp-content/uploads/2021/11/h2-bg-slider1-overlay.png') no-repeat center center; background-size: cover;"></rs-bg-elem>
- 
-							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
--->					</rs-slide>
-						<rs-slide style="position: absolute; display: none; overflow: hidden; height: 100%; width: 100%;" data-key="rs-6" data-title="Slide" data-thumb="//almalath.com/wp-content/uploads/2023/07/Untitled-design-5-50x100.png" data-anim="adpr:false;" data-in="o:0;" data-out="a:false;" data-originalindex="2" data-origindex="1" data-description="" data-sba="" data-scroll-based="false"><rs-sbg-px style="transform: translate(0px, -8.3594px); backface-visibility: hidden; left: 0px; top: 0px; position: absolute;"><rs-sbg-wrap data-key="rs-6"><!--Runtime Modification - Img tag is Still Available for SEO Goals in Source - <img loading="lazy" decoding="async" src="wp-content/plugins/revslider/sr6/assets/assets/dummy.png" alt="" title="Untitled design (5)" width="1920" height="759" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//almalath.com/wp-content/uploads/2023/07/Untitled-design-5.png" data-parallax="4" data-panzoom="d:10000;ss:110%;se:100;" data-no-retina="">--><rs-sbg data-lazyload="//almalath.com/wp-content/uploads/2023/07/Untitled-design-5.png" class="" data-bgcolor="transparent" style="width: 100%; height: 100%;" data-src-rs-ref="//almalath.com/wp-content/uploads/2023/07/Untitled-design-5.png"><canvas style="width: 100%; height: 100%;"></canvas></rs-sbg></rs-sbg-wrap></rs-sbg-px>
-							
-<!--
-							--><rs-group-wrap class="rs-parallax-wrap " style=" vertical-align:top; position:absolute;;pointer-events:none"><rs-loop-wrap style="position:absolute;"><rs-mask-wrap style="position:absolute;"><rs-group id="slider-3-slide-6-layer-1" data-type="group" data-xy="xo:30px,30px,15px,15px;y:m;yo:-50px,-50px,0,0;" data-text="w:normal;s:20,16,12,7;l:0,20,15,9;" data-dim="w:900px,900px,600px,360px;h:410px,410px,310px,270px;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="o:1;" data-frame_999="o:0;st:w;sR:8700;sA:9000;" style="z-index:13;" class="rs-layer" data-idcheck="true"><!--
-								--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><a id="slider-3-slide-6-layer-5" class="rs-layer btn-effect1 rev-btn" href="contact/index.html" target="_self" data-type="button" data-xy="xo:-2px;y:b;yo:30px;" data-pos="a" data-text="w:normal;s:16,16,16,15;l:55,55,55,48;fw:700;" data-dim="minh:0px,none,none,none;" data-rsp_o="off" data-rsp_bd="off" data-padding="r:45,45,45,32;l:45,45,45,32;" data-border="bor:55px,55px,55px,55px;" data-frame_0="x:50;" data-frame_1="e:back.inOut;st:1300;sp:1000;" data-frame_999="o:0;st:w;sR:7400;" data-frame_hover="c:#fff;bgc:linear-gradient(90deg, rgba(113,20,239,1) 0%, rgba(20,117,247,1) 100%);bor:55px,55px,55px,55px;" style="z-index:12;background:linear-gradient(90deg, rgba(113,20,239,1) 0%, rgba(20,117,247,1) 100%);font-family:'Fira Sans';" data-idcheck="true">تواصل  معنا<i class="flaticon flaticon-right-arrow space-left"></i> 
-								</a></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
-
-								--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-3-slide-6-layer-4" data-type="text" data-xy="yo:248px,248px,165px,143px;" data-pos="a" data-text="w:normal;s:20,20,16,14;l:30,30,28,24;" data-dim="w:500px,500px,420px,290px;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50;" data-frame_1="e:back.inOut;st:1100;sp:1000;" data-frame_999="o:0;st:w;sR:7600;" style="z-index:11;font-family:'Roboto';" class="rs-layer" data-idcheck="true">نضعك في  وسط الشبكات العالمية  لتحسين وتعزيز مصالحك الاستراتيجية 
-								</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
-
-								--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-3-slide-6-layer-3" class="slider-title-shadow1 rs-layer" data-type="text" data-xy="yo:68px,68px,55px,55px;" data-pos="a" data-text="w:normal;s:75,70,40,28;l:80,80,46,36;fw:700;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50;" data-frame_1="e:back.inOut;st:900;sp:1000;" data-frame_999="o:0;st:w;sR:7800;" style="z-index:10;font-family:'Fira Sans';" data-idcheck="true">فكر بشكل  كبير<br>
-نجعل  من المستحيل واقع 
-								</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
-
-								--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-3-slide-6-layer-2" data-type="text" data-color="#1475f7" data-xy="" data-pos="a" data-text="w:normal;s:22,22,18,15;l:42,42,40,38;fw:700;a:center;" data-rsp_o="off" data-rsp_bd="off" data-padding="r:30,30,30,22;l:30,30,30,22;" data-border="bor:30px,30px,30px,30px;" data-frame_0="y:50;" data-frame_1="e:back.inOut;st:700;sp:1000;" data-frame_999="o:0;st:w;sR:8000;" style="z-index:9;background-color:#ffffff;font-family:'Roboto';" class="rs-layer" data-idcheck="true"><span class="text-gradient">نحن وكالة  خدمات تكنولوجيا المعلومات ~</span> 
-								</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
-							--></rs-group></rs-mask-wrap></rs-loop-wrap></rs-group-wrap><!--
-
-							--><rs-layer-wrap class="rs-parallax-wrap " style=" position:absolute;display:block;;pointer-events:none"><rs-loop-wrap style="position:absolute;display:block;"><rs-mask-wrap style="position:absolute;display:block;"><rs-layer id="slider-3-slide-6-layer-0" data-type="shape" data-rsp_ch="on" data-xy="x:c;y:m;" data-text="w:normal;s:20,16,12,7;l:0,20,15,9;" data-dim="w:100%;h:100%;" data-basealign="slide" data-frame_0="x:-50,-41,-31,-19;" data-frame_1="st:300;sp:1000;" data-frame_999="o:0;st:w;sR:8700;" style="z-index:8;background-color:rgba(0,0,0,0);" class="rs-layer" data-idcheck="true"><rs-bg-elem style="background: url('wp-content/uploads/2021/11/h2-bg-slider1-overlay.png') no-repeat center center; background-size: cover;"></rs-bg-elem>
- 
-							</rs-layer></rs-mask-wrap></rs-loop-wrap></rs-layer-wrap><!--
--->					</rs-slide>
-					</rs-slides><rs-progress style="visibility:hidden;"><rs-progress-bar style="background: rgba(255, 255, 255, 0.5); transform-origin: 0% 50%; transform: translate(0px, 0px);"></rs-progress-bar></rs-progress></rs-module>
+--><rs-group
+id="slider-3-slide-{{ $loop->iteration }}-layer-1"
+data-type="group"
+data-xy="xo:30px,30px,15px,15px;y:m;yo:-50px,-50px,0,0;"
+data-text="w:normal;s:20,16,12,7;l:0,20,15,9;"
+data-dim="w:900px,900px,600px,360px;h:410px,410px,310px,270px;"
+data-rsp_o="off"
+data-rsp_bd="off"
+data-frame_0="o:1;"
+data-frame_999="o:0;st:w;sR:8700;sA:9000;"
+style="z-index:13;"
+><!--
+--><a
+id="slider-3-slide-{{ $loop->iteration }}-layer-5"
+class="rs-layer btn-effect1 rev-btn"
+href="{{ $slide->button_url }}" target="_self"
+data-type="button"
+data-xy="xo:-1px;y:b;yo:31px;"
+data-pos="a"
+data-text="w:normal;s:16,16,16,15;l:55,55,55,48;fw:700;"
+data-dim="minh:0px,none,none,none;"
+data-rsp_o="off"
+data-rsp_bd="off"
+data-padding="r:45,45,45,32;l:45,45,45,32;"
+data-border="bor:55px,55px,55px,55px;"
+data-frame_0="x:50;"
+data-frame_1="e:back.inOut;st:1300;sp:1000;"
+data-frame_999="o:0;st:w;sR:7400;"
+data-frame_hover="c:#fff;bgc:linear-gradient(90deg, rgba(113,20,239,1) 0%, rgba(20,117,247,1) 100%);bor:55px,55px,55px,55px;"
+style="z-index:12;background:linear-gradient(90deg, rgba(113,20,239,1) 0%, rgba(20,117,247,1) 100%);font-family:'Fira Sans';"
+>{{ $slide->button_text_ar }}<i class="flaticon flaticon-right-arrow space-left"></i>
+</a><!--
+--><rs-layer
+id="slider-3-slide-{{ $loop->iteration }}-layer-4"
+data-type="text"
+data-xy="yo:248px,248px,165px,143px;"
+data-pos="a"
+data-text="w:normal;s:20,20,16,14;l:30,30,28,24;"
+data-dim="w:500px,500px,420px,290px;"
+data-rsp_o="off"
+data-rsp_bd="off"
+data-frame_0="x:50;"
+data-frame_1="e:back.inOut;st:1100;sp:1000;"
+data-frame_999="o:0;st:w;sR:7600;"
+style="z-index:11;font-family:'Roboto';"
+>{{ $slide->description_ar }}</rs-layer><!--
+--><rs-layer
+id="slider-3-slide-{{ $loop->iteration }}-layer-3"
+class="slider-title-shadow1"
+data-type="text"
+data-xy="yo:68px,68px,55px,55px;"
+data-pos="a"
+data-text="w:normal;s:75,70,40,28;l:80,80,46,36;fw:700;"
+data-rsp_o="off"
+data-rsp_bd="off"
+data-frame_0="x:50;"
+data-frame_1="e:back.inOut;st:900;sp:1000;"
+data-frame_999="o:0;st:w;sR:7800;"
+style="z-index:10;font-family:'Fira Sans';"
+>{{ $slide->title_ar }}
+</rs-layer><!--
+--><rs-layer
+id="slider-3-slide-{{ $loop->iteration }}-layer-2"
+data-type="text"
+data-color="#1475f7"
+data-xy="xo:6px;yo:6px;"
+data-pos="a"
+data-text="w:normal;s:22,22,18,15;l:42,42,40,38;fw:700;"
+data-rsp_o="off"
+data-rsp_bd="off"
+data-padding="r:30,30,30,22;l:30,30,30,22;"
+data-border="bor:30px,30px,30px,30px;"
+data-frame_0="y:50;"
+data-frame_1="e:back.inOut;st:700;sp:1000;"
+data-frame_999="o:0;st:w;sR:8000;"
+style="z-index:9;background-color:#ffffff;font-family:'Roboto';"
+><span class="text-gradient">{{ $slide->subtitle_ar }}</span>
+</rs-layer><!--
+--></rs-group><!--
+--><rs-layer
+id="slider-3-slide-{{ $loop->iteration }}-layer-0"
+data-type="shape"
+data-rsp_ch="on"
+data-xy="x:c;y:m;"
+data-text="w:normal;s:20,16,12,7;l:0,20,15,9;"
+data-dim="w:100%;h:100%;"
+data-basealign="slide"
+data-frame_0="x:-50,-41,-31,-19;"
+data-frame_1="st:300;sp:1000;"
+data-frame_999="o:0;st:w;sR:8700;"
+style="z-index:8;background-color:rgba(0,0,0,0);"
+><rs-bg-elem style="background: url('wp-content/uploads/2021/11/h2-bg-slider1-overlay.png') no-repeat center center; background-size: cover;"></rs-bg-elem>
+</rs-layer><!--
+-->
+</rs-slide>
+@endforeach
+</rs-slides></rs-module>
 				
 				<script>
 					setREVStartSize({c: 'rev_slider_3_1',rl:[1240,1024,778,480],el:[760,760,700,700],gw:[1230,1024,778,480],gh:[760,760,700,700],type:'standard',justify:'',layout:'fullwidth',mh:"0"});if (window.RS_MODULES!==undefined && window.RS_MODULES.modules!==undefined && window.RS_MODULES.modules["revslider31"]!==undefined) {window.RS_MODULES.modules["revslider31"].once = false;window.revapi3 = undefined;if (window.RS_MODULES.checkMinimal!==undefined) window.RS_MODULES.checkMinimal()}
