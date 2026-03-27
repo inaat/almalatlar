@@ -20,6 +20,20 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        try {
+            \Illuminate\Support\Facades\DB::connection()->getPdo();
+        } catch (\Exception $e) {
+            View::share('navServiceCategories', collect());
+            View::share('aboutHistories', collect());
+            View::share('aboutTabs', collect());
+            View::share('navAboutPages', collect());
+            View::share('navProducts', collect());
+            View::share('siteSettings', collect());
+            View::share('teamMembers', collect());
+            View::share('testimonials', collect());
+            return;
+        }
+
         if (Schema::hasTable('service_categories')) {
             View::share('navServiceCategories', ServiceCategory::with('services')->where('is_active', true)->orderBy('sort_order')->get());
         } else {
