@@ -349,7 +349,7 @@
 				<div class="elementor-widget-container">
 					    <div class="ct-history ct-history-carousel1 ct-slick-slider">
         <div class="ct-carousel-inner">
-            <div class="ct-slick-carousel" data-arrows="true" data-dots="" data-pauseOnHover="" data-autoplay="" data-autoplaySpeed="5000" data-infinite="true" data-speed="500" data-colxs="1" data-colsm="2" data-colmd="3" data-collg="4" data-colxl="4" data-dir="false" data-slidesToScroll="1">
+            <div class="ct-slick-carousel" data-arrows="true" data-dots="" data-pauseOnHover="" data-autoplay="" data-autoplaySpeed="5000" data-infinite="true" data-speed="500" data-colxs="1" data-colsm="2" data-colmd="3" data-collg="4" data-colxl="4" data-dir="{{ app()->getLocale() === 'ar' ? 'true' : 'false' }}" data-slidesToScroll="1">
                                         @foreach($aboutHistories as $historyItem)
                                         <div class="slick-slide">
                             <div id="ct_history-{{ $loop->index }}" class="item--inner wow flipInY">
@@ -368,9 +368,9 @@
                                     <div class="item--year">
                                         <span>{{ $historyItem->year }}</span>
                                     </div>
-                                    <h3 class="item--title">{{ $historyItem->title }}</h3>
+                                    <h3 class="item--title">{{ $lang === 'ar' ? ($historyItem->title_ar ?? $historyItem->title) : $historyItem->title }}</h3>
                                     @if($historyItem->description)
-                                    <div class="item--description">{{ $historyItem->description }}</div>
+                                    <div class="item--description">{{ $lang === 'ar' ? ($historyItem->description_ar ?? $historyItem->description) : $historyItem->description }}</div>
                                     @endif
                                 </div>
                             </div>
@@ -710,46 +710,7 @@
                     <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-793c15c ct-column-none col-offset-none col-color-offset-none" data-id="793c15c" data-element_type="column" data-e-type="column">
         <div class="elementor-widget-wrap elementor-element-populated">
                     
-        		<div class="elementor-element elementor-element-82f8dd3 elementor-widget elementor-widget-ct_client_carousel" data-id="82f8dd3" data-element_type="widget" data-e-type="widget" data-widget_type="ct_client_carousel.default">
-				<div class="elementor-widget-container">
-					    <div class="ct-client-carousel1 ct-slick-slider style2 ">
-        <div class="ct-clients-list-inner">
-            <div class="ct-slick-carousel ct-slick-arrow-middle" data-arrows="" data-dots="" data-pauseOnHover="" data-autoplay="" data-autoplaySpeed="" data-infinite="true" data-speed="500" data-colxs="2" data-colsm="3" data-colmd="4" data-collg="4" data-colxl="5" data-dir="false" data-slidesToScroll="1">
-                                        <div class="slick-slide">
-                            <div class="ct-client--image ">
-                                <a href="#">
-                                                                            <img loading="lazy" decoding="async" width="133" height="44" src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/10/v2-client1.png" class="lazy lazy-hidden no-lazyload ct-client--imgmain image-one attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="133" height="44" src="../wp-content/uploads/2021/10/v2-client1.png" class="no-lazyload ct-client--imgmain image-one attachment-full" alt="" /></noscript>                                                                                                                                                    <img loading="lazy" decoding="async" width="133" height="44" src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/10/v2-client1.png" class="lazy lazy-hidden image-two attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="133" height="44" src="../wp-content/uploads/2021/10/v2-client1.png" class="image-two attachment-full" alt="" /></noscript>                                                                    </a>
-                            </div>
-                        </div>
-                                                            <div class="slick-slide">
-                            <div class="ct-client--image ">
-                                <a href="#">
-                                                                            <img loading="lazy" decoding="async" width="125" height="44" src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/10/v2-client2.png" class="lazy lazy-hidden no-lazyload ct-client--imgmain image-one attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="125" height="44" src="../wp-content/uploads/2021/10/v2-client2.png" class="no-lazyload ct-client--imgmain image-one attachment-full" alt="" /></noscript>                                                                                                                                                    <img loading="lazy" decoding="async" width="125" height="44" src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/10/v2-client2.png" class="lazy lazy-hidden image-two attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="125" height="44" src="../wp-content/uploads/2021/10/v2-client2.png" class="image-two attachment-full" alt="" /></noscript>                                                                    </a>
-                            </div>
-                        </div>
-                                                            <div class="slick-slide">
-                            <div class="ct-client--image ">
-                                <a href="#">
-                                                                            <img loading="lazy" decoding="async" width="134" height="44" src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/10/v2-client3.png" class="lazy lazy-hidden no-lazyload ct-client--imgmain image-one attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="134" height="44" src="../wp-content/uploads/2021/10/v2-client3.png" class="no-lazyload ct-client--imgmain image-one attachment-full" alt="" /></noscript>                                                                                                                                                    <img loading="lazy" decoding="async" width="134" height="44" src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/10/v2-client3.png" class="lazy lazy-hidden image-two attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="134" height="44" src="../wp-content/uploads/2021/10/v2-client3.png" class="image-two attachment-full" alt="" /></noscript>                                                                    </a>
-                            </div>
-                        </div>
-                                                            <div class="slick-slide">
-                            <div class="ct-client--image ">
-                                <a href="#">
-                                                                            <img loading="lazy" decoding="async" width="144" height="44" src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/10/v2-client4.png" class="lazy lazy-hidden no-lazyload ct-client--imgmain image-one attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="144" height="44" src="../wp-content/uploads/2021/10/v2-client4.png" class="no-lazyload ct-client--imgmain image-one attachment-full" alt="" /></noscript>                                                                                                                                                    <img loading="lazy" decoding="async" width="144" height="44" src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/10/v2-client4.png" class="lazy lazy-hidden image-two attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="144" height="44" src="../wp-content/uploads/2021/10/v2-client4.png" class="image-two attachment-full" alt="" /></noscript>                                                                    </a>
-                            </div>
-                        </div>
-                                                            <div class="slick-slide">
-                            <div class="ct-client--image ">
-                                <a href="#">
-                                                                            <img loading="lazy" decoding="async" width="109" height="44" src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/10/v2-client5.png" class="lazy lazy-hidden no-lazyload ct-client--imgmain image-one attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="109" height="44" src="../wp-content/uploads/2021/10/v2-client5.png" class="no-lazyload ct-client--imgmain image-one attachment-full" alt="" /></noscript>                                                                                                                                                    <img loading="lazy" decoding="async" width="109" height="44" src="../wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/10/v2-client5.png" class="lazy lazy-hidden image-two attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="109" height="44" src="../wp-content/uploads/2021/10/v2-client5.png" class="image-two attachment-full" alt="" /></noscript>                                                                    </a>
-                            </div>
-                        </div>
-                                                </div>
-        </div>
-    </div>
-				</div>
-				</div>
+        		@include('frontend.partners.partner-logos', ['partners' => $partners, 'lang' => app()->getLocale()])
 		            </div>
         </div>
                     </div>

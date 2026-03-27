@@ -1,12 +1,10 @@
 {{--
     Reusable Footer Component
     Usage:
-        @include('frontend.footer.footer', ['lang' => 'en'])
-        @include('frontend.footer.footer', ['lang' => 'ar'])
+        @include('frontend.footer.footer')
     Variables:
-        $lang - 'en' (default) or 'ar'
+        $siteSettings - collection of site settings (auto-handles language)
 --}}
-@php $lang = $lang ?? 'en'; @endphp
 
 <footer id="colophon" class="site-footer-custom">
     <div class="footer-custom-inner">
@@ -28,7 +26,7 @@
                                             <div class="ct-heading--inner">
                                                 <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
                                                     <span class="ct-text-inner">
-                                                        {{ $lang === 'ar' ? 'هل تبحث عن أفضل حلول أعمال تكنولوجيا المعلومات؟' : 'Looking for the Best IT Business Solutions?' }}
+                                                        {{ $siteSettings->get('footer_cta_heading')?->value }}
                                                     </span>
                                                 </h3>
                                             </div>
@@ -40,7 +38,7 @@
                                         <div id="ct_text_editor-200c8d04" class="ct-text-editor wow fadeInUp" data-wow-delay="ms">
                                             <div class="ct-item--inner">
                                                 <div class="ct-text-editor elementor-clearfix">
-                                                    {{ $lang === 'ar' ? 'باعتبارنا خبيرًا في زاحف الويب الخاص بالتطبيقات، سنساعدك في التنظيم.' : 'As a app web crawler expert, We will help to organize.' }}
+                                                    {{ $siteSettings->get('footer_cta_description')?->value }}
                                                 </div>
                                             </div>
                                         </div>
@@ -63,7 +61,7 @@
                                             <a href="contact/index.html" class="btn btn-default wow fadeInUp icon-ps-" data-wow-delay="ms">
                                                 <span class="ct-button-icon ct-icon-normal ct-align-icon-"></span>
                                                 <span class="ct-button-text">
-                                                    {{ $lang === 'ar' ? 'احصل على عرض أسعار' : 'Get a quote' }}
+                                                    {{ $siteSettings->get('footer_cta_button_text')?->value }}
                                                 </span>
                                             </a>
                                         </div>
@@ -94,7 +92,7 @@
                                                     <div class="elementor-widget-container">
                                                         <div id="ct_logo-5163ffb5" class="ct-logo style1">
                                                             <a href="index.html">
-                                                                <img width="1852" height="1628" src="wp-content/uploads/2021/11/web-logo1.png" class="attachment-full" alt="">
+                                                                <img src="{{ $siteSettings->get('site_logo_footer')?->value }}" class="attachment-full" alt="{{ $siteSettings->get('site_name')?->value }}">
                                                             </a>
                                                         </div>
                                                     </div>
@@ -104,9 +102,7 @@
                                                         <div id="ct_text_editor-2d3e84d9" class="ct-text-editor" data-wow-delay="ms">
                                                             <div class="ct-item--inner">
                                                                 <div class="ct-text-editor elementor-clearfix">
-                                                                    {{ $lang === 'ar'
-                                                                        ? 'اعتماد تقنيات تكنولوجيا المعلومات الجديدة المتطورة. العمل بأخلاقيات قوية وصدق وشفافية.'
-                                                                        : 'Adopting the evolving new IT technologies. Acting with strong ethics, Honesty, and transparency.' }}
+                                                                    {{ $siteSettings->get('footer_tagline')?->value }}
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -125,7 +121,7 @@
                                                             <a href="about/index.html" class="btn btn-default icon-ps-" data-wow-delay="ms">
                                                                 <span class="ct-button-icon ct-icon-normal ct-align-icon-"></span>
                                                                 <span class="ct-button-text">
-                                                                    {{ $lang === 'ar' ? 'معلومات عنا' : 'About us' }}
+                                                                    {{ $siteSettings->get('footer_about_button_text')?->value }}
                                                                 </span>
                                                             </a>
                                                         </div>
@@ -143,7 +139,7 @@
                                                             <div class="ct-heading--inner">
                                                                 <h3 class="item--title st-default" data-wow-delay="ms">
                                                                     <span class="ct-text-inner">
-                                                                        {{ $lang === 'ar' ? 'المعلومات الرسمية:' : 'Official info:' }}
+                                                                        {{ $siteSettings->get('footer_contact_heading')?->value }}
                                                                     </span>
                                                                 </h3>
                                                             </div>
@@ -161,20 +157,13 @@
                                                             <div class="item--contact-info">
                                                                 <span class="ct-contact-icon"><i aria-hidden="true" class="fas fa-map-marker-alt"></i></span>
                                                                 <span class="ct-contact-content">
-                                                                    @if($lang === 'ar')
-                                                                        مكتب رقم 3، مبنى ديم المناهل<br>
-                                                                        8775 الأمير عبد العزيز بن مساعد بن جلوي، حي السليمانية.<br>
-                                                                        ص.ب. 12234 - الرياض 2949<br>
-                                                                        المملكة العربية السعودية
-                                                                    @else
-                                                                        P.O. Box 12234 - Riyadh 2949 Kingdom of Saudi Arabia
-                                                                    @endif
+                                                                    {{ $siteSettings->get('address')?->value }}
                                                                 </span>
                                                             </div>
                                                             <div class="item--contact-info">
                                                                 <span class="ct-contact-icon"><i aria-hidden="true" class="fas fa-phone-alt"></i></span>
                                                                 <span class="ct-contact-content">
-                                                                    {{ $lang === 'ar' ? '+(966) 11 4002 03' : '' }}
+                                                                    {{ $siteSettings->get('phone')?->value }}
                                                                 </span>
                                                             </div>
                                                         </div>
@@ -185,7 +174,7 @@
                                                         <div id="ct_text_editor-604876e6" class="ct-text-editor" data-wow-delay="ms">
                                                             <div class="ct-item--inner">
                                                                 <div class="ct-text-editor elementor-clearfix">
-                                                                    {{ $lang === 'ar' ? 'ساعات العمل:' : 'Open Hours:' }}
+                                                                    {{ $siteSettings->get('open_hours_label')?->value }}
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -196,11 +185,7 @@
                                                         <div id="ct_text_editor-459e0c47" class="ct-text-editor" data-wow-delay="ms">
                                                             <div class="ct-item--inner">
                                                                 <div class="ct-text-editor elementor-clearfix">
-                                                                    @if($lang === 'ar')
-                                                                        الإثنين – السبت: 8 صباحًا – 5 مساءً<br>الأحد: مغلق
-                                                                    @else
-                                                                        Mon &#8211; Sat: 8 am &#8211; 5 pm,<br>Sunday: CLOSED
-                                                                    @endif
+                                                                    {{ $siteSettings->get('open_hours')?->value }}
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -218,7 +203,7 @@
                                                             <div class="ct-heading--inner">
                                                                 <h3 class="item--title st-default" data-wow-delay="ms">
                                                                     <span class="ct-text-inner">
-                                                                        {{ $lang === 'ar' ? 'رسم خريطة' : 'MAP' }}
+                                                                        {{ $siteSettings->get('footer_map_heading')?->value }}
                                                                     </span>
                                                                 </h3>
                                                             </div>
@@ -234,9 +219,9 @@
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-custom-embed">
                                                             <iframe loading="lazy"
-                                                                src="https://maps.google.com/maps?q=P.O.%20Box%2012234%20-%20Riyadh%202949%20Kingdom%20of%20Saudi%20Arabia&amp;t=m&amp;z=5&amp;output=embed&amp;iwloc=near"
-                                                                title="{{ $lang === 'ar' ? 'ص.ب. 12234 - الرياض 2949 المملكة العربية السعودية' : 'P.O. Box 12234 - Riyadh 2949 Kingdom of Saudi Arabia' }}"
-                                                                aria-label="{{ $lang === 'ar' ? 'ص.ب. 12234 - الرياض 2949 المملكة العربية السعودية' : 'P.O. Box 12234 - Riyadh 2949 Kingdom of Saudi Arabia' }}"
+                                                                src="https://maps.google.com/maps?q={{ urlencode($siteSettings->get('map_query')?->value) }}&amp;t=m&amp;z=5&amp;output=embed&amp;iwloc=near"
+                                                                title="{{ $siteSettings->get('address')?->value }}"
+                                                                aria-label="{{ $siteSettings->get('address')?->value }}"
                                                             ></iframe>
                                                         </div>
                                                     </div>
@@ -258,12 +243,7 @@
                                                         <div id="ct_text_editor-6b14a97f" class="ct-text-editor" data-wow-delay="ms">
                                                             <div class="ct-item--inner">
                                                                 <div class="ct-text-editor elementor-clearfix">
-                                                                    &copy; <span class="ct-year">{{ date('Y') }}</span>
-                                                                    @if($lang === 'ar')
-                                                                        الملاذ العربي . جميع الحقوق محفوظة. تصميم وتطوير بواسطة <a href="https://rsna.com.sa/" target="_blank" rel="noopener">RSN Advance IT Company</a>
-                                                                    @else
-                                                                        Al Malath Al Arabia. All rights reserved. Design and Developed by <a href="https://rsna.com.sa/" target="_blank" rel="noopener">RSN Advance IT Company</a>
-                                                                    @endif
+                                                                    {!! $siteSettings->get('copyright')?->value !!}
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -276,10 +256,10 @@
                                                 <div class="elementor-element elementor-element-8df806a elementor-widget elementor-widget-ct_icon" data-id="8df806a" data-element_type="widget" data-e-type="widget" data-widget_type="ct_icon.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="ct-icon1 style1 icon-align-right">
-                                                            <a class="ct_icon-8df806a-0 elementor-repeater-item-9f033d2" href="#"><i aria-hidden="true" class="fab fa-facebook-f"></i></a>
-                                                            <a class="ct_icon-8df806a-1 elementor-repeater-item-3f0e626" href="#"><i aria-hidden="true" class="fab fa-twitter"></i></a>
-                                                            <a class="ct_icon-8df806a-2 elementor-repeater-item-05c7498" href="#"><i aria-hidden="true" class="fab fa-dribbble"></i></a>
-                                                            <a class="ct_icon-8df806a-3 elementor-repeater-item-7342d6c" href="#"><i aria-hidden="true" class="fab fa-behance"></i></a>
+                                                            <a class="ct_icon-8df806a-0 elementor-repeater-item-9f033d2" href="{{ $siteSettings->get('social_facebook')?->value }}"><i aria-hidden="true" class="fab fa-facebook-f"></i></a>
+                                                            <a class="ct_icon-8df806a-1 elementor-repeater-item-3f0e626" href="{{ $siteSettings->get('social_twitter')?->value }}"><i aria-hidden="true" class="fab fa-twitter"></i></a>
+                                                            <a class="ct_icon-8df806a-2 elementor-repeater-item-05c7498" href="{{ $siteSettings->get('social_dribbble')?->value }}"><i aria-hidden="true" class="fab fa-dribbble"></i></a>
+                                                            <a class="ct_icon-8df806a-3 elementor-repeater-item-7342d6c" href="{{ $siteSettings->get('social_behance')?->value }}"><i aria-hidden="true" class="fab fa-behance"></i></a>
                                                         </div>
                                                     </div>
                                                 </div>

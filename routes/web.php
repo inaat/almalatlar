@@ -20,15 +20,7 @@ use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use Illuminate\Support\Facades\Route;
-Route::get('/welcome', function () {
-    $slides      = \App\Models\SliderSlide::where('is_active', true)->orderBy('sort_order')->get();
-    $categories  = \App\Models\ServiceCategory::where('is_active', true)->orderBy('sort_order')->get();
-    $services    = \App\Models\Service::where('is_active', true)->orderBy('sort_order')->get();
-    $aboutTabs   = \App\Models\AboutTab::orderBy('sort_order')->get();
-    $partners    = \App\Models\Partner::where('is_active', true)->orderBy('sort_order')->get();
-    $counters    = \App\Models\Counter::where('is_active', true)->orderBy('sort_order')->get();
-    return view('welcome', compact('slides', 'categories', 'services', 'aboutTabs', 'partners', 'counters'));
-});
+
 Route::get('/lang/{locale}', function (string $locale) {
     if (in_array($locale, ['en', 'ar'])) {
         session(['locale' => $locale]);
@@ -37,7 +29,13 @@ Route::get('/lang/{locale}', function (string $locale) {
 })->name('lang.switch');
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/about', fn() => view('frontend.about.about', ['lang' => app()->getLocale()]));
+Route::get('/about', function () {
+    $lang           = app()->getLocale();
+    $aboutHistories = \App\Models\AboutHistory::orderBy('year')->get();
+    $aboutTabs      = \App\Models\AboutTab::orderBy('sort_order')->get();
+    $partners       = \App\Models\Partner::where('is_active', true)->orderBy('sort_order')->get();
+    return view('frontend.about.about', compact('lang', 'aboutHistories', 'aboutTabs', 'partners'));
+});
 Route::get('/contact', fn() => view('contact'));
 Route::get('/about/{slug}', [AboutPageController::class, 'show']);
 

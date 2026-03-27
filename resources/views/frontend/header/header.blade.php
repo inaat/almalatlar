@@ -50,7 +50,7 @@
                 	    			        <span class="ct-contact-icon">
     		                <i aria-hidden="true" class="flaticon flaticon-telephone-call"></i>    		                    			        </span>
     			                        <span class="ct-contact-content">
-                	   {{ $lang === 'ar' ? '+(966) 11 4002 03' : '' }}                    </span>
+                	   {{ $siteSettings->get('phone')?->value }}                    </span>
                                             <a class="pxl-item--link" href="tel:+96611400203" target="_blank"></a>
                                    </div>
             </div>
@@ -115,7 +115,7 @@
                 	    			        <span class="ct-contact-icon">
     		                <i aria-hidden="true" class="flaticon flaticon-inbox"></i>    		                    			        </span>
     			                        <span class="ct-contact-content">
-                	   Info@almalath.com                    </span>
+                	   {{ $siteSettings->get('contact_email')?->value }}                    </span>
                                             <a class="pxl-item--link" href="mailto:envato@mail.com" target="_blank"></a>
                                    </div>
             </div>

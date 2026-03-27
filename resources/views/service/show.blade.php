@@ -16,8 +16,8 @@
                 <h1 class="ct-page-title">{{ $service->title }}</h1>
             </div>
             <ul class="ct-breadcrumb">
-                <li><a class="breadcrumb-entry" href="/">Home</a></li>
-                <li><a class="breadcrumb-entry" href="/service">Services</a></li>
+                <li><a class="breadcrumb-entry" href="/">{{ __('Home') }}</a></li>
+                <li><a class="breadcrumb-entry" href="/service">{{ __('Services') }}</a></li>
                 <li><span class="breadcrumb-entry">{{ $service->title }}</span></li>
             </ul>
         </div>

@@ -143,7 +143,7 @@
                         <div class="item--meta">
             <h4 class="item--title">
                 Office address            </h4>
-            <div class="item--description">{{ $siteSettings['address']->value ?? '' }}</div>
+            <div class="item--description">{{ $siteSettings->get('address')?->value }}</div>
         </div>
     </div>
 </div>				</div>
@@ -160,7 +160,7 @@
                         <div class="item--meta">
             <h4 class="item--title">
                 Telephone number            </h4>
-            <div class="item--description">{{ $siteSettings['phone']->value ?? '' }}</div>
+            <div class="item--description">{{ $siteSettings->get('phone')?->value }}</div>
         </div>
     </div>
 </div>				</div>
@@ -177,7 +177,7 @@
                         <div class="item--meta">
             <h4 class="item--title">
                 Mail address            </h4>
-            <div class="item--description">{{ $siteSettings['contact_email']->value ?? '' }}</div>
+            <div class="item--description">{{ $siteSettings->get('contact_email')?->value }}</div>
         </div>
     </div>
 </div>				</div>
@@ -200,15 +200,15 @@
         		<div class="elementor-element elementor-element-73aa34b elementor-widget elementor-widget-google_maps" data-id="73aa34b" data-element_type="widget" data-e-type="widget" data-widget_type="google_maps.default">
 				<div class="elementor-widget-container">
 							<div class="elementor-custom-embed">
-@php $mapQuery = urlencode($siteSettings['map_query']->value ?? 'Riyadh, Saudi Arabia'); @endphp
+@php $mapQuery = urlencode($siteSettings->get('map_query')?->value ?? 'Riyadh, Saudi Arabia'); @endphp
 			<iframe class="lazy lazy-hidden" loading="lazy"
 				 data-lazy-type="iframe" data-src="https://maps.google.com/maps?q={{ $mapQuery }}&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near"
-					title="{{ $siteSettings['map_query']->value ?? '' }}"
-					aria-label="{{ $siteSettings['map_query']->value ?? '' }}"
+					title="{{ $siteSettings->get('map_query')?->value }}"
+					aria-label="{{ $siteSettings->get('map_query')?->value }}"
 			></iframe><noscript><iframe loading="lazy"
 					src="https://maps.google.com/maps?q={{ $mapQuery }}&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near"
-					title="{{ $siteSettings['map_query']->value ?? '' }}"
-					aria-label="{{ $siteSettings['map_query']->value ?? '' }}"
+					title="{{ $siteSettings->get('map_query')?->value }}"
+					aria-label="{{ $siteSettings->get('map_query')?->value }}"
 			></iframe></noscript>
 		</div>
 						</div>

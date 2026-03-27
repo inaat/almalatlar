@@ -53,7 +53,7 @@
     
   
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms" style="visibility: hidden; animation-name: none;">
-        <span class="ct-text-inner">انضم إلى أكثر من 15000 عميل سعيد!</span>    </h3>
+        <span class="ct-text-inner">{{ $siteSettings->get('clients_heading')?->value }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -126,12 +126,10 @@
   
 			<div class="item--sub-title style-box-gr wow fadeInUp" data-wow-delay="ms" style="visibility: hidden; animation-name: none;">
                         <span>
-                نبذة عنا  ~            </span>
+                {{ $siteSettings->get('about_subtitle')?->value }}            </span>
                     </div>
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms" style="visibility: hidden; animation-name: none;">
-        <span class="ct-text-inner">يختار         <cite class="ct-text-highlight">
-            الأفضل        </cite>
-         شركة خدمات تكنولوجيا المعلومات</span>    </h3>
+        <span class="ct-text-inner">{{ $siteSettings->get('about_heading')?->value }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -142,7 +140,7 @@
 	<div class="ct-item--inner">
 		
 		<div class="ct-text-editor elementor-clearfix">
-			<p>تشهد الملاذ العربية منذ تأسيسها في عام 2011 نموّا ملحوظًا جعلها تتبوء مكانًا مرموقًا ضمن كبرى شركات تكامل حلول تكنولوجيا المعلومات في المملكة. تتمثل أهم نقاط قوتنا في جودة فريقنا الذي يضم خبراء محنكين يتمتعون بخبرة تزيد عن 30 عامًا في مجال تكنولوجيا المعلومات. تعزو قوة أساسنا إلى إنجازاتنا التاريخية في تخصصات عملنا ومنها على سبيل المثال أجهزة تكنولوجيا المعلومات والبرمجيات والخدمات وتطوير مفاهيم الأعمال والاستشارات. تسعى الشركات إلى التميز كجزءً  حيويًّا في أعمالها. وهذا يعني إضافة الجودة لكل ما تقوم به. وانطلاقًا من هذا الهدف، حرصنا على تقديم خدمات فائقة تضمن نجاح كامل ومستدام لعملائنا.</p>		
+			{{ $siteSettings->get('about_description')?->value }}		
 		</div>
 	</div>
 </div>				</div>
@@ -212,7 +210,7 @@
                             </div>
         		<div class="item--meta">
     		<div class="item--title el-empty">اتصل للحصول على المساعدة</div>
-    		<div class="item--phone el-empty">+(966) 11 4002 03</div>
+    		<div class="item--phone el-empty">{{ $siteSettings->get('phone')?->value }}</div>
         </div>
 	</div>
 </div>				</div>
@@ -249,12 +247,10 @@
   
 			<div class="item--sub-title style-box-gr wow fadeInUp" data-wow-delay="ms" style="visibility: hidden; animation-name: none;">
                         <span>
-                ~ خدماتنا الرائعة ~            </span>
+                {{ $siteSettings->get('services_subheading')?->value }}            </span>
                     </div>
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms" style="visibility: hidden; animation-name: none;">
-        <span class="ct-text-inner"> نسعد          <cite class="ct-text-highlight">
-            بخدمتكم        </cite>
-         في كل وقت .</span>    </h3>
+        <span class="ct-text-inner">{{ $siteSettings->get('services_heading')?->value }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -301,12 +297,10 @@
   
 			<div class="item--sub-title style-box-gr wow fadeInUp" data-wow-delay="ms" style="visibility: hidden; animation-name: none;">
                         <span>
-                ~ لماذا تختارنا؟ ~            </span>
+                {{ $siteSettings->get('industries_subheading')?->value }}            </span>
                     </div>
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms" style="visibility: hidden; animation-name: none;">
-        <span class="ct-text-inner">نحن نخدم على نطاق واسع         <cite class="ct-text-highlight">
-            متنوع        </cite>
-         من الصناعات</span>    </h3>
+        <span class="ct-text-inner">{{ $siteSettings->get('industries_heading')?->value }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -317,7 +311,7 @@
 	<div class="ct-item--inner">
 		
 		<div class="ct-text-editor elementor-clearfix">
-			وفيما يلي مجرد عينة صغيرة من بعض الصناعات التي نخدمها.		
+			{{ $siteSettings->get('industries_description')?->value }}		
 		</div>
 	</div>
 </div>				</div>
@@ -402,7 +396,7 @@
     </div>
   
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">Join over +15,000 happy clients!</span>    </h3>
+        <span class="ct-text-inner">{{ $siteSettings->get('clients_heading')?->value }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -515,12 +509,10 @@
   
 			<div class="item--sub-title style-box-gr wow fadeInUp" data-wow-delay="ms">
                         <span>
-                About Our Company ~            </span>
+                {{ $siteSettings->get('about_subtitle')?->value }}            </span>
                     </div>
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">Choose         <cite class="ct-text-highlight">
-            The Best        </cite>
-         IT Service Company</span>    </h3>
+        <span class="ct-text-inner">{{ $siteSettings->get('about_heading')?->value }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -534,7 +526,7 @@
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			<p>Since its founding in 2011 Al Malath Al Arabia has grown to be one of the major IT solutions integrators in the Kingdom. Our most key strength is the quality of our team of seasoned experts with over 30 years in the IT space. We have a strong foundation built on legacy including specialties in IT Hardware, Software and Services, Business Concepts Development, and Consultancy.</p>		
+			{{ $siteSettings->get('about_description')?->value }}		
 		</div>
 	</div>
 </div>				</div>
@@ -639,7 +631,7 @@
                             </div>
         		<div class="item--meta">
     		<div class="item--title el-empty">Call for help</div>
-    		<div class="item--phone el-empty"></div>
+    		<div class="item--phone el-empty">{{ $siteSettings->get('phone')?->value }}</div>
         </div>
 	</div>
 </div>				</div>
@@ -700,12 +692,10 @@
   
 			<div class="item--sub-title style-box-gr wow fadeInUp" data-wow-delay="ms">
                         <span>
-                ~ Our Awesome Services ~            </span>
+                {{ $siteSettings->get('services_subheading')?->value }}            </span>
                     </div>
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner"> We are          <cite class="ct-text-highlight">
-            dedicated        </cite>
-         to serve you all time.</span>    </h3>
+        <span class="ct-text-inner">{{ $siteSettings->get('services_heading')?->value }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -776,12 +766,10 @@
   
 			<div class="item--sub-title style-box-gr wow fadeInUp" data-wow-delay="ms">
                         <span>
-                ~ Why choose Us? ~            </span>
+                {{ $siteSettings->get('industries_subheading')?->value }}            </span>
                     </div>
 	    <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
-        <span class="ct-text-inner">We serve a wide         <cite class="ct-text-highlight">
-            variety        </cite>
-         of industries</span>    </h3>
+        <span class="ct-text-inner">{{ $siteSettings->get('industries_heading')?->value }}</span>    </h3>
   </div>
 </div>
 				</div>
@@ -795,7 +783,7 @@
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			Below is just a small sample of some of the industries that we serve.		
+			{{ $siteSettings->get('industries_description')?->value }}		
 		</div>
 	</div>
 </div>				</div>

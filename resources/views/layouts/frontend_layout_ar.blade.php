@@ -3,7 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <title>MAC | – ALMALATH ALARABIA CO</title>
+        <title>@yield('title') | {{ $siteSettings->get('site_name')?->value ?? '' }}</title>
+
 <meta name="robots" content="max-image-preview:large">
 <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
 <link rel="alternate" type="application/rss+xml" title="MAC | « الخلاصة" href="feed/index.html">
@@ -212,9 +213,9 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
                     </div>
                             </div>
         <div class="ct-page-loading-bg active" style="display: none;"></div>
-    @include('frontend.header.header', ['lang' => 'ar'])
+    @include('frontend.header.header', ['lang' => app()->getLocale()])
 @yield('content')
-@include('frontend.footer.footer', ['lang' => 'ar'])    <a href="#" class="scroll-top"><span><i class="caseicon-long-arrow-right-three"></i></span></a>
+@include('frontend.footer.footer', ['lang' => app()->getLocale()])    <a href="#" class="scroll-top"><span><i class="caseicon-long-arrow-right-three"></i></span></a>
 
 </div><!-- #page -->
     <div class="ct-modal ct-modal-search">
