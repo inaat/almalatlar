@@ -30,7 +30,8 @@
                      data-colmd="3"
                      data-collg="4"
                      data-colxl="4"
-                     data-slidesToScroll="1">
+                     data-slidesToScroll="1"
+                     data-dir="{{ $lang === 'ar' ? 'true' : 'false' }}">
 
                     @foreach($services as $service)
                     <div class="slick-slide">
