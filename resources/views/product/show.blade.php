@@ -15,8 +15,8 @@
                 <h1 class="ct-page-title">{{ $product->name }}</h1>
             </div>
             <ul class="ct-breadcrumb">
-                <li><a class="breadcrumb-entry" href="/">Home</a></li>
-                <li><span class="breadcrumb-entry">Products</span></li>
+                <li><a class="breadcrumb-entry" href="/">{{ __('Home') }}</a></li>
+                <li><span class="breadcrumb-entry">{{ __('Products') }}</span></li>
                 <li><span class="breadcrumb-entry">{{ $product->name }}</span></li>
             </ul>
         </div>
@@ -53,7 +53,7 @@
                                                         <div class="ct-heading h-align- item-st-default highlight-style1">
                                                             <div class="ct-heading--inner">
                                                                 <div class="item--sub-title style-default wow fadeInUp">
-                                                                    <span>Products</span>
+                                                                    <span>{{ __('Products') }}</span>
                                                                 </div>
                                                                 <h3 class="item--title st-default wow fadeInUp">
                                                                     <span class="ct-text-inner">{{ $product->name }}</span>

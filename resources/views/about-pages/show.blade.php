@@ -14,7 +14,7 @@
             <div class="ct-page-title-holder">
                                 <h1 class="ct-page-title">{{ $page->title }}</h1>            </div>
 
-                            <ul class="ct-breadcrumb"><li><a class="breadcrumb-entry" href="/">Home</a></li><li><a class="breadcrumb-entry" href="/about">About</a></li><li><span class="breadcrumb-entry">{{ $page->title }}</span></li></ul>                    </div>
+                            <ul class="ct-breadcrumb"><li><a class="breadcrumb-entry" href="/">{{ __('Home') }}</a></li><li><a class="breadcrumb-entry" href="/about">{{ __('About') }}</a></li><li><span class="breadcrumb-entry">{{ $page->title }}</span></li></ul>                    </div>
     </div>
         <div id="content" class="site-content">
         	<div class="content-inner">

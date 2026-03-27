@@ -12,9 +12,9 @@
     <div id="ct-pagetitle" class="ct-pagetitle bg-image">
         <div class="container">
             <div class="ct-page-title-holder">
-                                <h1 class="ct-page-title">About Us</h1>            </div>
+                                <h1 class="ct-page-title">{{ __('About Us') }}</h1>            </div>
 
-                            <ul class="ct-breadcrumb"><li><a class="breadcrumb-entry" href="/">Home</a></li><li><span class="breadcrumb-entry">About</span></li></ul>                    </div>
+                            <ul class="ct-breadcrumb"><li><a class="breadcrumb-entry" href="/">{{ __('Home') }}</a></li><li><span class="breadcrumb-entry">{{ __('About') }}</span></li></ul>                    </div>
     </div>
         <div id="content" class="site-content">
         	<div class="content-inner">
@@ -185,7 +185,7 @@
                             <div class="item--icon icon-psb">
                     <i aria-hidden="true" class="flaticon flaticon-operation"></i>                </div>
                                     <h4 class="item--title">
-                Technical <br/>Support            </h4>
+                {{ __('Technical Support') }}            </h4>
         </div>
         <div class="item--description el-empty"></div>
     </div>
@@ -218,7 +218,7 @@
                             <span class="ct-button-icon ct-icon-normal ct-align-icon-right">
                 <i aria-hidden="true" class="flaticon flaticon-right-arrow"></i>            </span>
                 <span class="ct-button-text">
-            Contact Us!        </span>
+            {{ __('Contact Us!') }}        </span>
     </a>
 </div>				</div>
 				</div>
@@ -247,7 +247,7 @@
                 <i aria-hidden="true" class="flaticon flaticon-phone-call"></i>                                    <a class="ct-info-link" href="tel:9112434672345"></a>
                             </div>
         		<div class="item--meta">
-    		<div class="item--title el-empty">Call for help</div>
+    		<div class="item--title el-empty">{{ __('Call for help') }}</div>
     		<div class="item--phone el-empty"></div>
         </div>
 	</div>
@@ -598,7 +598,7 @@
                                     <span class="ct-counter-number-suffix">+</span>
                             </div>
         </div>
-                    <div class="ct-counter-title">Team members</div>
+                    <div class="ct-counter-title">{{ __('Team members') }}</div>
             </div>
 </div>				</div>
 				</div>
@@ -619,7 +619,7 @@
                                     <span class="ct-counter-number-suffix">+</span>
                             </div>
         </div>
-                    <div class="ct-counter-title">Winning awards</div>
+                    <div class="ct-counter-title">{{ __('Winning awards') }}</div>
             </div>
 </div>				</div>
 				</div>
@@ -640,7 +640,7 @@
                                     <span class="ct-counter-number-suffix">k+</span>
                             </div>
         </div>
-                    <div class="ct-counter-title">Completed project</div>
+                    <div class="ct-counter-title">{{ __('Completed project') }}</div>
             </div>
 </div>				</div>
 				</div>
@@ -661,7 +661,7 @@
                                     <span class="ct-counter-number-suffix">+</span>
                             </div>
         </div>
-                    <div class="ct-counter-title">Client’s reviews</div>
+                    <div class="ct-counter-title">{{ __("Client’s reviews") }}</div>
             </div>
 </div>				</div>
 				</div>
@@ -688,7 +688,8 @@
                         <div class="ct-testimonial-slider" style="max-width:750px; margin:0 auto;">
                             @foreach($testimonials as $testimonial)
                             <div class="ct-testimonial-item">
-                                <p style="color:#e8f0fe; font-size:1.05rem; font-style:italic; margin-bottom:1.5rem;">"{{ $testimonial->description }}"</p>
+                                @php $isAr = app()->getLocale() === 'ar'; @endphp
+                                <p style="color:#e8f0fe; font-size:1.05rem; font-style:italic; margin-bottom:1.5rem;">"{{ $isAr ? ($testimonial->description_ar ?: $testimonial->description) : $testimonial->description }}"</p>
                                 <div style="display:flex; align-items:center; gap:1rem;">
                                     @if($testimonial->image)
                                     <img src="{{ $testimonial->image }}" width="60" height="60" alt="{{ $testimonial->name }}"
@@ -696,7 +697,7 @@
                                     @endif
                                     <div>
                                         <strong style="color:#fff; display:block;">{{ $testimonial->name }}</strong>
-                                        <span style="color:#a8c8f0; font-size:.88rem;">{{ $testimonial->position }}</span>
+                                        <span style="color:#a8c8f0; font-size:.88rem;">{{ $isAr ? ($testimonial->position_ar ?: $testimonial->position) : $testimonial->position }}</span>
                                     </div>
                                 </div>
                             </div>

@@ -44,9 +44,7 @@
                             <div class="ct-heading--inner">
                                 <h3 class="item--title st-default wow fadeInUp" data-wow-delay="ms">
                                     <span class="ct-text-inner">
-                                        {{ $lang === 'ar'
-                                            ? '"مجتمع حيوي واقتصاد مزدهر ووطن طموح"'
-                                            : 'vibrant society, thriving economy, ambitious nation&#8221;' }}
+                                        "{{ __('vibrant society, thriving economy, ambitious nation') }}"
                                     </span>
                                 </h3>
                             </div>
@@ -89,7 +87,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="ct-counter-title">
-                                                    {{ $lang === 'ar' ? $counter->label_ar : $counter->label }}
+                                                    {{ $lang === 'ar' ? ($counter->label_ar ?: __($counter->label)) : $counter->label }}
                                                 </div>
                                             </div>
                                         </div>
@@ -110,13 +108,8 @@
                             <div class="ct-item--inner">
                                 <div class="ct-text-editor elementor-clearfix">
                                     <p>
-                                        @if($lang === 'ar')
-                                            لديك أشياء أفضل للقيام بها بدلاً من القلق بشأن تكنولوجيا المعلومات لشركتك الصغيرة.
-                                            <a href="contact/index.html">دعونا نناقش حول المشروع.</a>
-                                        @else
-                                            You have better things to do than worry about IT for your small business.
-                                            <a href="contact/index.html">Let's Discuss about Project.</a>
-                                        @endif
+                                            {{ __('You have better things to do than worry about IT for your small business.') }}
+                                            <a href="/contact">{{ __("Let's Discuss about Project.") }}</a>
                                     </p>
                                 </div>
                             </div>

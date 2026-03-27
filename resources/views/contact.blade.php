@@ -12,9 +12,9 @@
     <div id="ct-pagetitle" class="ct-pagetitle bg-image">
         <div class="container">
             <div class="ct-page-title-holder">
-                                <h1 class="ct-page-title">Contact</h1>            </div>
+                                <h1 class="ct-page-title">{{ __('Contact') }}</h1>            </div>
 
-                            <ul class="ct-breadcrumb"><li><a class="breadcrumb-entry" href="/">Home</a></li><li><span class="breadcrumb-entry">Contact</span></li></ul>                    </div>
+                            <ul class="ct-breadcrumb"><li><a class="breadcrumb-entry" href="/">{{ __('Home') }}</a></li><li><span class="breadcrumb-entry">{{ __('Contact') }}</span></li></ul>                    </div>
     </div>
         <div id="content" class="site-content">
         	<div class="content-inner">
@@ -47,7 +47,7 @@
   
 			<div class="item--sub-title style-icon-right " data-wow-delay="ms">
                         <span>
-                Contact us            </span>
+                {{ __('Contact us') }}            </span>
                             <svg class="svg-right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="21" viewBox="0 0 33 21">
                   <defs>
                     <style>
@@ -95,8 +95,8 @@
                 </svg>
                     </div>
 	    <h3 class="item--title st-default " data-wow-delay="ms">
-        <span class="ct-text-inner">Let's Build Something         <cite class="ct-text-highlight">
-            Great Together        </cite>
+        <span class="ct-text-inner">{{ __("Let's Build Something") }}         <cite class="ct-text-highlight">
+            {{ __('Great Together') }}        </cite>
         </span>    </h3>
   </div>
 </div>
@@ -116,7 +116,7 @@
 
 	    </div>
 		<div class="ct-text-editor elementor-clearfix">
-			Have a project in mind? Get in touch with our team and we'll be happy to discuss how SB Construction can help bring your vision to life.
+			{{ __("Have a project in mind? Get in touch with our team and we'll be happy to discuss how SB Construction can help bring your vision to life.") }}
 		</div>
 	</div>
 </div>				</div>
@@ -142,7 +142,7 @@
                 <i aria-hidden="true" class="flaticon flaticon-address"></i>            </div>
                         <div class="item--meta">
             <h4 class="item--title">
-                Office address            </h4>
+                {{ __('Office address') }}            </h4>
             <div class="item--description">{{ $siteSettings->get('address')?->value }}</div>
         </div>
     </div>
@@ -159,7 +159,7 @@
                 <i aria-hidden="true" class="flaticon flaticon-24-hours-support"></i>            </div>
                         <div class="item--meta">
             <h4 class="item--title">
-                Telephone number            </h4>
+                {{ __('Telephone number') }}            </h4>
             <div class="item--description">{{ $siteSettings->get('phone')?->value }}</div>
         </div>
     </div>
@@ -176,7 +176,7 @@
                 <i aria-hidden="true" class="flaticon flaticon-email-1"></i>            </div>
                         <div class="item--meta">
             <h4 class="item--title">
-                Mail address            </h4>
+                {{ __('Mail address') }}            </h4>
             <div class="item--description">{{ $siteSettings->get('contact_email')?->value }}</div>
         </div>
     </div>

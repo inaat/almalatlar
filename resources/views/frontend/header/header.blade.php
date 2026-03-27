@@ -213,7 +213,7 @@
     <input type="hidden" name="trp-form-language" value="ar"></form>
 @else
 	<form role="search" method="get" action="https://almalath.com/">
-        <input type="text" placeholder="Search..." name="s" class="search-field" />
+        <input type="text" placeholder="{{ __('Search...') }}" name="s" class="search-field" />
         <button type="submit" class="search-submit"><i class="caseicon-search"></i></button>
     </form>
 @endif
@@ -336,7 +336,7 @@
     <input type="hidden" name="trp-form-language" value="ar"></form>
 @else
 	<form role="search" method="get" action="https://almalath.com/">
-        <input type="text" placeholder="Search..." name="s" class="search-field" />
+        <input type="text" placeholder="{{ __('Search...') }}" name="s" class="search-field" />
         <button type="submit" class="search-submit"><i class="caseicon-search"></i></button>
     </form>
 @endif

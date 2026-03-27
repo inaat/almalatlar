@@ -54,11 +54,11 @@
                                                         <div class="elementor-widget-wrap elementor-element-populated">
                                                             <div class="ct-info-box ct-info-box1 bg-image" style="background-image:url('/wp-content/uploads/2021/09/bg-info-box1.jpg');">
                                                                 <div class="ct-infobox-inner">
-                                                                    <div class="item--subtitle el-empty">Contact us now</div>
-                                                                    <div class="item--title el-empty">If need help!</div>
+                                                                    <div class="item--subtitle el-empty">{{ __('Contact us now') }}</div>
+                                                                    <div class="item--title el-empty">{{ __('If need help!') }}</div>
                                                                     <div class="item--phone el-empty"></div>
-                                                                    <div class="item--desc el-empty">or go to contact form:</div>
-                                                                    <a class="ct-info-button" href="/contact">Let's start now<i class="fas fa-link"></i></a>
+                                                                    <div class="item--desc el-empty">{{ __('or go to contact form:') }}</div>
+                                                                    <a class="ct-info-button" href="/contact">{{ __("Let's start now") }}<i class="fas fa-link"></i></a>
                                                                 </div>
                                                             </div>
                                                         </div>
