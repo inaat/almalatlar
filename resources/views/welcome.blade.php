@@ -91,12 +91,12 @@
 					    <div id="ct_button_video-8aa1330" class="ct-button-video2 wow fadeInUp" data-wow-delay="ms" style="visibility: hidden; animation-name: none;">
         
         <div class="ct-video-image">
-            <img loading="lazy" decoding="async" width="536" height="888" src="https://almalath.com/wp-content/uploads/2023/07/Assets-1.png" class="lazy-hidden attachment-full" alt=""><noscript><img loading="lazy" decoding="async" width="536" height="888" src="wp-content/uploads/2024/08/WhatsApp-Image-2024-08-22-at-7.40.17-PM.jpg" class="attachment-full" alt="" /></noscript>        </div>
+            <img loading="lazy" decoding="async" width="536" height="888" src="https://almalath.com/wp-content/uploads/2023/07/Assets-1.png" class="lazy-hidden attachment-full" alt=""><noscript><img loading="lazy" decoding="async" width="536" height="888" src="/wp-content/uploads/2024/08/WhatsApp-Image-2024-08-22-at-7.40.17-PM.jpg" class="attachment-full" alt="" /></noscript>        </div>
                     <a class="el-btn-video" href="https://www.youtube.com/watch?v=SF4aHwxHtZ0">
                 <i class="fa fa-play"></i>
             </a>
                             <div class="ct-video-shape">
-                <img loading="lazy" decoding="async" width="224" height="242" src="https://almalath.com/wp-content/uploads/2021/11/h2-video-shape1.png" class="lazy-hidden attachment-full" alt=""><noscript><img loading="lazy" decoding="async" width="224" height="242" src="wp-content/uploads/2021/11/h2-video-shape1.png" class="attachment-full" alt="" /></noscript>            </div>
+                <img loading="lazy" decoding="async" width="224" height="242" src="https://almalath.com/wp-content/uploads/2021/11/h2-video-shape1.png" class="lazy-hidden attachment-full" alt=""><noscript><img loading="lazy" decoding="async" width="224" height="242" src="/wp-content/uploads/2021/11/h2-video-shape1.png" class="attachment-full" alt="" /></noscript>            </div>
             </div>
 				</div>
 				</div>
@@ -110,7 +110,7 @@
 						<div class="ct-particle-animate el-move-inner img-below-content" data-wow-delay="ms">
 				    <div id="ct_particle_animate-bbf82a20" class="top-right shape-animate5">
 		    				    			    	
-			    			    			    		    	<img loading="lazy" decoding="async" width="123" height="242" src="https://almalath.com/wp-content/uploads/2021/11/h2-shape2.png" class="lazy-hidden attachment-full" alt=""><noscript><img loading="lazy" decoding="async" width="123" height="242" src="wp-content/uploads/2021/11/h2-shape2.png" class="attachment-full" alt="" /></noscript>		
+			    			    			    		    	<img loading="lazy" decoding="async" width="123" height="242" src="https://almalath.com/wp-content/uploads/2021/11/h2-shape2.png" class="lazy-hidden attachment-full" alt=""><noscript><img loading="lazy" decoding="async" width="123" height="242" src="/wp-content/uploads/2021/11/h2-shape2.png" class="attachment-full" alt="" /></noscript>		
 		    </div>
 			</div>
 				</div>
@@ -445,12 +445,12 @@
             ">
         </div>
         <div class="ct-video-image">
-            <img loading="lazy" decoding="async" width="536" height="888" src="wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2023/07/Assets-1.png" class="lazy lazy-hidden attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="536" height="888" src="wp-content/uploads/2023/07/Assets-1.png" class="attachment-full" alt="" /></noscript>        </div>
+            <img loading="lazy" decoding="async" width="536" height="888" src="/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2023/07/Assets-1.png" class="lazy lazy-hidden attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="536" height="888" src="/wp-content/uploads/2023/07/Assets-1.png" class="attachment-full" alt="" /></noscript>        </div>
                     <a class="el-btn-video" href="https://www.youtube.com/watch?v=SF4aHwxHtZ0">
                 <i class="fa fa-play"></i>
             </a>
                             <div class="ct-video-shape">
-                <img loading="lazy" decoding="async" width="224" height="242" src="wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/11/h2-video-shape1.png" class="lazy lazy-hidden attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="224" height="242" src="wp-content/uploads/2021/11/h2-video-shape1.png" class="attachment-full" alt="" /></noscript>            </div>
+                <img loading="lazy" decoding="async" width="224" height="242" src="/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/11/h2-video-shape1.png" class="lazy lazy-hidden attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="224" height="242" src="/wp-content/uploads/2021/11/h2-video-shape1.png" class="attachment-full" alt="" /></noscript>            </div>
             </div>
 				</div>
 				</div>
@@ -469,7 +469,7 @@
 			                top: -140px;
 			            }">
 			        </div>
-			    			    			    		    	<img loading="lazy" decoding="async" width="123" height="242" src="wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/11/h2-shape2.png" class="lazy lazy-hidden attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="123" height="242" src="wp-content/uploads/2021/11/h2-shape2.png" class="attachment-full" alt="" /></noscript>		
+			    			    			    		    	<img loading="lazy" decoding="async" width="123" height="242" src="/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://almalath.com/wp-content/uploads/2021/11/h2-shape2.png" class="lazy lazy-hidden attachment-full" alt="" /><noscript><img loading="lazy" decoding="async" width="123" height="242" src="/wp-content/uploads/2021/11/h2-shape2.png" class="attachment-full" alt="" /></noscript>		
 		    </div>
 			</div>
 				</div>

@@ -66,15 +66,15 @@
 			</div>
 			<div class="elementor-element elementor-element-974b276 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="974b276" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
 			<div class="elementor-widget-container">
-								<img fetchpriority="high" width="523" height="477" src="wp-content/uploads/2021/11/16.2-removebg-preview-1.png" class="attachment-full size-full wp-image-9176" alt="" sizes="(max-width: 523px) 100vw, 523px" />								</div>
+								<img fetchpriority="high" width="523" height="477" src="/wp-content/uploads/2021/11/16.2-removebg-preview-1.png" class="attachment-full size-full wp-image-9176" alt="" sizes="(max-width: 523px) 100vw, 523px" />								</div>
 			</div>
 			<div class="elementor-element elementor-element-91ad50b elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="91ad50b" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
 			<div class="elementor-widget-container">
-								<img width="150" height="150" src="wp-content/uploads/2021/11/16.3-removebg-preview-150x150.png" class="attachment-thumbnail size-thumbnail wp-image-9175" alt="" sizes="(max-width: 150px) 100vw, 150px" />								</div>
+								<img width="150" height="150" src="/wp-content/uploads/2021/11/16.3-removebg-preview-150x150.png" class="attachment-thumbnail size-thumbnail wp-image-9175" alt="" sizes="(max-width: 150px) 100vw, 150px" />								</div>
 			</div>
 			<div class="elementor-element elementor-element-f3d1d91 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="f3d1d91" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
 			<div class="elementor-widget-container">
-								<img width="524" height="476" src="wp-content/uploads/2021/11/16-removebg-preview.png" class="attachment-full size-full wp-image-9177" alt="" sizes="(max-width: 524px) 100vw, 524px" />								</div>
+								<img width="524" height="476" src="/wp-content/uploads/2021/11/16-removebg-preview.png" class="attachment-full size-full wp-image-9177" alt="" sizes="(max-width: 524px) 100vw, 524px" />								</div>
 			</div>
 			<div class="elementor-element elementor-element-6c4ac572 elementor-widget__width-auto elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="6c4ac572" data-element_type="widget" data-e-type="widget" data-widget_type="divider.default">
 			<div class="elementor-widget-container">
@@ -180,7 +180,7 @@
                 }
             ">
         </div>
-        <a href="index.html">            <img loading="lazy" width="2412" height="505" src="wp-content/uploads/2021/11/web-logo.png" class="attachment-full" alt="" />        </a>    </div>
+        <a href="index.html">            <img loading="lazy" width="2412" height="505" src="/wp-content/uploads/2021/11/web-logo.png" class="attachment-full" alt="" />        </a>    </div>
 			</div>
 			</div>
 			<div class="elementor-element elementor-element-909ae21 elementor-widget__width-auto el-flex-grow elementor-widget elementor-widget-ct_menu" data-id="909ae21" data-element_type="widget" data-e-type="widget" data-widget_type="ct_menu.default">
@@ -303,7 +303,7 @@
                 }
             ">
         </div>
-        <a href="index.html">            <img loading="lazy" width="2412" height="505" src="wp-content/uploads/2021/11/web-logo.png" class="attachment-full" alt="" />        </a>    </div>
+        <a href="index.html">            <img loading="lazy" width="2412" height="505" src="/wp-content/uploads/2021/11/web-logo.png" class="attachment-full" alt="" />        </a>    </div>
 			</div>
 			</div>
 			<div class="elementor-element elementor-element-78effc1f elementor-widget__width-auto el-flex-grow elementor-widget elementor-widget-ct_menu" data-id="78effc1f" data-element_type="widget" data-e-type="widget" data-widget_type="ct_menu.default">
@@ -381,12 +381,12 @@
             <div class="container">
                 <div class="row">
                     <div class="ct-header-branding">
-                        <a class="logo-mobile" href="index.html" title="MAC |" rel="home"><img src="wp-content/uploads/2021/11/web-logo.png" alt="MAC |"/></a><a class="logo-light" href="index.html" title="MAC |" rel="home"><img src="wp-content/themes/itfirm/assets/images/logo-df.png" alt="MAC |"/></a>                    </div>
+                        <a class="logo-mobile" href="index.html" title="MAC |" rel="home"><img src="/wp-content/uploads/2021/11/web-logo.png" alt="MAC |"/></a><a class="logo-light" href="index.html" title="MAC |" rel="home"><img src="/wp-content/themes/itfirm/assets/images/logo-df.png" alt="MAC |"/></a>                    </div>
                     <div class="ct-header-navigation">
                         <nav class="ct-main-navigation">
                             <div class="ct-main-navigation-inner">
                                                                     <div class="ct-logo-mobile">
-                                        <a class="logo-mobile" href="index.html" title="MAC |" rel="home"><img src="wp-content/uploads/2021/11/web-logo.png" alt="MAC |"/></a><a class="logo-light" href="index.html" title="MAC |" rel="home"><img src="wp-content/themes/itfirm/assets/images/logo-df.png" alt="MAC |"/></a>                                    </div>
+                                        <a class="logo-mobile" href="index.html" title="MAC |" rel="home"><img src="/wp-content/uploads/2021/11/web-logo.png" alt="MAC |"/></a><a class="logo-light" href="index.html" title="MAC |" rel="home"><img src="/wp-content/themes/itfirm/assets/images/logo-df.png" alt="MAC |"/></a>                                    </div>
                                                                                                 <ul id="menu-header-menu-2" class="ct-main-menu clearfix">@include('partials.nav-menu-simple', ['isAr' => $lang === 'ar'])
 </ul>                            </div>
                         </nav>

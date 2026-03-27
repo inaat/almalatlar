@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', $product->name)
+@php $isAr = app()->getLocale() === 'ar'; $productName = $isAr ? ($product->name_ar ?: $product->name) : $product->name; @endphp
+@section('title', $productName)
 
 @section('head_extra')
 <style id="ct_theme_options-dynamic-css" title="dynamic-css" class="redux-options-output">body #ct-pagetitle{background-image:url('/wp-content/uploads/2023/07/Untitled-design-5.png');}a{color:#3f69b1;}a:hover{color:#3f69b1;}a:active{color:#3f69b1;}</style>
@@ -12,12 +13,12 @@
     <div id="ct-pagetitle" class="ct-pagetitle bg-image">
         <div class="container">
             <div class="ct-page-title-holder">
-                <h1 class="ct-page-title">{{ $product->name }}</h1>
+                <h1 class="ct-page-title">{{ $productName }}</h1>
             </div>
             <ul class="ct-breadcrumb">
                 <li><a class="breadcrumb-entry" href="/">{{ __('Home') }}</a></li>
                 <li><span class="breadcrumb-entry">{{ __('Products') }}</span></li>
-                <li><span class="breadcrumb-entry">{{ $product->name }}</span></li>
+                <li><span class="breadcrumb-entry">{{ $productName }}</span></li>
             </ul>
         </div>
     </div>
@@ -40,7 +41,7 @@
                                                         <div class="ct-banner ct-banner2 wow fadeInUp">
                                                             <div class="ct-banner-inner">
                                                                 <div class="ct-banner-image">
-                                                                    <img loading="lazy" decoding="async" src="{{ $product->image }}" alt="{{ $product->name }}" title="{{ $product->name }}" />
+                                                                    <img loading="lazy" decoding="async" src="{{ $product->image }}" alt="{{ $productName }}" title="{{ $productName }}" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -56,15 +57,16 @@
                                                                     <span>{{ __('Products') }}</span>
                                                                 </div>
                                                                 <h3 class="item--title st-default wow fadeInUp">
-                                                                    <span class="ct-text-inner">{{ $product->name }}</span>
+                                                                    <span class="ct-text-inner">{{ $productName }}</span>
                                                                 </h3>
                                                             </div>
                                                         </div>
-                                                        @if($product->content)
+                                                        @php $productContent = $isAr ? ($product->content_ar ?: $product->content) : $product->content; @endphp
+                                                        @if($productContent)
                                                         <div class="ct-text-editor wow fadeInUp">
                                                             <div class="ct-item--inner">
                                                                 <div class="ct-text-editor elementor-clearfix">
-                                                                    {{ $product->content }}
+                                                                    {{ $productContent }}
                                                                 </div>
                                                             </div>
                                                         </div>

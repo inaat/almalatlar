@@ -24,7 +24,7 @@
     data-out="a:false;">
 
 <img loading="lazy" decoding="async"
-    src="wp-content/plugins/revslider/sr6/assets/assets/dummy.png"
+    src="/wp-content/plugins/revslider/sr6/assets/assets/dummy.png"
     alt=""
     title="{{ $lang === 'ar' ? $slide->title_ar : $slide->title }}"
     width="1920" height="759"
@@ -132,7 +132,7 @@
     data-frame_1="st:300;sp:1000;"
     data-frame_999="o:0;st:w;sR:8700;"
     style="z-index:8;background-color:rgba(0,0,0,0);">
-    <rs-bg-elem style="background: url('wp-content/uploads/2021/11/h2-bg-slider1-overlay.png') no-repeat center center; background-size: cover;"></rs-bg-elem>
+    <rs-bg-elem style="background: url('/wp-content/uploads/2021/11/h2-bg-slider1-overlay.png') no-repeat center center; background-size: cover;"></rs-bg-elem>
 </rs-layer><!--
 -->
 </rs-slide>

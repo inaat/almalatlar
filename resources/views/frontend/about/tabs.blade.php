@@ -52,7 +52,7 @@
                                                                 <div class="ct-banner-shape">
                                                                     <img loading="lazy" decoding="async"
                                                                          width="123" height="242"
-                                                                         src="wp-content/uploads/2021/11/h2-shape2.png"
+                                                                         src="/wp-content/uploads/2021/11/h2-shape2.png"
                                                                          class="attachment-full" alt="">
                                                                 </div>
                                                             </div>

@@ -29,7 +29,7 @@
                                     }">
                                 </div>
                                 <img loading="lazy" decoding="async" width="99" height="170"
-                                     src="wp-content/uploads/2021/11/h2-shape4.png"
+                                     src="/wp-content/uploads/2021/11/h2-shape4.png"
                                      class="attachment-full" alt="">
                             </div>
                         </div>
@@ -129,7 +129,7 @@
                                     }">
                                 </div>
                                 <img loading="lazy" decoding="async" width="182" height="98"
-                                     src="wp-content/uploads/2021/11/h2-shape3.png"
+                                     src="/wp-content/uploads/2021/11/h2-shape3.png"
                                      class="attachment-full" alt="">
                             </div>
                         </div>
