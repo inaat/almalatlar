@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', $service->title)
+@php $isAr = app()->getLocale() === 'ar'; $serviceTitle = $isAr ? ($service->title_ar ?: $service->title) : $service->title; @endphp
+@section('title', $serviceTitle)
 
 @section('head_extra')
 <style id="ct_theme_options-dynamic-css" title="dynamic-css" class="redux-options-output">body #ct-pagetitle{background-image:url('/wp-content/uploads/2023/07/Untitled-design-5.png');}a{color:#3f69b1;}a:hover{color:#3f69b1;}a:active{color:#3f69b1;}</style>
@@ -13,12 +14,12 @@
     <div id="ct-pagetitle" class="ct-pagetitle bg-image">
         <div class="container">
             <div class="ct-page-title-holder">
-                <h1 class="ct-page-title">{{ $service->title }}</h1>
+                <h1 class="ct-page-title">{{ $serviceTitle }}</h1>
             </div>
             <ul class="ct-breadcrumb">
                 <li><a class="breadcrumb-entry" href="/">{{ __('Home') }}</a></li>
                 <li><a class="breadcrumb-entry" href="/service">{{ __('Services') }}</a></li>
-                <li><span class="breadcrumb-entry">{{ $service->title }}</span></li>
+                <li><span class="breadcrumb-entry">{{ $serviceTitle }}</span></li>
             </ul>
         </div>
     </div>
@@ -43,7 +44,7 @@
                                                         <div class="elementor-widget-wrap elementor-element-populated">
                                                             <div class="ct-image-single ct-no-effect">
                                                                 <div class="ct-image-single--inner">
-                                                                    <img loading="lazy" decoding="async" class="img-main" src="{{ $service->image }}" alt="{{ $service->title }}" title="{{ $service->title }}" />
+                                                                    <img loading="lazy" decoding="async" class="img-main" src="{{ $service->image }}" alt="{{ $serviceTitle }}" title="{{ $serviceTitle }}" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -73,10 +74,14 @@
                                                     <div class="elementor-column elementor-col-100 elementor-top-column">
                                                         <div class="elementor-widget-wrap elementor-element-populated">
 
+                                                            @php
+                                                                $serviceDesc    = $isAr ? ($service->description_ar ?: $service->description) : $service->description;
+                                                                $serviceContent = $isAr ? ($service->content_ar    ?: $service->content)    : $service->content;
+                                                            @endphp
                                                             <div class="ct-heading h-align- item-st-default highlight-style1">
                                                                 <div class="ct-heading--inner">
                                                                     <h3 class="item--title st-default">
-                                                                        <span class="ct-text-inner">{{ $service->title }}</span>
+                                                                        <span class="ct-text-inner">{{ $serviceTitle }}</span>
                                                                     </h3>
                                                                 </div>
                                                             </div>
@@ -84,16 +89,16 @@
                                                             <div class="ct-text-editor">
                                                                 <div class="ct-item--inner">
                                                                     <div class="ct-text-editor elementor-clearfix">
-                                                                        {{ $service->description }}
+                                                                        {{ $serviceDesc }}
                                                                     </div>
                                                                 </div>
                                                             </div>
 
-                                                            @if($service->content)
+                                                            @if($serviceContent)
                                                             <div class="ct-text-editor mt-4">
                                                                 <div class="ct-item--inner">
                                                                     <div class="ct-text-editor elementor-clearfix">
-                                                                        {!! $service->content !!}
+                                                                        {!! $serviceContent !!}
                                                                     </div>
                                                                 </div>
                                                             </div>
