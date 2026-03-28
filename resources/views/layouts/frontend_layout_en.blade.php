@@ -62,6 +62,7 @@ img[data-dominant-color]:not(.has-transparency) { background-color: var(--domina
 <link rel='stylesheet' id='caseicon-css' href='/wp-content/themes/itfirm/assets/css/caseicon1159.css?ver=1.4.2' type='text/css' media='all' />
 <link rel='stylesheet' id='flaticon-css' href='/wp-content/themes/itfirm/assets/css/flaticon1159.css?ver=1.4.2' type='text/css' media='all' />
 <link rel='stylesheet' id='flaticon2-css' href='/wp-content/themes/itfirm/assets/css/flaticon21159.css?ver=1.4.2' type='text/css' media='all' />
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css' />
 <link rel='stylesheet' id='magnific-popup-css' href='/wp-content/themes/itfirm/assets/css/magnific-popup8a54.css?ver=1.0.0' type='text/css' media='all' />
 <link rel='stylesheet' id='animate-css' href='/wp-content/themes/itfirm/assets/css/animate8a54.css?ver=1.0.0' type='text/css' media='all' />
 <link rel='stylesheet' id='itfirm-theme-css' href='/wp-content/themes/itfirm/assets/css/theme1159.css?ver=1.4.2' type='text/css' media='all' />
