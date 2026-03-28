@@ -30,7 +30,7 @@
                     <td>{{ $cat->id }}</td>
                     <td>{{ $cat->name }}</td>
                     <td><code>{{ $cat->slug }}</code></td>
-                    <td><i class="{{ $cat->icon_class }}"></i> <small class="text-muted">{{ $cat->icon_class }}</small></td>
+                    <td><i class="{{ $cat->icon_class }}" style="font-size:1.5rem;"></i></td>
                     <td>{{ $cat->sort_order }}</td>
                     <td>
                         @if($cat->is_active)

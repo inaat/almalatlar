@@ -33,9 +33,7 @@
                     @error('slug') <div class="invalid-feedback">{{ $message }}</div> @enderror
                 </div>
                 <div class="col-md-6">
-                    <label class="form-label fw-semibold">Icon Class <small class="text-muted">(e.g. bi bi-star)</small></label>
-                    <input type="text" name="icon_class" class="form-control"
-                           value="{{ old('icon_class', $category->icon_class) }}">
+                    <x-icon-picker name="icon_class" :value="old('icon_class', $category->icon_class ?? '')" />
                 </div>
                 <div class="col-md-3">
                     <label class="form-label fw-semibold">Sort Order</label>

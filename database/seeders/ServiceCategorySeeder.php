@@ -14,21 +14,21 @@ class ServiceCategorySeeder extends Seeder
                 'name'       => 'General Contracting',
                 'name_ar'    => 'المقاولات العامة',
                 'slug'       => 'general-contracting',
-                'icon_class' => 'flaticon flaticon-building',
+                'icon_class' => 'flaticon flaticon-home',
                 'sort_order' => 1,
             ],
             [
                 'name'       => 'Fit-Out & Interior',
                 'name_ar'    => 'التشطيب والتصميم الداخلي',
                 'slug'       => 'fit-out-interior',
-                'icon_class' => 'flaticon flaticon-idea',
+                'icon_class' => 'flaticon flaticon-sketch',
                 'sort_order' => 2,
             ],
             [
                 'name'       => 'Infrastructure & Civil Works',
                 'name_ar'    => 'البنية التحتية والأعمال المدنية',
                 'slug'       => 'infrastructure-civil-works',
-                'icon_class' => 'flaticon flaticon-process',
+                'icon_class' => 'flaticon flaticon-operation',
                 'sort_order' => 3,
             ],
             [
@@ -41,7 +41,10 @@ class ServiceCategorySeeder extends Seeder
         ];
 
         foreach ($categories as $data) {
-            ServiceCategory::create($data);
+            ServiceCategory::updateOrCreate(
+                ['slug' => $data['slug']],
+                $data
+            );
         }
     }
 }

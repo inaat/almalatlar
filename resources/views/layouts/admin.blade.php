@@ -6,6 +6,8 @@
     <title>Admin Panel - @yield('title', 'Dashboard')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/wp-content/themes/itfirm/assets/css/flaticon1159.css">
+    <link rel="stylesheet" href="/wp-content/themes/itfirm/assets/css/flaticon21159.css">
     <style>
         body { background: #f4f6f9; }
         .sidebar {

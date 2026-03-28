@@ -46,9 +46,7 @@
                     </select>
                 </div>
                 <div class="col-md-6">
-                    <label class="form-label fw-semibold">Icon Class <small class="text-muted">(e.g. bi bi-star)</small></label>
-                    <input type="text" name="icon_class" class="form-control"
-                           value="{{ old('icon_class', $service->icon_class) }}">
+                    <x-icon-picker name="icon_class" :value="old('icon_class', $service->icon_class ?? '')" />
                 </div>
                 <div class="col-12">
                     <label class="form-label fw-semibold">Description <span class="badge bg-secondary">EN</span></label>
