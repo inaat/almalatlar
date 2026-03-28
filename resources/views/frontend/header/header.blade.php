@@ -180,7 +180,7 @@
                 }
             ">
         </div>
-        <a href="index.html">            <img loading="lazy" width="2412" height="505" src="/wp-content/uploads/2021/11/web-logo.png" class="attachment-full" alt="" />        </a>    </div>
+        <a href="/">            <img loading="lazy" width="2412" height="505" src="{{ $siteSettings->get('site_logo')?->value }}" class="attachment-full" alt="{{ $siteSettings->get('site_name')?->value }}" />        </a>    </div>
 			</div>
 			</div>
 			<div class="elementor-element elementor-element-909ae21 elementor-widget__width-auto el-flex-grow elementor-widget elementor-widget-ct_menu" data-id="909ae21" data-element_type="widget" data-e-type="widget" data-widget_type="ct_menu.default">
@@ -303,7 +303,7 @@
                 }
             ">
         </div>
-        <a href="index.html">            <img loading="lazy" width="2412" height="505" src="/wp-content/uploads/2021/11/web-logo.png" class="attachment-full" alt="" />        </a>    </div>
+        <a href="/">            <img loading="lazy" width="2412" height="505" src="{{ $siteSettings->get('site_logo')?->value }}" class="attachment-full" alt="{{ $siteSettings->get('site_name')?->value }}" />        </a>    </div>
 			</div>
 			</div>
 			<div class="elementor-element elementor-element-78effc1f elementor-widget__width-auto el-flex-grow elementor-widget elementor-widget-ct_menu" data-id="78effc1f" data-element_type="widget" data-e-type="widget" data-widget_type="ct_menu.default">
@@ -381,12 +381,12 @@
             <div class="container">
                 <div class="row">
                     <div class="ct-header-branding">
-                        <a class="logo-mobile" href="index.html" title="MAC |" rel="home"><img src="/wp-content/uploads/2021/11/web-logo.png" alt="MAC |"/></a><a class="logo-light" href="index.html" title="MAC |" rel="home"><img src="/wp-content/themes/itfirm/assets/images/logo-df.png" alt="MAC |"/></a>                    </div>
+                        <a class="logo-mobile" href="/" title="{{ $siteSettings->get('site_name')?->value }}" rel="home"><img src="{{ $siteSettings->get('site_logo')?->value }}" alt="{{ $siteSettings->get('site_name')?->value }}"/></a><a class="logo-light" href="/" title="{{ $siteSettings->get('site_name')?->value }}" rel="home"><img src="{{ $siteSettings->get('site_logo')?->value }}" alt="{{ $siteSettings->get('site_name')?->value }}"/></a>                    </div>
                     <div class="ct-header-navigation">
                         <nav class="ct-main-navigation">
                             <div class="ct-main-navigation-inner">
                                                                     <div class="ct-logo-mobile">
-                                        <a class="logo-mobile" href="index.html" title="MAC |" rel="home"><img src="/wp-content/uploads/2021/11/web-logo.png" alt="MAC |"/></a><a class="logo-light" href="index.html" title="MAC |" rel="home"><img src="/wp-content/themes/itfirm/assets/images/logo-df.png" alt="MAC |"/></a>                                    </div>
+                                        <a class="logo-mobile" href="/" title="{{ $siteSettings->get('site_name')?->value }}" rel="home"><img src="{{ $siteSettings->get('site_logo')?->value }}" alt="{{ $siteSettings->get('site_name')?->value }}"/></a><a class="logo-light" href="/" title="{{ $siteSettings->get('site_name')?->value }}" rel="home"><img src="{{ $siteSettings->get('site_logo')?->value }}" alt="{{ $siteSettings->get('site_name')?->value }}"/></a>                                    </div>
                                                                                                 <ul id="menu-header-menu-2" class="ct-main-menu clearfix">@include('partials.nav-menu-simple', ['isAr' => $lang === 'ar'])
 </ul>                            </div>
                         </nav>

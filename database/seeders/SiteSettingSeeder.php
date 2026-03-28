@@ -69,8 +69,8 @@ class SiteSettingSeeder extends Seeder
             ['key' => 'social_behance',         'value' => '#',                                       'type' => 'url'],
 
             // Logos
-            ['key' => 'site_logo',              'value' => '/wp-content/uploads/2021/11/web-logo.png',  'type' => 'image'],
-            ['key' => 'site_logo_footer',       'value' => '/wp-content/uploads/2021/11/web-logo1.png', 'type' => 'image'],
+            ['key' => 'site_logo',              'value' => '',  'type' => 'image'],
+            ['key' => 'site_logo_footer',       'value' => '', 'type' => 'image'],
 
             // ── Arabic (_ar) translations ─────────────────────────────────────
             ['key' => 'site_name_ar',              'value' => 'إس بي للإنشاءات',                          'type' => 'text'],
