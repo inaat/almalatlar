@@ -22,13 +22,13 @@ trait HandlesImageUpload
         if ($request->hasFile($field) && $request->file($field)->isValid()) {
             // Delete old uploaded file if it exists in storage
             if ($oldPath && str_starts_with($oldPath, '/storage/')) {
-                $storagePath = str_replace('/storage/', 'public/', $oldPath);
-                Storage::delete($storagePath);
+                $storagePath = str_replace('/storage/', '', $oldPath);
+                Storage::disk('public')->delete($storagePath);
             }
 
-            $path = $request->file($field)->store("public/{$folder}");
+            $path = $request->file($field)->store($folder, 'public');
             // Return URL accessible via /storage/...
-            return Storage::url($path);
+            return Storage::disk('public')->url($path);
         }
 
         // No new file — keep existing value (could be a URL or stored path)
